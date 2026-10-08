@@ -1,0 +1,205 @@
+Issue Type,Issue Key,Summary,Description,Epic Link,Parent,Sprint,Priority,Story Points,Acceptance Criteria,Learning Objective,Dependencies
+Epic,EPIC-1,Foundation,Flagged epic Foundation.,,,,High,,,Foundation,
+Epic,EPIC-2,Backend & Data,Flagged epic Backend & Data.,,,,High,,,Backend & Data,
+Epic,EPIC-3,Flag Management,Flagged epic Flag Management.,,,,High,,,Flag Management,
+Epic,EPIC-4,Dashboard,Flagged epic Dashboard.,,,,High,,,Dashboard,
+Epic,EPIC-5,SDK,Flagged epic SDK.,,,,High,,,SDK,
+Epic,EPIC-6,Evaluation & Targeting,Flagged epic Evaluation & Targeting.,,,,High,,,Evaluation & Targeting,
+Epic,EPIC-7,Caching & Polling,Flagged epic Caching & Polling.,,,,High,,,Caching & Polling,
+Epic,EPIC-8,Streaming & Consistency,Flagged epic Streaming & Consistency.,,,,High,,,Streaming & Consistency,
+Epic,EPIC-9,Observability & Resilience,Flagged epic Observability & Resilience.,,,,High,,,Observability & Resilience,
+Epic,EPIC-10,GCP Infrastructure,Flagged epic GCP Infrastructure.,,,,High,,,GCP Infrastructure,
+Epic,EPIC-11,Cloud Data & Events,Flagged epic Cloud Data & Events.,,,,High,,,Cloud Data & Events,
+Epic,EPIC-12,CI/CD & Finalization,Flagged epic CI/CD & Finalization.,,,,High,,,CI/CD & Finalization,
+Sub-task,FF-101-1,Write problem statement,Implementation subtask for Project charter and glossary.,EPIC-1,FF-101,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Sub-task,FF-101-2,Define control/data plane terms,Implementation subtask for Project charter and glossary.,EPIC-1,FF-101,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Sub-task,FF-101-3,Write first architecture sketch,Implementation subtask for Project charter and glossary.,EPIC-1,FF-101,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Story,FF-101,Project charter and glossary,Sprint 1 work in Foundation & Domain.,EPIC-1,,Sprint 1,High,3,Story DoD satisfied,Foundation & Domain,
+Sub-task,FF-102-1,Create monorepo structure,Implementation subtask for Repository bootstrap.,EPIC-1,FF-102,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Sub-task,FF-102-2,Configure Python tooling,Implementation subtask for Repository bootstrap.,EPIC-1,FF-102,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Sub-task,FF-102-3,Configure frontend/SDK workspace,Implementation subtask for Repository bootstrap.,EPIC-1,FF-102,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Story,FF-102,Repository bootstrap,Sprint 1 work in Foundation & Domain.,EPIC-1,,Sprint 1,High,3,Story DoD satisfied,Foundation & Domain,
+Sub-task,FF-103-1,Create Docker Compose,Implementation subtask for Local infrastructure.,EPIC-1,FF-103,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Sub-task,FF-103-2,Run PostgreSQL locally,Implementation subtask for Local infrastructure.,EPIC-1,FF-103,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Sub-task,FF-103-3,Add health checks and startup documentation,Implementation subtask for Local infrastructure.,EPIC-1,FF-103,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Story,FF-103,Local infrastructure,Sprint 1 work in Foundation & Domain.,EPIC-1,,Sprint 1,High,3,Story DoD satisfied,Foundation & Domain,
+Sub-task,FF-104-1,Set branch strategy,Implementation subtask for Engineering workflow.,EPIC-1,FF-104,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Sub-task,FF-104-2,Add commit conventions,Implementation subtask for Engineering workflow.,EPIC-1,FF-104,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Sub-task,FF-104-3,Create issue/PR templates,Implementation subtask for Engineering workflow.,EPIC-1,FF-104,Sprint 1,High,1,"Implemented, tested, documented",Foundation & Domain,See story
+Story,FF-104,Engineering workflow,Sprint 1 work in Foundation & Domain.,EPIC-1,,Sprint 1,High,3,Story DoD satisfied,Foundation & Domain,
+Sub-task,FF-201-1,Create app factory,Implementation subtask for FastAPI foundation.,EPIC-2,FF-201,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Sub-task,FF-201-2,Add health/readiness endpoints,Implementation subtask for FastAPI foundation.,EPIC-2,FF-201,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Sub-task,FF-201-3,Configure structured error handling,Implementation subtask for FastAPI foundation.,EPIC-2,FF-201,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Story,FF-201,FastAPI foundation,Sprint 2 work in Python API & Database.,EPIC-2,,Sprint 2,High,3,Story DoD satisfied,Python API & Database,
+Sub-task,FF-202-1,Configure SQLAlchemy,Implementation subtask for Database layer.,EPIC-2,FF-202,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Sub-task,FF-202-2,Create Alembic baseline,Implementation subtask for Database layer.,EPIC-2,FF-202,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Sub-task,FF-202-3,Implement DB session lifecycle,Implementation subtask for Database layer.,EPIC-2,FF-202,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Story,FF-202,Database layer,Sprint 2 work in Python API & Database.,EPIC-2,,Sprint 2,High,3,Story DoD satisfied,Python API & Database,
+Sub-task,FF-203-1,Create projects/environments tables,Implementation subtask for Core schema.,EPIC-2,FF-203,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Sub-task,FF-203-2,Create feature_flags table,Implementation subtask for Core schema.,EPIC-2,FF-203,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Sub-task,FF-203-3,Add uniqueness/index constraints,Implementation subtask for Core schema.,EPIC-2,FF-203,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Story,FF-203,Core schema,Sprint 2 work in Python API & Database.,EPIC-2,,Sprint 2,High,3,Story DoD satisfied,Python API & Database,
+Sub-task,FF-204-1,Create pytest fixtures,Implementation subtask for API tests.,EPIC-2,FF-204,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Sub-task,FF-204-2,Write CRUD integration tests,Implementation subtask for API tests.,EPIC-2,FF-204,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Sub-task,FF-204-3,Add invalid-input tests,Implementation subtask for API tests.,EPIC-2,FF-204,Sprint 2,High,1,"Implemented, tested, documented",Python API & Database,See story
+Story,FF-204,API tests,Sprint 2 work in Python API & Database.,EPIC-2,,Sprint 2,High,3,Story DoD satisfied,Python API & Database,
+Sub-task,FF-301-1,Build create/list/update/delete endpoints,Implementation subtask for Project/environment CRUD.,EPIC-3,FF-301,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Sub-task,FF-301-2,Validate environment keys,Implementation subtask for Project/environment CRUD.,EPIC-3,FF-301,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Sub-task,FF-301-3,Document endpoint behavior,Implementation subtask for Project/environment CRUD.,EPIC-3,FF-301,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Story,FF-301,Project/environment CRUD,Sprint 3 work in Flag Management & Audit.,EPIC-3,,Sprint 3,High,3,Story DoD satisfied,Flag Management & Audit,
+Sub-task,FF-302-1,Build create/list/update/delete,Implementation subtask for Feature flag CRUD.,EPIC-3,FF-302,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Sub-task,FF-302-2,Add version incrementing,Implementation subtask for Feature flag CRUD.,EPIC-3,FF-302,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Sub-task,FF-302-3,Add optimistic update protection,Implementation subtask for Feature flag CRUD.,EPIC-3,FF-302,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Story,FF-302,Feature flag CRUD,Sprint 3 work in Flag Management & Audit.,EPIC-3,,Sprint 3,High,3,Story DoD satisfied,Flag Management & Audit,
+Sub-task,FF-303-1,Create audit_events table,Implementation subtask for Audit trail.,EPIC-3,FF-303,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Sub-task,FF-303-2,Record mutations,Implementation subtask for Audit trail.,EPIC-3,FF-303,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Sub-task,FF-303-3,Add audit read endpoint,Implementation subtask for Audit trail.,EPIC-3,FF-303,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Story,FF-303,Audit trail,Sprint 3 work in Flag Management & Audit.,EPIC-3,,Sprint 3,High,3,Story DoD satisfied,Flag Management & Audit,
+Sub-task,FF-304-1,Implement login,Implementation subtask for Admin authentication.,EPIC-3,FF-304,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Sub-task,FF-304-2,Protect admin routes,Implementation subtask for Admin authentication.,EPIC-3,FF-304,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Sub-task,FF-304-3,Add authorization tests,Implementation subtask for Admin authentication.,EPIC-3,FF-304,Sprint 3,High,1,"Implemented, tested, documented",Flag Management & Audit,See story
+Story,FF-304,Admin authentication,Sprint 3 work in Flag Management & Audit.,EPIC-3,,Sprint 3,High,3,Story DoD satisfied,Flag Management & Audit,
+Sub-task,FF-401-1,Create dashboard layout,Implementation subtask for Astro/React shell.,EPIC-4,FF-401,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Sub-task,FF-401-2,Add routing/navigation,Implementation subtask for Astro/React shell.,EPIC-4,FF-401,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Sub-task,FF-401-3,Configure API client,Implementation subtask for Astro/React shell.,EPIC-4,FF-401,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Story,FF-401,Astro/React shell,Sprint 4 work in Dashboard.,EPIC-4,,Sprint 4,High,3,Story DoD satisfied,Dashboard,
+Sub-task,FF-402-1,Project list,Implementation subtask for Project/environment UI.,EPIC-4,FF-402,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Sub-task,FF-402-2,Environment selector,Implementation subtask for Project/environment UI.,EPIC-4,FF-402,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Sub-task,FF-402-3,Environment state/loading/error UI,Implementation subtask for Project/environment UI.,EPIC-4,FF-402,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Story,FF-402,Project/environment UI,Sprint 4 work in Dashboard.,EPIC-4,,Sprint 4,High,3,Story DoD satisfied,Dashboard,
+Sub-task,FF-403-1,Flag table,Implementation subtask for Flag management UI.,EPIC-4,FF-403,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Sub-task,FF-403-2,Create/edit form,Implementation subtask for Flag management UI.,EPIC-4,FF-403,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Sub-task,FF-403-3,Enable/disable control,Implementation subtask for Flag management UI.,EPIC-4,FF-403,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Story,FF-403,Flag management UI,Sprint 4 work in Dashboard.,EPIC-4,,Sprint 4,High,3,Story DoD satisfied,Dashboard,
+Sub-task,FF-404-1,Audit history page,Implementation subtask for Audit UX.,EPIC-4,FF-404,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Sub-task,FF-404-2,Before/after display,Implementation subtask for Audit UX.,EPIC-4,FF-404,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Sub-task,FF-404-3,Error and empty states,Implementation subtask for Audit UX.,EPIC-4,FF-404,Sprint 4,High,1,"Implemented, tested, documented",Dashboard,See story
+Story,FF-404,Audit UX,Sprint 4 work in Dashboard.,EPIC-4,,Sprint 4,High,3,Story DoD satisfied,Dashboard,
+Sub-task,FF-501-1,Create package structure,Implementation subtask for SDK package.,EPIC-5,FF-501,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Sub-task,FF-501-2,Define public SDK API,Implementation subtask for SDK package.,EPIC-5,FF-501,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Sub-task,FF-501-3,Add build/test pipeline,Implementation subtask for SDK package.,EPIC-5,FF-501,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Story,FF-501,SDK package,Sprint 5 work in SDK & Local Evaluation.,EPIC-5,,Sprint 5,High,3,Story DoD satisfied,SDK & Local Evaluation,
+Sub-task,FF-502-1,Implement config fetch,Implementation subtask for Configuration bootstrap.,EPIC-5,FF-502,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Sub-task,FF-502-2,Validate config schema,Implementation subtask for Configuration bootstrap.,EPIC-5,FF-502,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Sub-task,FF-502-3,Store immutable snapshot,Implementation subtask for Configuration bootstrap.,EPIC-5,FF-502,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Story,FF-502,Configuration bootstrap,Sprint 5 work in SDK & Local Evaluation.,EPIC-5,,Sprint 5,High,3,Story DoD satisfied,SDK & Local Evaluation,
+Sub-task,FF-503-1,Boolean evaluation,Implementation subtask for Evaluation engine.,EPIC-5,FF-503,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Sub-task,FF-503-2,Default/fallback evaluation,Implementation subtask for Evaluation engine.,EPIC-5,FF-503,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Sub-task,FF-503-3,Evaluation unit-test matrix,Implementation subtask for Evaluation engine.,EPIC-5,FF-503,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Story,FF-503,Evaluation engine,Sprint 5 work in SDK & Local Evaluation.,EPIC-5,,Sprint 5,High,3,Story DoD satisfied,SDK & Local Evaluation,
+Sub-task,FF-504-1,Integrate SDK,Implementation subtask for Demo Store integration.,EPIC-5,FF-504,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Sub-task,FF-504-2,Add new checkout flag,Implementation subtask for Demo Store integration.,EPIC-5,FF-504,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Sub-task,FF-504-3,Demonstrate live switch without rebuild,Implementation subtask for Demo Store integration.,EPIC-5,FF-504,Sprint 5,High,1,"Implemented, tested, documented",SDK & Local Evaluation,See story
+Story,FF-504,Demo Store integration,Sprint 5 work in SDK & Local Evaluation.,EPIC-5,,Sprint 5,High,3,Story DoD satisfied,SDK & Local Evaluation,
+Sub-task,FF-601-1,Generate scoped keys,Implementation subtask for Client keys.,EPIC-6,FF-601,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Sub-task,FF-601-2,Hash stored secrets,Implementation subtask for Client keys.,EPIC-6,FF-601,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Sub-task,FF-601-3,Build revoke flow,Implementation subtask for Client keys.,EPIC-6,FF-601,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Story,FF-601,Client keys,"Sprint 6 work in Environments, Rollouts & Targeting.",EPIC-6,,Sprint 6,High,3,Story DoD satisfied,"Environments, Rollouts & Targeting",
+Sub-task,FF-602-1,Prevent cross-environment reads,Implementation subtask for Environment isolation.,EPIC-6,FF-602,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Sub-task,FF-602-2,Test staging/production separation,Implementation subtask for Environment isolation.,EPIC-6,FF-602,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Sub-task,FF-602-3,Add SDK environment configuration,Implementation subtask for Environment isolation.,EPIC-6,FF-602,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Story,FF-602,Environment isolation,"Sprint 6 work in Environments, Rollouts & Targeting.",EPIC-6,,Sprint 6,High,3,Story DoD satisfied,"Environments, Rollouts & Targeting",
+Sub-task,FF-603-1,Implement stable hashing,Implementation subtask for Percentage rollout.,EPIC-6,FF-603,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Sub-task,FF-603-2,Build 0/50/100% cases,Implementation subtask for Percentage rollout.,EPIC-6,FF-603,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Sub-task,FF-603-3,Test deterministic user assignment,Implementation subtask for Percentage rollout.,EPIC-6,FF-603,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Story,FF-603,Percentage rollout,"Sprint 6 work in Environments, Rollouts & Targeting.",EPIC-6,,Sprint 6,High,3,Story DoD satisfied,"Environments, Rollouts & Targeting",
+Sub-task,FF-604-1,Define v1 rule model,Implementation subtask for Targeting rules.,EPIC-6,FF-604,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Sub-task,FF-604-2,Implement equals/contains,Implementation subtask for Targeting rules.,EPIC-6,FF-604,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Sub-task,FF-604-3,Test rule precedence,Implementation subtask for Targeting rules.,EPIC-6,FF-604,Sprint 6,High,1,"Implemented, tested, documented","Environments, Rollouts & Targeting",See story
+Story,FF-604,Targeting rules,"Sprint 6 work in Environments, Rollouts & Targeting.",EPIC-6,,Sprint 6,High,3,Story DoD satisfied,"Environments, Rollouts & Targeting",
+Sub-task,FF-701-1,Atomic snapshot replacement,Implementation subtask for In-memory configuration cache.,EPIC-7,FF-701,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Sub-task,FF-701-2,Track version/age,Implementation subtask for In-memory configuration cache.,EPIC-7,FF-701,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Sub-task,FF-701-3,Expose cache diagnostics,Implementation subtask for In-memory configuration cache.,EPIC-7,FF-701,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Story,FF-701,In-memory configuration cache,Sprint 7 work in Caching & Polling.,EPIC-7,,Sprint 7,High,3,Story DoD satisfied,Caching & Polling,
+Sub-task,FF-702-1,Add polling scheduler,Implementation subtask for Polling.,EPIC-7,FF-702,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Sub-task,FF-702-2,Handle timeouts/errors,Implementation subtask for Polling.,EPIC-7,FF-702,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Sub-task,FF-702-3,Measure stale window,Implementation subtask for Polling.,EPIC-7,FF-702,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Story,FF-702,Polling,Sprint 7 work in Caching & Polling.,EPIC-7,,Sprint 7,High,3,Story DoD satisfied,Caching & Polling,
+Sub-task,FF-703-1,Implement ETag/version conditional requests,Implementation subtask for HTTP cache optimization.,EPIC-7,FF-703,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Sub-task,FF-703-2,Test 304 behavior,Implementation subtask for HTTP cache optimization.,EPIC-7,FF-703,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Sub-task,FF-703-3,Benchmark request reduction,Implementation subtask for HTTP cache optimization.,EPIC-7,FF-703,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Story,FF-703,HTTP cache optimization,Sprint 7 work in Caching & Polling.,EPIC-7,,Sprint 7,High,3,Story DoD satisfied,Caching & Polling,
+Sub-task,FF-704-1,Run Redis locally,Implementation subtask for Redis experiment.,EPIC-7,FF-704,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Sub-task,FF-704-2,Implement shared cache adapter,Implementation subtask for Redis experiment.,EPIC-7,FF-704,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Sub-task,FF-704-3,Document when Redis helps,Implementation subtask for Redis experiment.,EPIC-7,FF-704,Sprint 7,High,1,"Implemented, tested, documented",Caching & Polling,See story
+Story,FF-704,Redis experiment,Sprint 7 work in Caching & Polling.,EPIC-7,,Sprint 7,High,3,Story DoD satisfied,Caching & Polling,
+Sub-task,FF-801-1,Create stream endpoint,Implementation subtask for SSE stream.,EPIC-8,FF-801,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Sub-task,FF-801-2,Define event schema,Implementation subtask for SSE stream.,EPIC-8,FF-801,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Sub-task,FF-801-3,Handle client disconnects,Implementation subtask for SSE stream.,EPIC-8,FF-801,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Story,FF-801,SSE stream,Sprint 8 work in SSE & Consistency.,EPIC-8,,Sprint 8,High,3,Story DoD satisfied,SSE & Consistency,
+Sub-task,FF-802-1,Connect to SSE,Implementation subtask for SDK stream client.,EPIC-8,FF-802,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Sub-task,FF-802-2,Update snapshot from events,Implementation subtask for SDK stream client.,EPIC-8,FF-802,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Sub-task,FF-802-3,Add stream status diagnostics,Implementation subtask for SDK stream client.,EPIC-8,FF-802,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Story,FF-802,SDK stream client,Sprint 8 work in SSE & Consistency.,EPIC-8,,Sprint 8,High,3,Story DoD satisfied,SSE & Consistency,
+Sub-task,FF-803-1,Exponential backoff,Implementation subtask for Reconnect behavior.,EPIC-8,FF-803,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Sub-task,FF-803-2,Catch-up bootstrap,Implementation subtask for Reconnect behavior.,EPIC-8,FF-803,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Sub-task,FF-803-3,Test connection interruption,Implementation subtask for Reconnect behavior.,EPIC-8,FF-803,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Story,FF-803,Reconnect behavior,Sprint 8 work in SSE & Consistency.,EPIC-8,,Sprint 8,High,3,Story DoD satisfied,SSE & Consistency,
+Sub-task,FF-804-1,Reject stale versions,Implementation subtask for Consistency controls.,EPIC-8,FF-804,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Sub-task,FF-804-2,Handle duplicates,Implementation subtask for Consistency controls.,EPIC-8,FF-804,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Sub-task,FF-804-3,Test out-of-order events,Implementation subtask for Consistency controls.,EPIC-8,FF-804,Sprint 8,High,1,"Implemented, tested, documented",SSE & Consistency,See story
+Story,FF-804,Consistency controls,Sprint 8 work in SSE & Consistency.,EPIC-8,,Sprint 8,High,3,Story DoD satisfied,SSE & Consistency,
+Sub-task,FF-901-1,Add request logs,Implementation subtask for Structured observability.,EPIC-9,FF-901,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Sub-task,FF-901-2,Add evaluation telemetry,Implementation subtask for Structured observability.,EPIC-9,FF-901,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Sub-task,FF-901-3,Add propagation metrics,Implementation subtask for Structured observability.,EPIC-9,FF-901,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Story,FF-901,Structured observability,"Sprint 9 work in Observability, Resilience & Load.",EPIC-9,,Sprint 9,High,3,Story DoD satisfied,"Observability, Resilience & Load",
+Sub-task,FF-902-1,Instrument service boundaries,Implementation subtask for Tracing/metrics.,EPIC-9,FF-902,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Sub-task,FF-902-2,Expose latency metrics,Implementation subtask for Tracing/metrics.,EPIC-9,FF-902,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Sub-task,FF-902-3,Measure propagation delay,Implementation subtask for Tracing/metrics.,EPIC-9,FF-902,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Story,FF-902,Tracing/metrics,"Sprint 9 work in Observability, Resilience & Load.",EPIC-9,,Sprint 9,High,3,Story DoD satisfied,"Observability, Resilience & Load",
+Sub-task,FF-903-1,Break database,Implementation subtask for Failure injection.,EPIC-9,FF-903,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Sub-task,FF-903-2,Break stream connection,Implementation subtask for Failure injection.,EPIC-9,FF-903,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Sub-task,FF-903-3,Test stale-cache fallback,Implementation subtask for Failure injection.,EPIC-9,FF-903,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Story,FF-903,Failure injection,"Sprint 9 work in Observability, Resilience & Load.",EPIC-9,,Sprint 9,High,3,Story DoD satisfied,"Observability, Resilience & Load",
+Sub-task,FF-904-1,Create Locust scenarios,Implementation subtask for Load testing.,EPIC-9,FF-904,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Sub-task,FF-904-2,Measure p50/p95/p99,Implementation subtask for Load testing.,EPIC-9,FF-904,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Sub-task,FF-904-3,Write performance report,Implementation subtask for Load testing.,EPIC-9,FF-904,Sprint 9,High,1,"Implemented, tested, documented","Observability, Resilience & Load",See story
+Story,FF-904,Load testing,"Sprint 9 work in Observability, Resilience & Load.",EPIC-9,,Sprint 9,High,3,Story DoD satisfied,"Observability, Resilience & Load",
+Sub-task,FF-1001-1,Create budget/alert,Implementation subtask for Cost guardrails.,EPIC-10,FF-1001,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Sub-task,FF-1001-2,Document free-tier assumptions,Implementation subtask for Cost guardrails.,EPIC-10,FF-1001,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Sub-task,FF-1001-3,Write cleanup checklist,Implementation subtask for Cost guardrails.,EPIC-10,FF-1001,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Story,FF-1001,Cost guardrails,Sprint 10 work in Terraform & GCP Foundation.,EPIC-10,,Sprint 10,High,3,Story DoD satisfied,Terraform & GCP Foundation,
+Sub-task,FF-1002-1,Create provider/module layout,Implementation subtask for Terraform foundation.,EPIC-10,FF-1002,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Sub-task,FF-1002-2,Create state configuration,Implementation subtask for Terraform foundation.,EPIC-10,FF-1002,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Sub-task,FF-1002-3,Add variables/outputs,Implementation subtask for Terraform foundation.,EPIC-10,FF-1002,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Story,FF-1002,Terraform foundation,Sprint 10 work in Terraform & GCP Foundation.,EPIC-10,,Sprint 10,High,3,Story DoD satisfied,Terraform & GCP Foundation,
+Sub-task,FF-1003-1,Create repository,Implementation subtask for Artifact Registry.,EPIC-10,FF-1003,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Sub-task,FF-1003-2,Build container locally,Implementation subtask for Artifact Registry.,EPIC-10,FF-1003,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Sub-task,FF-1003-3,Push versioned image,Implementation subtask for Artifact Registry.,EPIC-10,FF-1003,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Story,FF-1003,Artifact Registry,Sprint 10 work in Terraform & GCP Foundation.,EPIC-10,,Sprint 10,High,3,Story DoD satisfied,Terraform & GCP Foundation,
+Sub-task,FF-1004-1,Deploy stateless API,Implementation subtask for Cloud Run foundation.,EPIC-10,FF-1004,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Sub-task,FF-1004-2,Configure environment variables,Implementation subtask for Cloud Run foundation.,EPIC-10,FF-1004,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Sub-task,FF-1004-3,Validate scale-to-zero behavior,Implementation subtask for Cloud Run foundation.,EPIC-10,FF-1004,Sprint 10,High,1,"Implemented, tested, documented",Terraform & GCP Foundation,See story
+Story,FF-1004,Cloud Run foundation,Sprint 10 work in Terraform & GCP Foundation.,EPIC-10,,Sprint 10,High,3,Story DoD satisfied,Terraform & GCP Foundation,
+Sub-task,FF-1101-1,Map local domain to documents,Implementation subtask for Firestore adapter.,EPIC-11,FF-1101,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Sub-task,FF-1101-2,Implement repository methods,Implementation subtask for Firestore adapter.,EPIC-11,FF-1101,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Sub-task,FF-1101-3,Run parity tests vs PostgreSQL,Implementation subtask for Firestore adapter.,EPIC-11,FF-1101,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Story,FF-1101,Firestore adapter,"Sprint 11 work in Firestore, Pub/Sub & IAM.",EPIC-11,,Sprint 11,High,3,Story DoD satisfied,"Firestore, Pub/Sub & IAM",
+Sub-task,FF-1102-1,Create topic/subscription,Implementation subtask for Pub/Sub propagation.,EPIC-11,FF-1102,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Sub-task,FF-1102-2,Publish configuration events,Implementation subtask for Pub/Sub propagation.,EPIC-11,FF-1102,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Sub-task,FF-1102-3,Consume and handle duplicates,Implementation subtask for Pub/Sub propagation.,EPIC-11,FF-1102,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Story,FF-1102,Pub/Sub propagation,"Sprint 11 work in Firestore, Pub/Sub & IAM.",EPIC-11,,Sprint 11,High,3,Story DoD satisfied,"Firestore, Pub/Sub & IAM",
+Sub-task,FF-1103-1,Create least-privilege runtime identity,Implementation subtask for GCP IAM.,EPIC-11,FF-1103,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Sub-task,FF-1103-2,Limit Firestore permissions,Implementation subtask for GCP IAM.,EPIC-11,FF-1103,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Sub-task,FF-1103-3,Limit Pub/Sub permissions,Implementation subtask for GCP IAM.,EPIC-11,FF-1103,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Story,FF-1103,GCP IAM,"Sprint 11 work in Firestore, Pub/Sub & IAM.",EPIC-11,,Sprint 11,High,3,Story DoD satisfied,"Firestore, Pub/Sub & IAM",
+Sub-task,FF-1104-1,Configure useful logs,Implementation subtask for Cloud observability.,EPIC-11,FF-1104,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Sub-task,FF-1104-2,Validate log volume,Implementation subtask for Cloud observability.,EPIC-11,FF-1104,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Sub-task,FF-1104-3,Create basic operational dashboard/queries,Implementation subtask for Cloud observability.,EPIC-11,FF-1104,Sprint 11,High,1,"Implemented, tested, documented","Firestore, Pub/Sub & IAM",See story
+Story,FF-1104,Cloud observability,"Sprint 11 work in Firestore, Pub/Sub & IAM.",EPIC-11,,Sprint 11,High,3,Story DoD satisfied,"Firestore, Pub/Sub & IAM",
+Sub-task,FF-1201-1,Lint workflow,Implementation subtask for GitHub Actions CI.,EPIC-12,FF-1201,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Sub-task,FF-1201-2,Unit/integration test workflow,Implementation subtask for GitHub Actions CI.,EPIC-12,FF-1201,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Sub-task,FF-1201-3,Build artifact workflow,Implementation subtask for GitHub Actions CI.,EPIC-12,FF-1201,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Story,FF-1201,GitHub Actions CI,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.",EPIC-12,,Sprint 12,High,3,Story DoD satisfied,"CI/CD, Cloud Validation & Finalization",
+Sub-task,FF-1202-1,Deploy Cloud Run from trusted branch,Implementation subtask for Deployment workflow.,EPIC-12,FF-1202,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Sub-task,FF-1202-2,Use environment configuration,Implementation subtask for Deployment workflow.,EPIC-12,FF-1202,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Sub-task,FF-1202-3,Add rollback procedure,Implementation subtask for Deployment workflow.,EPIC-12,FF-1202,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Story,FF-1202,Deployment workflow,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.",EPIC-12,,Sprint 12,High,3,Story DoD satisfied,"CI/CD, Cloud Validation & Finalization",
+Sub-task,FF-1203-1,Test cloud SDK bootstrap,Implementation subtask for End-to-end validation.,EPIC-12,FF-1203,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Sub-task,FF-1203-2,Test Pub/Sub/SSE propagation,Implementation subtask for End-to-end validation.,EPIC-12,FF-1203,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Sub-task,FF-1203-3,Test failure fallback,Implementation subtask for End-to-end validation.,EPIC-12,FF-1203,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Story,FF-1203,End-to-end validation,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.",EPIC-12,,Sprint 12,High,3,Story DoD satisfied,"CI/CD, Cloud Validation & Finalization",
+Sub-task,FF-1204-1,Review ADRs,Implementation subtask for Final engineering package.,EPIC-12,FF-1204,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Sub-task,FF-1204-2,Write architecture/benchmark report,Implementation subtask for Final engineering package.,EPIC-12,FF-1204,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Sub-task,FF-1204-3,Record final demo and retrospective,Implementation subtask for Final engineering package.,EPIC-12,FF-1204,Sprint 12,High,1,"Implemented, tested, documented","CI/CD, Cloud Validation & Finalization",See story
+Story,FF-1204,Final engineering package,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.",EPIC-12,,Sprint 12,High,3,Story DoD satisfied,"CI/CD, Cloud Validation & Finalization",
