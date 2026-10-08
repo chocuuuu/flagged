@@ -1,0 +1,1825 @@
+﻿Work item ID,Work type,Summary,Description,Parent,Priority,Story Points
+1001,Epic,Foundation,"Flagged epic Foundation.
+
+Learning Objective:
+Foundation",,High,
+1002,Epic,Backend & Data,"Flagged epic Backend & Data.
+
+Learning Objective:
+Backend & Data",,High,
+1003,Epic,Flag Management,"Flagged epic Flag Management.
+
+Learning Objective:
+Flag Management",,High,
+1004,Epic,Dashboard,"Flagged epic Dashboard.
+
+Learning Objective:
+Dashboard",,High,
+1005,Epic,SDK,"Flagged epic SDK.
+
+Learning Objective:
+SDK",,High,
+1006,Epic,Evaluation & Targeting,"Flagged epic Evaluation & Targeting.
+
+Learning Objective:
+Evaluation & Targeting",,High,
+1007,Epic,Caching & Polling,"Flagged epic Caching & Polling.
+
+Learning Objective:
+Caching & Polling",,High,
+1008,Epic,Streaming & Consistency,"Flagged epic Streaming & Consistency.
+
+Learning Objective:
+Streaming & Consistency",,High,
+1009,Epic,Observability & Resilience,"Flagged epic Observability & Resilience.
+
+Learning Objective:
+Observability & Resilience",,High,
+1010,Epic,GCP Infrastructure,"Flagged epic GCP Infrastructure.
+
+Learning Objective:
+GCP Infrastructure",,High,
+1011,Epic,Cloud Data & Events,"Flagged epic Cloud Data & Events.
+
+Learning Objective:
+Cloud Data & Events",,High,
+1012,Epic,CI/CD & Finalization,"Flagged epic CI/CD & Finalization.
+
+Learning Objective:
+CI/CD & Finalization",,High,
+2001,Story,Project charter and glossary,"Sprint 1 work in Foundation & Domain.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Foundation & Domain",1001,High,3
+2002,Story,Repository bootstrap,"Sprint 1 work in Foundation & Domain.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Foundation & Domain",1001,High,3
+2003,Story,Local infrastructure,"Sprint 1 work in Foundation & Domain.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Foundation & Domain",1001,High,3
+2004,Story,Engineering workflow,"Sprint 1 work in Foundation & Domain.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Foundation & Domain",1001,High,3
+2005,Story,FastAPI foundation,"Sprint 2 work in Python API & Database.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Python API & Database",1002,High,3
+2006,Story,Database layer,"Sprint 2 work in Python API & Database.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Python API & Database",1002,High,3
+2007,Story,Core schema,"Sprint 2 work in Python API & Database.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Python API & Database",1002,High,3
+2008,Story,API tests,"Sprint 2 work in Python API & Database.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Python API & Database",1002,High,3
+2009,Story,Project/environment CRUD,"Sprint 3 work in Flag Management & Audit.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Flag Management & Audit",1003,High,3
+2010,Story,Feature flag CRUD,"Sprint 3 work in Flag Management & Audit.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Flag Management & Audit",1003,High,3
+2011,Story,Audit trail,"Sprint 3 work in Flag Management & Audit.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Flag Management & Audit",1003,High,3
+2012,Story,Admin authentication,"Sprint 3 work in Flag Management & Audit.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Flag Management & Audit",1003,High,3
+2013,Story,Astro/React shell,"Sprint 4 work in Dashboard.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Dashboard",1004,High,3
+2014,Story,Project/environment UI,"Sprint 4 work in Dashboard.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Dashboard",1004,High,3
+2015,Story,Flag management UI,"Sprint 4 work in Dashboard.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Dashboard",1004,High,3
+2016,Story,Audit UX,"Sprint 4 work in Dashboard.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Dashboard",1004,High,3
+2017,Story,SDK package,"Sprint 5 work in SDK & Local Evaluation.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+SDK & Local Evaluation",1005,High,3
+2018,Story,Configuration bootstrap,"Sprint 5 work in SDK & Local Evaluation.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+SDK & Local Evaluation",1005,High,3
+2019,Story,Evaluation engine,"Sprint 5 work in SDK & Local Evaluation.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+SDK & Local Evaluation",1005,High,3
+2020,Story,Demo Store integration,"Sprint 5 work in SDK & Local Evaluation.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+SDK & Local Evaluation",1005,High,3
+2021,Story,Client keys,"Sprint 6 work in Environments, Rollouts & Targeting.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Environments, Rollouts & Targeting",1006,High,3
+2022,Story,Environment isolation,"Sprint 6 work in Environments, Rollouts & Targeting.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Environments, Rollouts & Targeting",1006,High,3
+2023,Story,Percentage rollout,"Sprint 6 work in Environments, Rollouts & Targeting.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Environments, Rollouts & Targeting",1006,High,3
+2024,Story,Targeting rules,"Sprint 6 work in Environments, Rollouts & Targeting.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Environments, Rollouts & Targeting",1006,High,3
+2025,Story,In-memory configuration cache,"Sprint 7 work in Caching & Polling.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Caching & Polling",1007,High,3
+2026,Story,Polling,"Sprint 7 work in Caching & Polling.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Caching & Polling",1007,High,3
+2027,Story,HTTP cache optimization,"Sprint 7 work in Caching & Polling.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Caching & Polling",1007,High,3
+2028,Story,Redis experiment,"Sprint 7 work in Caching & Polling.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Caching & Polling",1007,High,3
+2029,Story,SSE stream,"Sprint 8 work in SSE & Consistency.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+SSE & Consistency",1008,High,3
+2030,Story,SDK stream client,"Sprint 8 work in SSE & Consistency.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+SSE & Consistency",1008,High,3
+2031,Story,Reconnect behavior,"Sprint 8 work in SSE & Consistency.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+SSE & Consistency",1008,High,3
+2032,Story,Consistency controls,"Sprint 8 work in SSE & Consistency.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+SSE & Consistency",1008,High,3
+2033,Story,Structured observability,"Sprint 9 work in Observability, Resilience & Load.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Observability, Resilience & Load",1009,High,3
+2034,Story,Tracing/metrics,"Sprint 9 work in Observability, Resilience & Load.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Observability, Resilience & Load",1009,High,3
+2035,Story,Failure injection,"Sprint 9 work in Observability, Resilience & Load.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Observability, Resilience & Load",1009,High,3
+2036,Story,Load testing,"Sprint 9 work in Observability, Resilience & Load.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Observability, Resilience & Load",1009,High,3
+2037,Story,Cost guardrails,"Sprint 10 work in Terraform & GCP Foundation.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Terraform & GCP Foundation",1010,High,3
+2038,Story,Terraform foundation,"Sprint 10 work in Terraform & GCP Foundation.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Terraform & GCP Foundation",1010,High,3
+2039,Story,Artifact Registry,"Sprint 10 work in Terraform & GCP Foundation.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Terraform & GCP Foundation",1010,High,3
+2040,Story,Cloud Run foundation,"Sprint 10 work in Terraform & GCP Foundation.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Terraform & GCP Foundation",1010,High,3
+2041,Story,Firestore adapter,"Sprint 11 work in Firestore, Pub/Sub & IAM.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Firestore, Pub/Sub & IAM",1011,High,3
+2042,Story,Pub/Sub propagation,"Sprint 11 work in Firestore, Pub/Sub & IAM.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Firestore, Pub/Sub & IAM",1011,High,3
+2043,Story,GCP IAM,"Sprint 11 work in Firestore, Pub/Sub & IAM.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Firestore, Pub/Sub & IAM",1011,High,3
+2044,Story,Cloud observability,"Sprint 11 work in Firestore, Pub/Sub & IAM.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+Firestore, Pub/Sub & IAM",1011,High,3
+2045,Story,GitHub Actions CI,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization",1012,High,3
+2046,Story,Deployment workflow,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization",1012,High,3
+2047,Story,End-to-end validation,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization",1012,High,3
+2048,Story,Final engineering package,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.
+
+Acceptance Criteria:
+Story DoD satisfied
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization",1012,High,3
+3001,Sub-task,Write problem statement,"Implementation subtask for Project charter and glossary.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2001,High,1
+3002,Sub-task,Define control/data plane terms,"Implementation subtask for Project charter and glossary.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2001,High,1
+3003,Sub-task,Write first architecture sketch,"Implementation subtask for Project charter and glossary.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2001,High,1
+3004,Sub-task,Create monorepo structure,"Implementation subtask for Repository bootstrap.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2002,High,1
+3005,Sub-task,Configure Python tooling,"Implementation subtask for Repository bootstrap.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2002,High,1
+3006,Sub-task,Configure frontend/SDK workspace,"Implementation subtask for Repository bootstrap.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2002,High,1
+3007,Sub-task,Create Docker Compose,"Implementation subtask for Local infrastructure.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2003,High,1
+3008,Sub-task,Run PostgreSQL locally,"Implementation subtask for Local infrastructure.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2003,High,1
+3009,Sub-task,Add health checks and startup documentation,"Implementation subtask for Local infrastructure.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2003,High,1
+3010,Sub-task,Set branch strategy,"Implementation subtask for Engineering workflow.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2004,High,1
+3011,Sub-task,Add commit conventions,"Implementation subtask for Engineering workflow.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2004,High,1
+3012,Sub-task,Create issue/PR templates,"Implementation subtask for Engineering workflow.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Foundation & Domain
+
+Dependencies:
+See story",2004,High,1
+3013,Sub-task,Create app factory,"Implementation subtask for FastAPI foundation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2005,High,1
+3014,Sub-task,Add health/readiness endpoints,"Implementation subtask for FastAPI foundation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2005,High,1
+3015,Sub-task,Configure structured error handling,"Implementation subtask for FastAPI foundation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2005,High,1
+3016,Sub-task,Configure SQLAlchemy,"Implementation subtask for Database layer.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2006,High,1
+3017,Sub-task,Create Alembic baseline,"Implementation subtask for Database layer.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2006,High,1
+3018,Sub-task,Implement DB session lifecycle,"Implementation subtask for Database layer.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2006,High,1
+3019,Sub-task,Create projects/environments tables,"Implementation subtask for Core schema.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2007,High,1
+3020,Sub-task,Create feature_flags table,"Implementation subtask for Core schema.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2007,High,1
+3021,Sub-task,Add uniqueness/index constraints,"Implementation subtask for Core schema.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2007,High,1
+3022,Sub-task,Create pytest fixtures,"Implementation subtask for API tests.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2008,High,1
+3023,Sub-task,Write CRUD integration tests,"Implementation subtask for API tests.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2008,High,1
+3024,Sub-task,Add invalid-input tests,"Implementation subtask for API tests.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Python API & Database
+
+Dependencies:
+See story",2008,High,1
+3025,Sub-task,Build create/list/update/delete endpoints,"Implementation subtask for Project/environment CRUD.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2009,High,1
+3026,Sub-task,Validate environment keys,"Implementation subtask for Project/environment CRUD.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2009,High,1
+3027,Sub-task,Document endpoint behavior,"Implementation subtask for Project/environment CRUD.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2009,High,1
+3028,Sub-task,Build create/list/update/delete,"Implementation subtask for Feature flag CRUD.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2010,High,1
+3029,Sub-task,Add version incrementing,"Implementation subtask for Feature flag CRUD.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2010,High,1
+3030,Sub-task,Add optimistic update protection,"Implementation subtask for Feature flag CRUD.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2010,High,1
+3031,Sub-task,Create audit_events table,"Implementation subtask for Audit trail.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2011,High,1
+3032,Sub-task,Record mutations,"Implementation subtask for Audit trail.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2011,High,1
+3033,Sub-task,Add audit read endpoint,"Implementation subtask for Audit trail.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2011,High,1
+3034,Sub-task,Implement login,"Implementation subtask for Admin authentication.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2012,High,1
+3035,Sub-task,Protect admin routes,"Implementation subtask for Admin authentication.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2012,High,1
+3036,Sub-task,Add authorization tests,"Implementation subtask for Admin authentication.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Flag Management & Audit
+
+Dependencies:
+See story",2012,High,1
+3037,Sub-task,Create dashboard layout,"Implementation subtask for Astro/React shell.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2013,High,1
+3038,Sub-task,Add routing/navigation,"Implementation subtask for Astro/React shell.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2013,High,1
+3039,Sub-task,Configure API client,"Implementation subtask for Astro/React shell.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2013,High,1
+3040,Sub-task,Project list,"Implementation subtask for Project/environment UI.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2014,High,1
+3041,Sub-task,Environment selector,"Implementation subtask for Project/environment UI.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2014,High,1
+3042,Sub-task,Environment state/loading/error UI,"Implementation subtask for Project/environment UI.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2014,High,1
+3043,Sub-task,Flag table,"Implementation subtask for Flag management UI.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2015,High,1
+3044,Sub-task,Create/edit form,"Implementation subtask for Flag management UI.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2015,High,1
+3045,Sub-task,Enable/disable control,"Implementation subtask for Flag management UI.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2015,High,1
+3046,Sub-task,Audit history page,"Implementation subtask for Audit UX.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2016,High,1
+3047,Sub-task,Before/after display,"Implementation subtask for Audit UX.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2016,High,1
+3048,Sub-task,Error and empty states,"Implementation subtask for Audit UX.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Dashboard
+
+Dependencies:
+See story",2016,High,1
+3049,Sub-task,Create package structure,"Implementation subtask for SDK package.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2017,High,1
+3050,Sub-task,Define public SDK API,"Implementation subtask for SDK package.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2017,High,1
+3051,Sub-task,Add build/test pipeline,"Implementation subtask for SDK package.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2017,High,1
+3052,Sub-task,Implement config fetch,"Implementation subtask for Configuration bootstrap.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2018,High,1
+3053,Sub-task,Validate config schema,"Implementation subtask for Configuration bootstrap.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2018,High,1
+3054,Sub-task,Store immutable snapshot,"Implementation subtask for Configuration bootstrap.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2018,High,1
+3055,Sub-task,Boolean evaluation,"Implementation subtask for Evaluation engine.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2019,High,1
+3056,Sub-task,Default/fallback evaluation,"Implementation subtask for Evaluation engine.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2019,High,1
+3057,Sub-task,Evaluation unit-test matrix,"Implementation subtask for Evaluation engine.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2019,High,1
+3058,Sub-task,Integrate SDK,"Implementation subtask for Demo Store integration.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2020,High,1
+3059,Sub-task,Add new checkout flag,"Implementation subtask for Demo Store integration.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2020,High,1
+3060,Sub-task,Demonstrate live switch without rebuild,"Implementation subtask for Demo Store integration.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SDK & Local Evaluation
+
+Dependencies:
+See story",2020,High,1
+3061,Sub-task,Generate scoped keys,"Implementation subtask for Client keys.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2021,High,1
+3062,Sub-task,Hash stored secrets,"Implementation subtask for Client keys.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2021,High,1
+3063,Sub-task,Build revoke flow,"Implementation subtask for Client keys.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2021,High,1
+3064,Sub-task,Prevent cross-environment reads,"Implementation subtask for Environment isolation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2022,High,1
+3065,Sub-task,Test staging/production separation,"Implementation subtask for Environment isolation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2022,High,1
+3066,Sub-task,Add SDK environment configuration,"Implementation subtask for Environment isolation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2022,High,1
+3067,Sub-task,Implement stable hashing,"Implementation subtask for Percentage rollout.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2023,High,1
+3068,Sub-task,Build 0/50/100% cases,"Implementation subtask for Percentage rollout.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2023,High,1
+3069,Sub-task,Test deterministic user assignment,"Implementation subtask for Percentage rollout.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2023,High,1
+3070,Sub-task,Define v1 rule model,"Implementation subtask for Targeting rules.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2024,High,1
+3071,Sub-task,Implement equals/contains,"Implementation subtask for Targeting rules.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2024,High,1
+3072,Sub-task,Test rule precedence,"Implementation subtask for Targeting rules.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Environments, Rollouts & Targeting
+
+Dependencies:
+See story",2024,High,1
+3073,Sub-task,Atomic snapshot replacement,"Implementation subtask for In-memory configuration cache.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2025,High,1
+3074,Sub-task,Track version/age,"Implementation subtask for In-memory configuration cache.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2025,High,1
+3075,Sub-task,Expose cache diagnostics,"Implementation subtask for In-memory configuration cache.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2025,High,1
+3076,Sub-task,Add polling scheduler,"Implementation subtask for Polling.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2026,High,1
+3077,Sub-task,Handle timeouts/errors,"Implementation subtask for Polling.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2026,High,1
+3078,Sub-task,Measure stale window,"Implementation subtask for Polling.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2026,High,1
+3079,Sub-task,Implement ETag/version conditional requests,"Implementation subtask for HTTP cache optimization.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2027,High,1
+3080,Sub-task,Test 304 behavior,"Implementation subtask for HTTP cache optimization.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2027,High,1
+3081,Sub-task,Benchmark request reduction,"Implementation subtask for HTTP cache optimization.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2027,High,1
+3082,Sub-task,Run Redis locally,"Implementation subtask for Redis experiment.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2028,High,1
+3083,Sub-task,Implement shared cache adapter,"Implementation subtask for Redis experiment.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2028,High,1
+3084,Sub-task,Document when Redis helps,"Implementation subtask for Redis experiment.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Caching & Polling
+
+Dependencies:
+See story",2028,High,1
+3085,Sub-task,Create stream endpoint,"Implementation subtask for SSE stream.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2029,High,1
+3086,Sub-task,Define event schema,"Implementation subtask for SSE stream.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2029,High,1
+3087,Sub-task,Handle client disconnects,"Implementation subtask for SSE stream.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2029,High,1
+3088,Sub-task,Connect to SSE,"Implementation subtask for SDK stream client.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2030,High,1
+3089,Sub-task,Update snapshot from events,"Implementation subtask for SDK stream client.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2030,High,1
+3090,Sub-task,Add stream status diagnostics,"Implementation subtask for SDK stream client.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2030,High,1
+3091,Sub-task,Exponential backoff,"Implementation subtask for Reconnect behavior.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2031,High,1
+3092,Sub-task,Catch-up bootstrap,"Implementation subtask for Reconnect behavior.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2031,High,1
+3093,Sub-task,Test connection interruption,"Implementation subtask for Reconnect behavior.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2031,High,1
+3094,Sub-task,Reject stale versions,"Implementation subtask for Consistency controls.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2032,High,1
+3095,Sub-task,Handle duplicates,"Implementation subtask for Consistency controls.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2032,High,1
+3096,Sub-task,Test out-of-order events,"Implementation subtask for Consistency controls.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+SSE & Consistency
+
+Dependencies:
+See story",2032,High,1
+3097,Sub-task,Add request logs,"Implementation subtask for Structured observability.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2033,High,1
+3098,Sub-task,Add evaluation telemetry,"Implementation subtask for Structured observability.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2033,High,1
+3099,Sub-task,Add propagation metrics,"Implementation subtask for Structured observability.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2033,High,1
+3100,Sub-task,Instrument service boundaries,"Implementation subtask for Tracing/metrics.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2034,High,1
+3101,Sub-task,Expose latency metrics,"Implementation subtask for Tracing/metrics.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2034,High,1
+3102,Sub-task,Measure propagation delay,"Implementation subtask for Tracing/metrics.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2034,High,1
+3103,Sub-task,Break database,"Implementation subtask for Failure injection.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2035,High,1
+3104,Sub-task,Break stream connection,"Implementation subtask for Failure injection.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2035,High,1
+3105,Sub-task,Test stale-cache fallback,"Implementation subtask for Failure injection.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2035,High,1
+3106,Sub-task,Create Locust scenarios,"Implementation subtask for Load testing.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2036,High,1
+3107,Sub-task,Measure p50/p95/p99,"Implementation subtask for Load testing.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2036,High,1
+3108,Sub-task,Write performance report,"Implementation subtask for Load testing.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Observability, Resilience & Load
+
+Dependencies:
+See story",2036,High,1
+3109,Sub-task,Create budget/alert,"Implementation subtask for Cost guardrails.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2037,High,1
+3110,Sub-task,Document free-tier assumptions,"Implementation subtask for Cost guardrails.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2037,High,1
+3111,Sub-task,Write cleanup checklist,"Implementation subtask for Cost guardrails.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2037,High,1
+3112,Sub-task,Create provider/module layout,"Implementation subtask for Terraform foundation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2038,High,1
+3113,Sub-task,Create state configuration,"Implementation subtask for Terraform foundation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2038,High,1
+3114,Sub-task,Add variables/outputs,"Implementation subtask for Terraform foundation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2038,High,1
+3115,Sub-task,Create repository,"Implementation subtask for Artifact Registry.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2039,High,1
+3116,Sub-task,Build container locally,"Implementation subtask for Artifact Registry.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2039,High,1
+3117,Sub-task,Push versioned image,"Implementation subtask for Artifact Registry.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2039,High,1
+3118,Sub-task,Deploy stateless API,"Implementation subtask for Cloud Run foundation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2040,High,1
+3119,Sub-task,Configure environment variables,"Implementation subtask for Cloud Run foundation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2040,High,1
+3120,Sub-task,Validate scale-to-zero behavior,"Implementation subtask for Cloud Run foundation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Terraform & GCP Foundation
+
+Dependencies:
+See story",2040,High,1
+3121,Sub-task,Map local domain to documents,"Implementation subtask for Firestore adapter.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2041,High,1
+3122,Sub-task,Implement repository methods,"Implementation subtask for Firestore adapter.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2041,High,1
+3123,Sub-task,Run parity tests vs PostgreSQL,"Implementation subtask for Firestore adapter.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2041,High,1
+3124,Sub-task,Create topic/subscription,"Implementation subtask for Pub/Sub propagation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2042,High,1
+3125,Sub-task,Publish configuration events,"Implementation subtask for Pub/Sub propagation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2042,High,1
+3126,Sub-task,Consume and handle duplicates,"Implementation subtask for Pub/Sub propagation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2042,High,1
+3127,Sub-task,Create least-privilege runtime identity,"Implementation subtask for GCP IAM.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2043,High,1
+3128,Sub-task,Limit Firestore permissions,"Implementation subtask for GCP IAM.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2043,High,1
+3129,Sub-task,Limit Pub/Sub permissions,"Implementation subtask for GCP IAM.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2043,High,1
+3130,Sub-task,Configure useful logs,"Implementation subtask for Cloud observability.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2044,High,1
+3131,Sub-task,Validate log volume,"Implementation subtask for Cloud observability.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2044,High,1
+3132,Sub-task,Create basic operational dashboard/queries,"Implementation subtask for Cloud observability.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+Firestore, Pub/Sub & IAM
+
+Dependencies:
+See story",2044,High,1
+3133,Sub-task,Lint workflow,"Implementation subtask for GitHub Actions CI.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2045,High,1
+3134,Sub-task,Unit/integration test workflow,"Implementation subtask for GitHub Actions CI.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2045,High,1
+3135,Sub-task,Build artifact workflow,"Implementation subtask for GitHub Actions CI.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2045,High,1
+3136,Sub-task,Deploy Cloud Run from trusted branch,"Implementation subtask for Deployment workflow.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2046,High,1
+3137,Sub-task,Use environment configuration,"Implementation subtask for Deployment workflow.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2046,High,1
+3138,Sub-task,Add rollback procedure,"Implementation subtask for Deployment workflow.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2046,High,1
+3139,Sub-task,Test cloud SDK bootstrap,"Implementation subtask for End-to-end validation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2047,High,1
+3140,Sub-task,Test Pub/Sub/SSE propagation,"Implementation subtask for End-to-end validation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2047,High,1
+3141,Sub-task,Test failure fallback,"Implementation subtask for End-to-end validation.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2047,High,1
+3142,Sub-task,Review ADRs,"Implementation subtask for Final engineering package.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2048,High,1
+3143,Sub-task,Write architecture/benchmark report,"Implementation subtask for Final engineering package.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2048,High,1
+3144,Sub-task,Record final demo and retrospective,"Implementation subtask for Final engineering package.
+
+Acceptance Criteria:
+Implemented, tested, documented
+
+Learning Objective:
+CI/CD, Cloud Validation & Finalization
+
+Dependencies:
+See story",2048,High,1
