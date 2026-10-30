@@ -1,6 +1,6 @@
 # ADR-003: Python + FastAPI for the control plane
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

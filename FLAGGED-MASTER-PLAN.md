@@ -1086,7 +1086,7 @@ UNIQUE(project_id, key)
 | description | text | nullable |
 | type | varchar | boolean/variant |
 | enabled | boolean | base state |
-| rollout_percentage | numeric | 0–100 |
+| rollout_basis_points | integer | 0–10000 inclusive; canonical rollout value |
 | version | bigint | optimistic version |
 | created_at | timestamptz | required |
 | updated_at | timestamptz | required |
@@ -1108,6 +1108,8 @@ UNIQUE(environment_id, key)
 | value | text | comparison target |
 | priority | integer | evaluation order |
 | enabled | boolean | rule switch |
+
+Targeting-rule priorities need not be unique. Enabled rules are ordered by ascending priority, then by canonical lowercase UUID rule ID in ascending ordinal/bytewise string order. The admin API and SDK payload represent rollout as integer basis points.
 
 ## client_keys
 
@@ -1147,15 +1149,14 @@ SDK bootstrap response:
 ```json
 {
   "environment": "production",
-  "version": 42,
-  "generatedAt": "2026-01-01T00:00:00Z",
+  "revision": 42,
   "flags": [
     {
       "key": "new_checkout",
       "type": "boolean",
       "enabled": true,
       "rollout": {
-        "percentage": 10
+        "basisPoints": 1000
       },
       "rules": []
     }
@@ -1422,7 +1423,7 @@ true / false / variant
 ```text
 SDK starts
    ↓
-GET /sdk/config
+GET /v1/sdk/projects/{projectKey}/environments/{environmentKey}/config
    ↓
 validate response
    ↓
@@ -1436,7 +1437,8 @@ ready
 ```text
 timer
   ↓
-GET /sdk/config?afterVersion=42
+GET /v1/sdk/projects/{projectKey}/environments/{environmentKey}/config
+If-None-Match: "config-r42"
   ↓
 new version?
   ├── no → keep snapshot
@@ -1450,15 +1452,15 @@ SDK
  │
  │ SSE connection
  ▼
-/sdk/stream
+/v1/sdk/projects/{projectKey}/environments/{environmentKey}/stream
  │
- └── CONFIG_UPDATED(version=43)
+ └── config.updated(revision=43)
          ↓
     fetch/validate config
          ↓
-    compare version
+    compare environment revision
          ↓
-    replace snapshot
+    replace snapshot if newer
 ```
 
 ---
@@ -1494,16 +1496,16 @@ This is a simple but powerful consistency guard.
 
 # 8. Percentage rollout
 
-Use a stable hash:
+Use the deterministic, cross-language bucketing contract in [ADR-020](docs/adrs/ADR-020-rule-precedence-and-rollout-bucketing.md):
 
 ```text
-bucket = hash(flagKey + subjectKey) % 100
+bucket = floor(fnv1a32(encode(flagKey, subjectKey)) * 10000 / 2^32)
 ```
 
 Then:
 
 ```text
-bucket < percentage
+bucket < rolloutBasisPoints
 ```
 
 means the user is included.

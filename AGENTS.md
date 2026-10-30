@@ -82,6 +82,14 @@ Changes to the following require an ADR:
 - deployment topology
 - repository structure
 
+## ADR lifecycle and architecture freeze gate
+
+- An ADR is `Proposed` while a decision is being evaluated, planned, or implemented. A detailed proposal is not evidence that the design works.
+- Mark an ADR `Accepted` only in the milestone that implements its decision, after the relevant behavior or infrastructure has been tested and verified. Record the implementation and verification evidence in the ADR or its linked milestone/PR.
+- When a decision is replaced, retain the original ADR and mark it `Superseded by ADR-XXX`; document the replacement decision in a new ADR.
+- Before starting a milestone that crosses an architectural boundary, run the checklist in [docs/ARCHITECTURE-FREEZE-GATE.md](docs/ARCHITECTURE-FREEZE-GATE.md). A gate may authorize a bounded local milestone while leaving unrelated cloud or later-milestone decisions explicitly deferred. It must not label the whole architecture frozen while Tier 1 decisions for the upcoming work remain unresolved.
+- A gate result records its scope, date, evidence, blockers, and deferred decisions. It does not change an ADR to `Accepted`; implementation verification does that at the point of delivery.
+
 ## Required engineering artifacts
 
 The repository should maintain:
@@ -97,6 +105,7 @@ SKILLS.md
 CLAUDE.md
 AGENTS.md
 docs/adrs/
+docs/ARCHITECTURE-FREEZE-GATE.md
 docs/runbooks/
 docs/benchmarks/
 ```

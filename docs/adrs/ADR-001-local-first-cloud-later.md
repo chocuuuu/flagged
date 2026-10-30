@@ -1,6 +1,6 @@
 # ADR-001: Local-first development and cloud-later migration
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

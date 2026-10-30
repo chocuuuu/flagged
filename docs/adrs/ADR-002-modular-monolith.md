@@ -1,6 +1,6 @@
 # ADR-002: Modular monolith before microservices
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

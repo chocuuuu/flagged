@@ -8,6 +8,8 @@ No live GCP resource is required to complete the project. Cloud architecture, Te
 
 The default path also avoids paid hosted services. Before enabling hosted CI/CD or other external services, check their current quotas and billing terms.
 
+The official [Cloud Firestore pricing page](https://cloud.google.com/firestore/pricing) was checked on 2026-10-30: it lists a 50,000-document-read daily free quota for one default database per project. This is a quota, not a spending cap or guarantee; named databases do not qualify. Re-check current pricing, eligibility, and billing requirements before live use.
+
 ## Default local learning path
 
 - PostgreSQL and optional Redis run locally.

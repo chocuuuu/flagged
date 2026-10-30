@@ -1,6 +1,6 @@
 # ADR-018: Single-operator admin authentication
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Context
 

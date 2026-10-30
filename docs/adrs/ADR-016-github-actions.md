@@ -1,6 +1,6 @@
 # ADR-016: GitHub Actions for CI/CD
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

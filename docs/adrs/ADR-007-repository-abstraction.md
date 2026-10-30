@@ -1,6 +1,6 @@
 # ADR-007: Persistence repository boundary
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

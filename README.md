@@ -26,6 +26,8 @@ The project is designed to be:
 7. Track demonstrated outcomes in `progress/PROGRESS.md`.
 8. Use `progress/DAILY-PLAN.md` as the detailed, non-calendar work guide.
 9. Treat the Jira sprint groupings as backlog organization, not deadlines.
+10. Run the scoped [architecture freeze gate](docs/ARCHITECTURE-FREEZE-GATE.md) before implementation work that crosses a system boundary.
+11. Review the [technical design draft](docs/TECHNICAL-DESIGN.md) for the initial product, architecture, data, and sequence diagrams.
 
 ## Project stack
 
@@ -79,6 +81,9 @@ Free tiers are quotas, not a zero-cost guarantee. Live GCP resources and hosted 
 - `progress/DAILY-PLAN.md`
 - `jira/JIRA-BACKLOG.md`
 - `docs/adrs/`
+- `docs/ARCHITECTURE-FREEZE-GATE.md` (repeatable pre-milestone gate and current review)
+- `docs/TECHNICAL-DESIGN.md` (planning draft: use cases, architecture, data, and sequence diagrams)
+- `docs/API-CONTRACT.md` (draft; proposed v1 HTTP contract)
 
 `jira/JIRA-BACKLOG.csv` is an older export and is not an authoritative planning source. Use `jira/FLAGGED-JIRA-IMPORT.csv` for the supplied Jira import data.
 
