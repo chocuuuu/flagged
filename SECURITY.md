@@ -286,9 +286,47 @@ Tools/practices:
 - dependency audit
 - secret scanning
 - GitHub secret scanning where available
-- Gitleaks
+- Gitleaks runs on pushes and pull requests in `.github/workflows/gitleaks.yml`.
 - OWASP API Security guidance
 - manual abuse tests
+
+## Protecting `main` with a GitHub ruleset
+
+The checklist to protect `main` is not effective until a ruleset is configured in
+GitHub. A repository administrator must do this in the repository settings:
+
+1. Open **Settings → Rules → Rulesets → New ruleset → New branch ruleset**.
+2. Name it `Protect main`, set **Enforcement status** to **Active**, and target
+   the `main` branch.
+3. Leave the bypass list empty so no actor is explicitly allowed to bypass the
+   ruleset.
+4. Enable **Require a pull request before merging**. Choose the required
+   approval count based on your review setup. A solo maintainer cannot approve
+   their own pull request, so requiring an approval means another reviewer must
+   be available.
+5. Enable **Require status checks to pass**. After the Gitleaks workflow has run
+   at least once, select the `Gitleaks` check. Add the project's other CI checks
+   here as they are introduced.
+6. Enable **Block force pushes** and **Restrict deletions**.
+7. Save the ruleset, then test it with a pull request containing a harmless
+   change: direct updates to `main` should be blocked and a PR should be
+   unmergeable until its required checks pass.
+
+Rulesets govern matching branches, not who can change repository settings.
+Review **Settings → Collaborators and teams** and give write/admin access only
+to people who should have it. Repository owners and administrators can change
+the ruleset or access list; avoid granting those roles to anyone whose changes
+you do not authorize. Keeping the bypass list empty prevents configured
+bypasses, but does not stop an administrator from changing the configuration.
+
+This workflow requests only read access to repository contents and does not
+write PR comments or upload scan artifacts. For a personal-account repository,
+the Gitleaks action does not need a license secret. If this repository belongs
+to a GitHub organization, configure the `GITLEAKS_LICENSE` repository secret
+using an organization license before relying on the check.
+
+If a scan finds a real secret, revoke or rotate it immediately. Removing it in
+a later commit does not make an exposed credential safe.
 
 ---
 
