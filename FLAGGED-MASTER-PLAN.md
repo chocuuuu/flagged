@@ -1,8 +1,10 @@
 # Flagged — Project Plan Package
 
+> **Historical consolidated snapshot:** this bundled export is not the active source of truth and may contain superseded schedule, cost, or architecture decisions. Use `README.md`, `PRD.md`, `COST-BOUNDARY.md`, `progress/DAILY-PLAN.md`, `progress/PROGRESS.md`, and the individual ADRs for current guidance. `jira/FLAGGED-JIRA-IMPORT.csv` is the current supplied Jira import; `jira/JIRA-BACKLOG.csv` is an older export.
+
 ## Distributed Feature Flag & Configuration Platform
 
-This package is the planning baseline for a 12-week / 60-session learning project.
+This file preserves a bundled planning snapshot. The current project uses 12 outcome-based milestones with no fixed completion date.
 
 The project is designed to be:
 
@@ -4463,4 +4465,3 @@ Consequences: CI becomes a visible part of the engineering lifecycle.
 Decision: telemetry is designed from the middle of the project rather than bolted on at the end.
 Context: latency, propagation, stale state, and failure behavior are the actual system-design learning goals.
 Consequences: the code includes measurable signals and the final report includes evidence.
-

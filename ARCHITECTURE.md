@@ -134,7 +134,7 @@ GET /sdk/config
    ↓
 validate response
    ↓
-set local version
+set local environment revision
    ↓
 ready
 ```
@@ -144,11 +144,11 @@ ready
 ```text
 timer
   ↓
-GET /sdk/config?afterVersion=42
+GET /sdk/config?afterRevision=42
   ↓
-new version?
+newer revision?
   ├── no → keep snapshot
-  └── yes → atomically replace
+  └── yes → atomically replace if newer
 ```
 
 ## Streaming
@@ -160,13 +160,13 @@ SDK
  ▼
 /sdk/stream
  │
- └── CONFIG_UPDATED(version=43)
+ └── CONFIG_UPDATED(revision=43)
          ↓
     fetch/validate config
          ↓
-    compare version
+    compare environment revision
          ↓
-    replace snapshot
+    replace snapshot if newer
 ```
 
 ---
@@ -176,8 +176,8 @@ SDK
 Suppose:
 
 ```text
-Update 42
-Update 43
+Revision 42
+Revision 43
 ```
 
 arrive in this order:
@@ -192,11 +192,11 @@ The SDK must never move backward.
 Rule:
 
 ```text
-if incoming.version <= current.version:
+if incoming.revision <= current.revision:
     ignore
 ```
 
-This is a simple but powerful consistency guard.
+The server assigns a single monotonically increasing revision per environment. Every transaction that changes client-visible configuration updates the configuration and revision together. Concurrent updates must serialize revision allocation; database-specific implementations use an atomic row update or lock in PostgreSQL and a transaction in Firestore. The SDK's current revision is its latest accepted snapshot, not a competing source of truth.
 
 ---
 
@@ -239,6 +239,8 @@ Redis is not intended to be in the SDK's normal evaluation path.
 ---
 
 # 10. GCP architecture
+
+This diagram is a target architecture for study, not the default deployment. Run cloud learning exercises against local emulators/adapters and validate Terraform without applying it. A live deployment is optional and requires the cost-approval gate in `COST-BOUNDARY.md`.
 
 ```text
                 GitHub
@@ -441,11 +443,11 @@ PostgreSQL:
 - familiar SQL
 - excellent local learning environment
 
-Firestore:
+Firestore (emulator by default):
 
 - managed
 - serverless
-- free-tier-compatible for small usage
+- live cloud usage is optional and requires the cost-approval gate
 - different query/data model
 
 Chosen: **both, behind a repository boundary**.
@@ -465,4 +467,3 @@ Redis:
 - useful for distributed caching experiments
 
 Chosen: **memory first, Redis experiment second**.
-

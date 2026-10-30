@@ -47,336 +47,336 @@ Cloud Data & Events",,High,
 
 Learning Objective:
 CI/CD & Finalization",,High,
-2001,Story,Project charter and glossary,"Sprint 1 work in Foundation & Domain.
+2001,Story,Project charter and glossary,"Milestone 1 work in Foundation & Domain.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Foundation & Domain",1001,High,3
-2002,Story,Repository bootstrap,"Sprint 1 work in Foundation & Domain.
+2002,Story,Repository bootstrap,"Milestone 1 work in Foundation & Domain.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Foundation & Domain",1001,High,3
-2003,Story,Local infrastructure,"Sprint 1 work in Foundation & Domain.
+2003,Story,Local infrastructure,"Milestone 1 work in Foundation & Domain.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Foundation & Domain",1001,High,3
-2004,Story,Engineering workflow,"Sprint 1 work in Foundation & Domain.
+2004,Story,Engineering workflow,"Milestone 1 work in Foundation & Domain.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Foundation & Domain",1001,High,3
-2005,Story,FastAPI foundation,"Sprint 2 work in Python API & Database.
+2005,Story,FastAPI foundation,"Milestone 2 work in Python API & Database.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Python API & Database",1002,High,3
-2006,Story,Database layer,"Sprint 2 work in Python API & Database.
+2006,Story,Database layer,"Milestone 2 work in Python API & Database.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Python API & Database",1002,High,3
-2007,Story,Core schema,"Sprint 2 work in Python API & Database.
+2007,Story,Core schema,"Milestone 2 work in Python API & Database.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Python API & Database",1002,High,3
-2008,Story,API tests,"Sprint 2 work in Python API & Database.
+2008,Story,API tests,"Milestone 2 work in Python API & Database.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Python API & Database",1002,High,3
-2009,Story,Project/environment CRUD,"Sprint 3 work in Flag Management & Audit.
+2009,Story,Project/environment CRUD,"Milestone 3 work in Flag Management & Audit.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Flag Management & Audit",1003,High,3
-2010,Story,Feature flag CRUD,"Sprint 3 work in Flag Management & Audit.
+2010,Story,Feature flag CRUD,"Milestone 3 work in Flag Management & Audit.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Flag Management & Audit",1003,High,3
-2011,Story,Audit trail,"Sprint 3 work in Flag Management & Audit.
+2011,Story,Audit trail,"Milestone 3 work in Flag Management & Audit.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Flag Management & Audit",1003,High,3
-2012,Story,Admin authentication,"Sprint 3 work in Flag Management & Audit.
+2012,Story,Admin authentication,"Milestone 3 work in Flag Management & Audit.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Flag Management & Audit",1003,High,3
-2013,Story,Astro/React shell,"Sprint 4 work in Dashboard.
+2013,Story,Astro/React shell,"Milestone 4 work in Dashboard.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Dashboard",1004,High,3
-2014,Story,Project/environment UI,"Sprint 4 work in Dashboard.
+2014,Story,Project/environment UI,"Milestone 4 work in Dashboard.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Dashboard",1004,High,3
-2015,Story,Flag management UI,"Sprint 4 work in Dashboard.
+2015,Story,Flag management UI,"Milestone 4 work in Dashboard.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Dashboard",1004,High,3
-2016,Story,Audit UX,"Sprint 4 work in Dashboard.
+2016,Story,Audit UX,"Milestone 4 work in Dashboard.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Dashboard",1004,High,3
-2017,Story,SDK package,"Sprint 5 work in SDK & Local Evaluation.
+2017,Story,SDK package,"Milestone 5 work in SDK & Local Evaluation.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 SDK & Local Evaluation",1005,High,3
-2018,Story,Configuration bootstrap,"Sprint 5 work in SDK & Local Evaluation.
+2018,Story,Configuration bootstrap,"Milestone 5 work in SDK & Local Evaluation.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 SDK & Local Evaluation",1005,High,3
-2019,Story,Evaluation engine,"Sprint 5 work in SDK & Local Evaluation.
+2019,Story,Evaluation engine,"Milestone 5 work in SDK & Local Evaluation.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 SDK & Local Evaluation",1005,High,3
-2020,Story,Demo Store integration,"Sprint 5 work in SDK & Local Evaluation.
+2020,Story,Demo Store integration,"Milestone 5 work in SDK & Local Evaluation.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 SDK & Local Evaluation",1005,High,3
-2021,Story,Client keys,"Sprint 6 work in Environments, Rollouts & Targeting.
+2021,Story,Client keys,"Milestone 6 work in Environments, Rollouts & Targeting.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Environments, Rollouts & Targeting",1006,High,3
-2022,Story,Environment isolation,"Sprint 6 work in Environments, Rollouts & Targeting.
+2022,Story,Environment isolation,"Milestone 6 work in Environments, Rollouts & Targeting.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Environments, Rollouts & Targeting",1006,High,3
-2023,Story,Percentage rollout,"Sprint 6 work in Environments, Rollouts & Targeting.
+2023,Story,Percentage rollout,"Milestone 6 work in Environments, Rollouts & Targeting.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Environments, Rollouts & Targeting",1006,High,3
-2024,Story,Targeting rules,"Sprint 6 work in Environments, Rollouts & Targeting.
+2024,Story,Targeting rules,"Milestone 6 work in Environments, Rollouts & Targeting.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Environments, Rollouts & Targeting",1006,High,3
-2025,Story,In-memory configuration cache,"Sprint 7 work in Caching & Polling.
+2025,Story,In-memory configuration cache,"Milestone 7 work in Caching & Polling.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Caching & Polling",1007,High,3
-2026,Story,Polling,"Sprint 7 work in Caching & Polling.
+2026,Story,Polling,"Milestone 7 work in Caching & Polling.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Caching & Polling",1007,High,3
-2027,Story,HTTP cache optimization,"Sprint 7 work in Caching & Polling.
+2027,Story,HTTP cache optimization,"Milestone 7 work in Caching & Polling.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Caching & Polling",1007,High,3
-2028,Story,Redis experiment,"Sprint 7 work in Caching & Polling.
+2028,Story,Redis experiment,"Milestone 7 work in Caching & Polling.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Caching & Polling",1007,High,3
-2029,Story,SSE stream,"Sprint 8 work in SSE & Consistency.
+2029,Story,SSE stream,"Milestone 8 work in SSE & Consistency.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 SSE & Consistency",1008,High,3
-2030,Story,SDK stream client,"Sprint 8 work in SSE & Consistency.
+2030,Story,SDK stream client,"Milestone 8 work in SSE & Consistency.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 SSE & Consistency",1008,High,3
-2031,Story,Reconnect behavior,"Sprint 8 work in SSE & Consistency.
+2031,Story,Reconnect behavior,"Milestone 8 work in SSE & Consistency.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 SSE & Consistency",1008,High,3
-2032,Story,Consistency controls,"Sprint 8 work in SSE & Consistency.
+2032,Story,Consistency controls,"Milestone 8 work in SSE & Consistency.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 SSE & Consistency",1008,High,3
-2033,Story,Structured observability,"Sprint 9 work in Observability, Resilience & Load.
+2033,Story,Structured observability,"Milestone 9 work in Observability, Resilience & Load.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Observability, Resilience & Load",1009,High,3
-2034,Story,Tracing/metrics,"Sprint 9 work in Observability, Resilience & Load.
+2034,Story,Tracing/metrics,"Milestone 9 work in Observability, Resilience & Load.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Observability, Resilience & Load",1009,High,3
-2035,Story,Failure injection,"Sprint 9 work in Observability, Resilience & Load.
+2035,Story,Failure injection,"Milestone 9 work in Observability, Resilience & Load.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Observability, Resilience & Load",1009,High,3
-2036,Story,Load testing,"Sprint 9 work in Observability, Resilience & Load.
+2036,Story,Load testing,"Milestone 9 work in Observability, Resilience & Load.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Observability, Resilience & Load",1009,High,3
-2037,Story,Cost guardrails,"Sprint 10 work in Terraform & GCP Foundation.
+2037,Story,Cost guardrails,"Milestone 10 work in Terraform & GCP Foundation.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Terraform & GCP Foundation",1010,High,3
-2038,Story,Terraform foundation,"Sprint 10 work in Terraform & GCP Foundation.
+2038,Story,Terraform foundation,"Milestone 10 work in Terraform & GCP Foundation.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Terraform & GCP Foundation",1010,High,3
-2039,Story,Artifact Registry,"Sprint 10 work in Terraform & GCP Foundation.
+2039,Story,Artifact Registry,"Milestone 10 work in Terraform & GCP Foundation.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Terraform & GCP Foundation",1010,High,3
-2040,Story,Cloud Run foundation,"Sprint 10 work in Terraform & GCP Foundation.
+2040,Story,Cloud Run foundation,"Milestone 10 work in Terraform & GCP Foundation.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Terraform & GCP Foundation",1010,High,3
-2041,Story,Firestore adapter,"Sprint 11 work in Firestore, Pub/Sub & IAM.
+2041,Story,Firestore adapter,"Milestone 11 work in Firestore, Pub/Sub & IAM.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Firestore, Pub/Sub & IAM",1011,High,3
-2042,Story,Pub/Sub propagation,"Sprint 11 work in Firestore, Pub/Sub & IAM.
+2042,Story,Pub/Sub propagation,"Milestone 11 work in Firestore, Pub/Sub & IAM.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Firestore, Pub/Sub & IAM",1011,High,3
-2043,Story,GCP IAM,"Sprint 11 work in Firestore, Pub/Sub & IAM.
+2043,Story,GCP IAM,"Milestone 11 work in Firestore, Pub/Sub & IAM.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Firestore, Pub/Sub & IAM",1011,High,3
-2044,Story,Cloud observability,"Sprint 11 work in Firestore, Pub/Sub & IAM.
+2044,Story,Cloud observability,"Milestone 11 work in Firestore, Pub/Sub & IAM.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 Firestore, Pub/Sub & IAM",1011,High,3
-2045,Story,GitHub Actions CI,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.
+2045,Story,GitHub Actions CI,"Milestone 12 work in CI/CD, Cloud Validation & Finalization.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 CI/CD, Cloud Validation & Finalization",1012,High,3
-2046,Story,Deployment workflow,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.
+2046,Story,Deployment workflow,"Milestone 12 work in CI/CD, Cloud Validation & Finalization.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 CI/CD, Cloud Validation & Finalization",1012,High,3
-2047,Story,End-to-end validation,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.
+2047,Story,End-to-end validation,"Milestone 12 work in CI/CD, Cloud Validation & Finalization.
 
 Acceptance Criteria:
 Story DoD satisfied
 
 Learning Objective:
 CI/CD, Cloud Validation & Finalization",1012,High,3
-2048,Story,Final engineering package,"Sprint 12 work in CI/CD, Cloud Validation & Finalization.
+2048,Story,Final engineering package,"Milestone 12 work in CI/CD, Cloud Validation & Finalization.
 
 Acceptance Criteria:
 Story DoD satisfied
@@ -1463,7 +1463,7 @@ Observability, Resilience & Load
 
 Dependencies:
 See story",2036,High,1
-3109,Sub-task,Create budget/alert,"Implementation subtask for Cost guardrails.
+3109,Sub-task,Document the $0 default path and approval gate,"Implementation subtask for Cost guardrails.
 
 Acceptance Criteria:
 Implemented, tested, documented
@@ -1473,7 +1473,7 @@ Terraform & GCP Foundation
 
 Dependencies:
 See story",2037,High,1
-3110,Sub-task,Document free-tier assumptions,"Implementation subtask for Cost guardrails.
+3110,Sub-task,Check pricing and billing before optional provisioning,"Implementation subtask for Cost guardrails.
 
 Acceptance Criteria:
 Implemented, tested, documented

@@ -2,7 +2,7 @@
 
 ## Distributed Feature Flag & Configuration Platform
 
-This package is the planning baseline for a 12-week / 60-session learning project.
+This is an outcome-based learning project. Its 12 milestones are an ordered guide, not a calendar or deadline.
 
 The project is designed to be:
 
@@ -13,7 +13,7 @@ The project is designed to be:
 - AI-assisted but not AI-dependent;
 - GitHub-centered;
 - Terraform-managed;
-- as close to zero-cost as practical.
+- designed to add no cloud-service charges on its default path.
 
 ## Start here
 
@@ -22,9 +22,10 @@ The project is designed to be:
 3. Read `SYSTEM-DESIGN.md`.
 4. Read `SKILLS.md`.
 5. Read `AGENTS.md`.
-6. Start Sprint 1.
-7. Track progress in `progress/PROGRESS.md`.
-8. Manage execution in `jira/JIRA-BACKLOG.md`.
+6. Start Milestone 1 when ready; pause and resume between milestones or work blocks.
+7. Track demonstrated outcomes in `progress/PROGRESS.md`.
+8. Use `progress/DAILY-PLAN.md` as the detailed, non-calendar work guide.
+9. Treat the Jira sprint groupings as backlog organization, not deadlines.
 
 ## Project stack
 
@@ -32,16 +33,16 @@ The project is designed to be:
 Frontend      Astro + React + TypeScript
 Backend       Python + FastAPI
 Local DB      PostgreSQL
-Cache lab     Redis
+Cache lab     Redis (optional local experiment)
 SDK           TypeScript
 Containers    Docker / Docker Compose
 IaC           Terraform
 CI/CD         GitHub Actions
-Cloud         GCP
-Cloud DB      Firestore
-Events        Pub/Sub
-Runtime       Cloud Run
-Observability Cloud Logging/Monitoring
+Cloud learning GCP (local emulators and Terraform review by default)
+Cloud DB      Firestore (emulator by default)
+Events        Pub/Sub (emulator or local adapter by default)
+Runtime       Cloud Run (design/validation by default)
+Observability local-first; cloud services only by explicit opt-in
 ```
 
 ## Important database decision
@@ -51,18 +52,16 @@ PostgreSQL and Firestore are used for different stages intentionally.
 The project does **not** require two production databases.
 
 - PostgreSQL = rich local relational learning environment.
-- Firestore = low-ops GCP deployment experiment with free-tier-compatible usage.
+- Firestore = optional GCP learning experiment; use its emulator by default.
 - Repository boundary = makes the persistence decision explicit and testable.
 
 Read ADR-005, ADR-006, and ADR-007 together.
 
-## Cost warning
+## Cost boundary
 
-Do not provision paid managed Redis/Memorystore as part of the standard plan.
+The default path is **$0 in cloud-service charges**: develop locally, and use emulators or local adapters for cloud concepts where practical. No GCP provisioning or hosted CI is required to complete the learning milestones.
 
-Do not provision Cloud SQL unless an explicit cost-approved experiment is being performed.
-
-Cloud free tiers are quotas, not guarantees of zero spend. Re-check official pricing immediately before cloud provisioning.
+Free tiers are quotas, not a zero-cost guarantee. Live GCP resources and hosted services are optional experiments and must not be created without explicit approval after checking current pricing, billing prerequisites, expected usage, and cleanup steps. See `COST-BOUNDARY.md`.
 
 ## Files
 
@@ -79,8 +78,9 @@ Cloud free tiers are quotas, not guarantees of zero spend. Re-check official pri
 - `progress/PROGRESS.md`
 - `progress/DAILY-PLAN.md`
 - `jira/JIRA-BACKLOG.md`
-- `jira/JIRA-BACKLOG.csv`
 - `docs/adrs/`
+
+`jira/JIRA-BACKLOG.csv` is an older export and is not an authoritative planning source. Use `jira/FLAGGED-JIRA-IMPORT.csv` for the supplied Jira import data.
 
 ## Suggested repo layout
 

@@ -4,7 +4,7 @@
 ## Distributed Feature Flag & Configuration Platform
 
 **Status:** Approved planning baseline  
-**Duration:** 12 weeks / 60 working sessions  
+**Plan:** 12 outcome-based milestones; no fixed calendar or completion date
 **Primary goal:** Learn cloud and system design by building, testing, breaking, and improving a real distributed platform.
 
 ---
@@ -199,9 +199,9 @@ SDK can optionally maintain an SSE connection for update events.
 
 ## FR-11 Versioning
 
-Every configuration update has a monotonically increasing version.
+Every environment has a monotonically increasing configuration revision. The server increments it atomically with each successful client-visible configuration mutation; a flag's own edit version is separate.
 
-The SDK must ignore an older configuration received after a newer one.
+The SDK retains its latest valid snapshot and must ignore a snapshot with an equal or older environment revision.
 
 ## FR-12 Audit log
 
@@ -265,54 +265,31 @@ A new developer should be able to run the core system locally using documented c
 
 ## NFR-07 Cost
 
-Core development target: **$0**.
+Default development and validation path: **$0 in cloud-service charges**, using local services, emulators, and adapters.
 
-Cloud deployment target: **near $0 and designed around free-tier-compatible usage**.
+Live cloud provisioning is optional and is not required for project completion. Free-tier quotas are not a guarantee of zero spend; any live deployment requires explicit opt-in and a current cost review.
 
 ---
 
 # 8. Scope by phase
 
-## MVP
+## Local core milestone (Milestones 1–5)
 
-- Python/FastAPI API
-- PostgreSQL
-- admin authentication
-- project/environment/flag CRUD
-- boolean evaluation
-- TypeScript SDK
-- in-memory configuration
-- demo store integration
-- tests
-- Docker Compose
+Deliver a usable end-to-end local system: a Python/FastAPI API, PostgreSQL, project/environment/flag management, admin authentication, a TypeScript SDK with bootstrap and in-memory evaluation, a demo-store integration, tests, and reproducible local infrastructure.
 
-## Phase 2
+This is an early success point, not a reduced project scope. Continue through the remaining milestones to complete the full learning plan.
 
-- percentage rollout
-- targeting
-- audit logs
-- versioning
-- polling
-- Redis cache experiment
+## Evaluation and propagation (Milestones 6–9)
 
-## Phase 3
+- scoped client keys and environment isolation;
+- percentage rollout and targeting;
+- configuration revisioning, polling, conditional HTTP requests, and stale fallback;
+- optional local Redis experiment;
+- SSE, reconnection, observability, failure testing, and benchmarks.
 
-- SSE
-- reconnection
-- stale-cache strategy
-- observability
-- load testing
-- failure injection
+## GCP learning path (Milestones 10–12)
 
-## Phase 4
-
-- GCP deployment
-- Firestore adapter
-- Pub/Sub propagation
-- IAM
-- Artifact Registry
-- Terraform
-- GitHub Actions
+Study Terraform, Cloud Run, Firestore, Pub/Sub, IAM, observability, and CI/CD using local validation and emulators/adapters by default. A live GCP deployment is an optional, explicitly approved experiment—not a completion criterion.
 
 ---
 
@@ -348,11 +325,10 @@ The project succeeds when:
 5. SDK evaluations normally execute locally.
 6. The SDK can refresh configuration via polling.
 7. The SDK can receive updates via SSE.
-8. Update versions prevent stale writes.
+8. Environment revisions prevent stale snapshots from replacing newer SDK state, and flag edit versions prevent lost updates.
 9. The system survives temporary control-plane failures using cached configuration.
 10. Tests cover core behavior and failure cases.
 11. The system is containerized.
 12. The infrastructure can be recreated with Terraform.
-13. A GCP deployment exists within the project's cost guardrails.
+13. The GCP deployment path is documented and validated without provisioning billable resources; live deployment remains optional.
 14. A final report explains architecture decisions and measured behavior.
-
