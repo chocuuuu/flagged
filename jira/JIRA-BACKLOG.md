@@ -1,8 +1,9 @@
 # JIRA-BACKLOG.md
 
-# Flagged — Jira-Style Sprint Board
+# Flagged - Outcome-Based Jira Backlog
 
-**Cadence:** 12 sprints × 5 working sessions = 60 sessions  
+**Execution model:** 12 ordered milestone groups; no fixed schedule, session count, or completion date
+
 **Workflow:** Backlog → Ready → In Progress → Code Review → QA → Done
 
 ## Board conventions
@@ -23,7 +24,7 @@ Epic
 - Description
 - Epic Link
 - Parent
-- Sprint
+- Milestone
 - Priority
 - Story Points
 - Acceptance Criteria
@@ -47,16 +48,16 @@ Epic
 
 ---
 
-# Sprint 1 — Foundation & Domain
+# Milestone 1 — Foundation & Domain
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-101 — Project charter and glossary
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 1  
+**Milestone:** M1<br>
 **Epic:** EPIC-1
 
 **Definition of done:**
@@ -79,7 +80,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 1  
+**Milestone:** M1<br>
 **Epic:** EPIC-1
 
 **Definition of done:**
@@ -102,7 +103,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 1  
+**Milestone:** M1<br>
 **Epic:** EPIC-1
 
 **Definition of done:**
@@ -125,7 +126,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 1  
+**Milestone:** M1<br>
 **Epic:** EPIC-1
 
 **Definition of done:**
@@ -146,16 +147,16 @@ Epic
 
 ---
 
-# Sprint 2 — Python API & Database
+# Milestone 2 — Python API & Database
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-201 — FastAPI foundation
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 2  
+**Milestone:** M2<br>
 **Epic:** EPIC-2
 
 **Definition of done:**
@@ -178,7 +179,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 2  
+**Milestone:** M2<br>
 **Epic:** EPIC-2
 
 **Definition of done:**
@@ -201,7 +202,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 2  
+**Milestone:** M2<br>
 **Epic:** EPIC-2
 
 **Definition of done:**
@@ -224,7 +225,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 2  
+**Milestone:** M2<br>
 **Epic:** EPIC-2
 
 **Definition of done:**
@@ -245,16 +246,16 @@ Epic
 
 ---
 
-# Sprint 3 — Flag Management & Audit
+# Milestone 3 — Flag Management & Audit
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-301 — Project/environment CRUD
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 3  
+**Milestone:** M3<br>
 **Epic:** EPIC-3
 
 **Definition of done:**
@@ -277,7 +278,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 3  
+**Milestone:** M3<br>
 **Epic:** EPIC-3
 
 **Definition of done:**
@@ -300,7 +301,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 3  
+**Milestone:** M3<br>
 **Epic:** EPIC-3
 
 **Definition of done:**
@@ -323,7 +324,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 3  
+**Milestone:** M3<br>
 **Epic:** EPIC-3
 
 **Definition of done:**
@@ -344,16 +345,16 @@ Epic
 
 ---
 
-# Sprint 4 — Dashboard
+# Milestone 4 — Dashboard
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-401 — Astro/React shell
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 4  
+**Milestone:** M4<br>
 **Epic:** EPIC-4
 
 **Definition of done:**
@@ -376,7 +377,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 4  
+**Milestone:** M4<br>
 **Epic:** EPIC-4
 
 **Definition of done:**
@@ -399,7 +400,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 4  
+**Milestone:** M4<br>
 **Epic:** EPIC-4
 
 **Definition of done:**
@@ -422,7 +423,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 4  
+**Milestone:** M4<br>
 **Epic:** EPIC-4
 
 **Definition of done:**
@@ -443,16 +444,16 @@ Epic
 
 ---
 
-# Sprint 5 — SDK & Local Evaluation
+# Milestone 5 — SDK & Local Evaluation
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-501 — SDK package
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 5  
+**Milestone:** M5<br>
 **Epic:** EPIC-5
 
 **Definition of done:**
@@ -475,7 +476,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 5  
+**Milestone:** M5<br>
 **Epic:** EPIC-5
 
 **Definition of done:**
@@ -498,7 +499,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 5  
+**Milestone:** M5<br>
 **Epic:** EPIC-5
 
 **Definition of done:**
@@ -521,7 +522,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 5  
+**Milestone:** M5<br>
 **Epic:** EPIC-5
 
 **Definition of done:**
@@ -542,16 +543,16 @@ Epic
 
 ---
 
-# Sprint 6 — Environments, Rollouts & Targeting
+# Milestone 6 — Environments, Rollouts & Targeting
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-601 — Client keys
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 6  
+**Milestone:** M6<br>
 **Epic:** EPIC-6
 
 **Definition of done:**
@@ -574,7 +575,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 6  
+**Milestone:** M6<br>
 **Epic:** EPIC-6
 
 **Definition of done:**
@@ -597,7 +598,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 6  
+**Milestone:** M6<br>
 **Epic:** EPIC-6
 
 **Definition of done:**
@@ -620,7 +621,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 6  
+**Milestone:** M6<br>
 **Epic:** EPIC-6
 
 **Definition of done:**
@@ -641,16 +642,16 @@ Epic
 
 ---
 
-# Sprint 7 — Caching & Polling
+# Milestone 7 — Caching & Polling
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-701 — In-memory configuration cache
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 7  
+**Milestone:** M7<br>
 **Epic:** EPIC-7
 
 **Definition of done:**
@@ -673,7 +674,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 7  
+**Milestone:** M7<br>
 **Epic:** EPIC-7
 
 **Definition of done:**
@@ -696,7 +697,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 7  
+**Milestone:** M7<br>
 **Epic:** EPIC-7
 
 **Definition of done:**
@@ -719,7 +720,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 7  
+**Milestone:** M7<br>
 **Epic:** EPIC-7
 
 **Definition of done:**
@@ -740,16 +741,16 @@ Epic
 
 ---
 
-# Sprint 8 — SSE & Consistency
+# Milestone 8 — SSE & Consistency
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-801 — SSE stream
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 8  
+**Milestone:** M8<br>
 **Epic:** EPIC-8
 
 **Definition of done:**
@@ -772,7 +773,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 8  
+**Milestone:** M8<br>
 **Epic:** EPIC-8
 
 **Definition of done:**
@@ -795,7 +796,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 8  
+**Milestone:** M8<br>
 **Epic:** EPIC-8
 
 **Definition of done:**
@@ -818,7 +819,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 8  
+**Milestone:** M8<br>
 **Epic:** EPIC-8
 
 **Definition of done:**
@@ -839,16 +840,16 @@ Epic
 
 ---
 
-# Sprint 9 — Observability, Resilience & Load
+# Milestone 9 — Observability, Resilience & Load
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-901 — Structured observability
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 9  
+**Milestone:** M9<br>
 **Epic:** EPIC-9
 
 **Definition of done:**
@@ -871,7 +872,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 9  
+**Milestone:** M9<br>
 **Epic:** EPIC-9
 
 **Definition of done:**
@@ -894,7 +895,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 9  
+**Milestone:** M9<br>
 **Epic:** EPIC-9
 
 **Definition of done:**
@@ -917,7 +918,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 9  
+**Milestone:** M9<br>
 **Epic:** EPIC-9
 
 **Definition of done:**
@@ -938,16 +939,16 @@ Epic
 
 ---
 
-# Sprint 10 — Terraform & GCP Foundation
+# Milestone 10 — Terraform & GCP Foundation
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-1001 — Cost guardrails
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 10  
+**Milestone:** M10<br>
 **Epic:** EPIC-10
 
 **Definition of done:**
@@ -970,7 +971,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 10  
+**Milestone:** M10<br>
 **Epic:** EPIC-10
 
 **Definition of done:**
@@ -993,7 +994,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 10  
+**Milestone:** M10<br>
 **Epic:** EPIC-10
 
 **Definition of done:**
@@ -1016,7 +1017,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 10  
+**Milestone:** M10<br>
 **Epic:** EPIC-10
 
 **Definition of done:**
@@ -1037,16 +1038,16 @@ Epic
 
 ---
 
-# Sprint 11 — Firestore, Pub/Sub & IAM
+# Milestone 11 — Firestore, Pub/Sub & IAM
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-1101 — Firestore adapter
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 11  
+**Milestone:** M11<br>
 **Epic:** EPIC-11
 
 **Definition of done:**
@@ -1069,7 +1070,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 11  
+**Milestone:** M11<br>
 **Epic:** EPIC-11
 
 **Definition of done:**
@@ -1092,7 +1093,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 11  
+**Milestone:** M11<br>
 **Epic:** EPIC-11
 
 **Definition of done:**
@@ -1115,7 +1116,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 11  
+**Milestone:** M11<br>
 **Epic:** EPIC-11
 
 **Definition of done:**
@@ -1136,16 +1137,16 @@ Epic
 
 ---
 
-# Sprint 12 — CI/CD, Cloud Validation & Finalization
+# Milestone 12 — CI/CD, Cloud Validation & Finalization
 
-**Duration:** 5 working sessions
+**Timing:** Outcome-based; no fixed duration
 
 ## FF-1201 — GitHub Actions CI
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 12  
+**Milestone:** M12<br>
 **Epic:** EPIC-12
 
 **Definition of done:**
@@ -1168,7 +1169,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 12  
+**Milestone:** M12<br>
 **Epic:** EPIC-12
 
 **Definition of done:**
@@ -1191,7 +1192,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 12  
+**Milestone:** M12<br>
 **Epic:** EPIC-12
 
 **Definition of done:**
@@ -1214,7 +1215,7 @@ Epic
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3–5  
-**Sprint:** Sprint 12  
+**Milestone:** M12<br>
 **Epic:** EPIC-12
 
 **Definition of done:**

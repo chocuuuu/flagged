@@ -8,7 +8,7 @@ The feature flag database is the **control-plane source of truth**.
 
 SDK memory and Redis are caches, not sources of truth.
 
-Configuration distributed to clients is versioned.
+Configuration distributed to clients carries an environment-wide, monotonically increasing revision. A flag's own version remains a separate optimistic-concurrency control for edits to that flag.
 
 ---
 
@@ -21,7 +21,7 @@ Project
         │     ├── Target Rules
         │     └── Variants
         ├── Client Key
-        └── Configuration Version
+        └── Environment Configuration Revision
 
 Audit Event
 ```
@@ -49,6 +49,7 @@ Audit Event
 | project_id | UUID | FK |
 | key | varchar | development/staging/production |
 | name | varchar | display value |
+| config_revision | bigint | environment-wide revision of client-visible configuration; starts at 0 |
 | created_at | timestamptz | required |
 | updated_at | timestamptz | required |
 
@@ -113,7 +114,7 @@ UNIQUE(environment_id, key)
 | id | UUID | PK |
 | project_id | UUID | FK |
 | environment_id | UUID | nullable FK |
-| actor_id | UUID | admin identity |
+| actor_id | varchar | configured admin principal (single operator) |
 | action | varchar | flag.updated, flag.created, etc. |
 | entity_type | varchar | flag/environment/etc. |
 | entity_id | UUID | affected entity |
@@ -130,7 +131,7 @@ SDK bootstrap response:
 ```json
 {
   "environment": "production",
-  "version": 42,
+  "revision": 42,
   "generatedAt": "2026-01-01T00:00:00Z",
   "flags": [
     {
@@ -146,7 +147,15 @@ SDK bootstrap response:
 }
 ```
 
-The SDK treats this as immutable configuration and replaces its in-memory snapshot atomically.
+The SDK treats this as immutable configuration and replaces its in-memory snapshot atomically. `revision` is the authoritative environment-wide revision, not a per-flag version.
+
+## Revision and concurrency rules
+
+- Increment the environment revision once for each successful transaction that changes client-visible configuration in that environment. Changes to labels or other admin-only metadata need not increment it.
+- Commit the configuration mutation, revision increment, and corresponding audit event atomically.
+- In PostgreSQL, serialize revision allocation through an atomic environment-row update or row lock in the same transaction. Concurrent writes must receive distinct, increasing revisions; a failed/rolled-back mutation must not publish a revision.
+- In Firestore, perform the equivalent read-modify-write inside a transaction.
+- The SDK retains the latest valid snapshot it accepted. It installs an incoming snapshot only when `incoming.revision > current.revision`; equal or older revisions are ignored. If refresh fails, the last-known-good snapshot remains usable.
 
 ---
 
@@ -167,10 +176,10 @@ It is a deliberate learning and cost decision.
 - indexes
 - query behavior
 
-### GCP Firestore teaches
+### Firestore (emulator by default) teaches
 
 - document modeling
-- managed/serverless persistence
+- document persistence and managed/serverless service semantics
 - read/write billing
 - document-oriented access patterns
 - cloud-native data access
@@ -192,6 +201,8 @@ adapter         adapter
 This creates a useful engineering exercise:
 
 > How much of the domain can remain unchanged when the persistence model changes?
+
+Firestore modeling and adapter behavior should use the emulator or a local test adapter by default. Live GCP resources are not required for project completion.
 
 ---
 
@@ -261,9 +272,9 @@ Avoid unlimited historical growth.
 # 9. Data invariants
 
 1. Flag keys are unique per environment.
-2. Configuration versions increase monotonically.
+2. Environment configuration revisions increase monotonically; per-flag edit versions are separate.
 3. A revoked client key cannot access SDK configuration.
 4. Admin keys cannot be used by the client SDK.
-5. A lower version cannot replace a higher local snapshot.
+5. A lower or equal revision cannot replace the SDK's current snapshot.
 6. Audit records are append-only.
 7. A flag evaluation never mutates configuration.

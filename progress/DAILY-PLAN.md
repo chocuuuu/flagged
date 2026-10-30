@@ -1,373 +1,189 @@
-# DAILY-PLAN.md
-
-# Flagged — 60-Working-Session Execution Plan
-
-## Working assumption
-
-- 5 sessions/week
-- 12 weeks
-- 2–4 focused hours/session
-- Longer sessions may compress the schedule; shorter sessions may extend it
-- The goal is learning evidence, not speed
-
-## Session template
-
-```text
-1. Learn        20–45 min
-2. Design       15–30 min
-3. Implement    60–120 min
-4. Test/debug   20–45 min
-5. Document     10–20 min
-6. Commit       5–10 min
-```
-
-## Phase 1 — Understand and bootstrap
-
-### Day 1 — Project charter
-Goal: understand exactly what a feature flag service solves.
-Tools: GitHub, VS Code, Claude Code, Gemini.
-Deliverable: problem statement + glossary.
-Test: explain deployment vs release, control plane vs data plane without notes.
-Commit: `docs: add project charter and glossary`
-
-### Day 2 — Study reference architectures
-Goal: inspect LaunchDarkly/OpenFeature concepts.
-Deliverable: one-page comparison of commercial/reference concepts.
-Experiment: identify which concepts are in/out of scope.
-Commit: `docs: document feature flag domain concepts`
-
-### Day 3 — First architecture
-Goal: draw control/data-plane architecture.
-Tools: Mermaid, draw.io/Excalidraw.
-Deliverable: architecture v0.
-Checkpoint: explain why database is not in the evaluation hot path.
-Commit: `docs: add initial system architecture`
-
-### Day 4 — Monorepo
-Goal: create repository structure and boundaries.
-Tools: Git, GitHub, pnpm, uv.
-Deliverable: apps/services/packages/docs directories.
-Test: clean clone setup.
-Commit: `chore: bootstrap monorepo`
-
-### Day 5 — Docker Compose
-Goal: create local reproducible infrastructure.
-Tools: Docker, PostgreSQL.
-Deliverable: compose file + health checks.
-Test: destroy/recreate environment successfully.
-Commit: `infra: add local database compose setup`
-
-## Phase 2 — Python/API/database
-
-### Day 6 — FastAPI shell
-Goal: create backend application and health endpoints.
-Tools: FastAPI, pytest.
-Test: unit + HTTP health check.
-Commit: `feat(api): add fastapi service shell`
-
-### Day 7 — Validation
-Goal: learn Pydantic request/response validation.
-Deliverable: API error contract.
-Test: malformed payload cases.
-Commit: `feat(api): add request validation`
-
-### Day 8 — SQLAlchemy
-Goal: connect service layer to PostgreSQL.
-Deliverable: DB session dependency.
-Test: connection test + transaction rollback fixture.
-Commit: `feat(db): add sqlalchemy integration`
-
-### Day 9 — Alembic
-Goal: learn schema migrations.
-Deliverable: first migration.
-Experiment: migrate up/down in a clean database.
-Commit: `infra(db): add alembic migrations`
-
-### Day 10 — Core schema
-Goal: implement projects/environments.
-Deliverable: tables, constraints, indexes.
-Test: duplicate environment rejection.
-Commit: `feat(db): add project and environment models`
-
-## Phase 3 — Flag management
-
-### Day 11 — Flag model
-Goal: model feature flags and version field.
-Test: unique key per environment.
-Commit: `feat(flag): add feature flag model`
-
-### Day 12 — Flag CRUD
-Goal: build create/list/update/delete.
-Test: API integration suite.
-Commit: `feat(flag): add flag crud endpoints`
-
-### Day 13 — Versioning
-Goal: prevent lost updates.
-Experiment: simulate two clients updating the same flag.
-Commit: `feat(flag): add optimistic version checks`
-
-### Day 14 — Audit events
-Goal: make changes observable.
-Test: each mutation creates an audit record.
-Commit: `feat(audit): record configuration changes`
-
-### Day 15 — Admin authentication
-Goal: protect control-plane endpoints.
-Test: unauthorized/forbidden/success cases.
-Commit: `feat(auth): protect admin endpoints`
-
-## Phase 4 — Dashboard
-
-### Day 16 — Astro/React shell
-Goal: build dashboard skeleton.
-Tools: Astro, React, TypeScript, Tailwind.
-Commit: `feat(dashboard): add application shell`
-
-### Day 17 — Project/environment UI
-Goal: browse configuration scope.
-Test: loading/error/empty states.
-Commit: `feat(dashboard): add project environment views`
-
-### Day 18 — Flag management UI
-Goal: create/edit/toggle flags.
-Test: API integration from browser.
-Commit: `feat(dashboard): add flag management`
-
-### Day 19 — Audit UI
-Goal: inspect who changed configuration.
-Commit: `feat(dashboard): add audit history`
-
-### Day 20 — Dashboard hardening
-Goal: validation, accessibility, error UX.
-Test: browser smoke tests.
-Commit: `fix(dashboard): harden admin workflows`
-
-## Phase 5 — SDK and evaluation
-
-### Day 21 — SDK contract
-Goal: design public SDK API before implementation.
-Deliverable: README examples + type definitions.
-Commit: `docs(sdk): define client contract`
-
-### Day 22 — Bootstrap
-Goal: fetch environment configuration.
-Test: malformed/timeout/401 responses.
-Commit: `feat(sdk): add configuration bootstrap`
-
-### Day 23 — Immutable cache
-Goal: safely store configuration in memory.
-Test: atomic replacement and snapshot reads.
-Commit: `feat(sdk): add in memory config store`
-
-### Day 24 — Evaluation
-Goal: implement boolean evaluation.
-Test: deterministic unit matrix.
-Commit: `feat(sdk): add boolean evaluation`
-
-### Day 25 — Demo store integration
-Goal: integrate SDK into the demo application.
-Demo: toggle a checkout UI without rebuilding.
-Commit: `feat(demo): integrate feature flag sdk`
-
-## Phase 6 — Rollouts and targeting
-
-### Day 26 — Client keys
-Goal: scope read-only SDK credentials.
-Test: admin key rejected by SDK endpoint.
-Commit: `feat(auth): add scoped client keys`
-
-### Day 27 — Environment isolation
-Goal: prevent cross-environment access.
-Test: production client cannot read staging.
-Commit: `feat(auth): enforce environment isolation`
-
-### Day 28 — Percentage rollout
-Goal: deterministic hashing.
-Experiment: same user remains in same bucket.
-Commit: `feat(eval): add deterministic percentage rollout`
-
-### Day 29 — Targeting rules
-Goal: support equals/contains.
-Test: rule order and fallback cases.
-Commit: `feat(eval): add targeting rules`
-
-### Day 30 — Evaluation matrix
-Goal: document precedence.
-Deliverable: decision table.
-Test: comprehensive rules + rollout matrix.
-Commit: `test(eval): expand evaluation behavior matrix`
-
-## Phase 7 — Caching and polling
-
-### Day 31 — SDK age/version diagnostics
-Goal: track snapshot age/version.
-Commit: `feat(sdk): expose configuration diagnostics`
-
-### Day 32 — Polling
-Goal: periodically refresh configuration.
-Test: server unavailable while polling.
-Commit: `feat(sdk): add configuration polling`
-
-### Day 33 — ETag/version optimization
-Goal: reduce unnecessary payloads.
-Test: 304/no-change path.
-Commit: `feat(api): add conditional configuration fetch`
-
-### Day 34 — Stale fallback
-Goal: define last-known-good behavior.
-Experiment: shut down API and keep demo running.
-Commit: `feat(sdk): add stale configuration fallback`
-
-### Day 35 — Redis lab
-Goal: compare in-memory and shared cache.
-Tools: Redis, Docker.
-Deliverable: benchmark + trade-off notes.
-Commit: `docs(cache): document redis experiment`
-
-## Phase 8 — SSE and consistency
-
-### Day 36 — SSE fundamentals
-Goal: understand long-lived HTTP connections.
-Deliverable: minimal SSE proof of concept.
-Commit: `feat(stream): add sse proof of concept`
-
-### Day 37 — Production-ish stream endpoint
-Goal: stream version/update events.
-Test: multiple clients.
-Commit: `feat(stream): add configuration update stream`
-
-### Day 38 — SDK stream
-Goal: consume update events.
-Commit: `feat(sdk): consume sse updates`
-
-### Day 39 — Reconnect
-Goal: exponential backoff and catch-up.
-Test: terminate/restart server.
-Commit: `feat(sdk): add stream reconnect handling`
-
-### Day 40 — Ordering/idempotency
-Goal: reject duplicates/out-of-order messages.
-Test: versions 10, 12, 11.
-Commit: `test(sdk): add update ordering guarantees`
-
-## Phase 9 — Observability/resilience/performance
-
-### Day 41 — Structured logging
-Goal: logs with request IDs, environment, flag/config version.
-Commit: `feat(obs): add structured logging`
-
-### Day 42 — Metrics
-Goal: measure evaluation latency and refresh failures.
-Commit: `feat(obs): add evaluation metrics`
-
-### Day 43 — Propagation measurement
-Goal: measure admin change → client update.
-Experiment: 100 update events.
-Commit: `test(obs): measure configuration propagation`
-
-### Day 44 — Failure injection
-Goal: break DB, API, and stream intentionally.
-Deliverable: failure matrix.
-Commit: `test(resilience): add failure scenarios`
-
-### Day 45 — Load testing
-Goal: establish baseline with Locust.
-Measure: p50/p95/p99, throughput, errors.
-Commit: `test(perf): add load test scenarios`
-
-## Phase 10 — GCP foundation
-
-### Day 46 — Cost guardrails
-Goal: configure budget/alerts and cleanup procedures.
-Deliverable: cost checklist.
-Commit: `docs(cost): add gcp cost guardrails`
-
-### Day 47 — Terraform structure
-Goal: provider, variables, outputs, state.
-Test: plan with no changes.
-Commit: `infra: bootstrap terraform`
-
-### Day 48 — Artifact Registry
-Goal: build/push versioned image.
-Test: pull and run image locally.
-Commit: `infra: add artifact registry`
-
-### Day 49 — Cloud Run
-Goal: deploy stateless API.
-Test: scale-to-zero and cold start behavior.
-Commit: `infra: deploy api to cloud run`
-
-### Day 50 — Cloud logging/operations
-Goal: inspect cloud logs and runtime behavior.
-Commit: `ops: document cloud run operations`
-
-## Phase 11 — Firestore/Pub/Sub/IAM
-
-### Day 51 — Firestore model
-Goal: map relational domain to documents.
-Deliverable: mapping document and ADR.
-Commit: `docs(data): document firestore mapping`
-
-### Day 52 — Firestore adapter
-Goal: implement repository adapter.
-Test: domain-level parity suite.
-Commit: `feat(db): add firestore repository`
-
-### Day 53 — Pub/Sub topic
-Goal: publish configuration-change events.
-Test: event payload and version.
-Commit: `feat(events): publish config updates`
-
-### Day 54 — Pub/Sub consumer
-Goal: consume events idempotently.
-Test: duplicate delivery.
-Commit: `feat(events): consume config updates`
-
-### Day 55 — IAM hardening
-Goal: least-privilege runtime identity.
-Test: denied permission outside required resources.
-Commit: `infra(security): tighten gcp iam`
-
-## Phase 12 — CI/CD and finalization
-
-### Day 56 — CI
-Goal: lint + tests + build on pull request.
-Commit: `ci: add github actions checks`
-
-### Day 57 — CD
-Goal: controlled deployment to Cloud Run.
-Test: rollback procedure.
-Commit: `ci: add cloud deployment workflow`
-
-### Day 58 — Cloud E2E
-Goal: test dashboard → API → Firestore → Pub/Sub → SDK/SSE.
-Commit: `test(e2e): validate cloud architecture`
-
-### Day 59 — Final benchmark and docs
-Goal: compare baseline vs final system.
-Deliverable: benchmark report and architecture evolution diagram.
-Commit: `docs: add final benchmark report`
-
-### Day 60 — Final capstone
-Goal: perform complete demo and retrospective.
-Deliverables:
-- demo recording
-- architecture walkthrough
-- security walkthrough
-- cost review
-- ADR review
-- "what I learned" retrospective
-Commit: `docs: finalize project documentation`
+# Flagged — Outcome-Based Milestone Guide
+
+## How to use this guide
+
+The milestones are ordered learning outcomes, not weeks, days, or deadlines. Work blocks are small pieces of study and implementation; combine or split them to fit the time you have. Stop between blocks whenever needed.
+
+The project remains the full 12-milestone learning plan. Milestone 5 is an early, useful local end-to-end system, not a scope cut. The remaining milestones build on it. GCP concepts are explored locally with emulators, adapters, and Terraform validation by default; live provisioning is optional and requires the approval gate in `COST-BOUNDARY.md`.
+
+For each meaningful change, first discuss the concept, purpose, alternatives, assumptions, files, and tests. At the end, record what you learned, what failed, what evidence proves the behavior, and what remains uncertain.
+
+## Milestone 1 — Domain and local foundation
+
+**Outcome:** Explain the product and its control/data-plane boundary, and reproduce the starting local environment.
+
+Work blocks:
+
+- Define the feature-flag problem, glossary, deployment-versus-release distinction, and project scope.
+- Study feature-flag concepts and OpenFeature/commercial reference models; record what is in and out of scope.
+- Sketch the initial control-plane/data-plane architecture and explain why evaluation is local.
+- Bootstrap the repository structure and local Python/frontend/SDK tooling.
+- Create the Docker Compose foundation and verify that the local database can be started, stopped, and recreated.
+
+Evidence: architecture sketch, clean setup instructions, and a successful local environment recreation.
+
+## Milestone 2 — API and relational data foundation
+
+**Outcome:** Build a tested FastAPI and PostgreSQL foundation with repeatable schema changes.
+
+Work blocks:
+
+- Create the FastAPI application shell and health/readiness endpoints.
+- Define request validation and a consistent API error contract.
+- Connect SQLAlchemy and establish a clear database-session lifecycle.
+- Add Alembic migrations and test applying them to a clean database.
+- Define the initial project/environment/flag schema, constraints, and indexes.
+
+Evidence: automated API/database tests and a clean migration run.
+
+## Milestone 3 — Flag control plane and admin access
+
+**Outcome:** Manage flags through a protected API and retain an auditable history of changes.
+
+Work blocks:
+
+- Implement project, environment, and feature-flag CRUD.
+- Add flag edit-version checks to prevent lost updates.
+- Record audit events with before/after state in the same transaction as mutations.
+- Implement the single-operator admin authentication in ADR-018.
+- Test authorized, unauthorized, invalid, conflicting, and failure cases.
+
+Evidence: API tests show successful changes are audited atomically and stale edits are rejected.
+
+## Milestone 4 — Admin dashboard
+
+**Outcome:** Operate the local control plane through a usable browser dashboard.
+
+Work blocks:
+
+- Create the Astro/React application shell and navigation.
+- Build project and environment views with loading, empty, and error states.
+- Build flag list/create/edit/toggle workflows.
+- Display audit history and before/after values.
+- Harden forms, input validation, accessibility, and browser error behavior.
+
+Evidence: a browser walkthrough of the admin workflows and relevant component/API tests.
+
+## Milestone 5 — SDK and first local end-to-end behavior
+
+**Outcome:** Change a flag in the control plane and observe the demo app respond without rebuilding it.
+
+Work blocks:
+
+- Define the public TypeScript SDK contract before implementation.
+- Fetch and validate configuration during SDK bootstrap.
+- Store an immutable in-memory configuration snapshot.
+- Implement boolean evaluation and caller-provided fallback behavior.
+- Integrate the SDK into the demo store and demonstrate a live flag change.
+
+Evidence: end-to-end local demonstration, unit/integration tests, and a documented unavailable-API fallback.
+
+## Milestone 6 — Isolation, rollout, and targeting
+
+**Outcome:** Deliver the correct environment configuration and evaluate deterministic user assignment.
+
+Work blocks:
+
+- Design environment-scoped, read-only SDK client keys and their revocation flow.
+- Enforce project/environment isolation at the API boundary.
+- Implement and test deterministic percentage bucketing.
+- Define and implement the intentionally small targeting-rule set.
+- Document precedence and exercise a table-driven evaluation matrix.
+
+Evidence: tests for revoked keys, environment separation, stable user assignment, and rule precedence.
+
+## Milestone 7 — Refresh, cache, and stale behavior
+
+**Outcome:** Refresh SDK configuration efficiently while continuing to use the last valid snapshot during failures.
+
+Work blocks:
+
+- Expose SDK configuration revision/age diagnostics.
+- Implement configurable polling and test timeout/server-error behavior.
+- Add conditional HTTP requests using ETags or revision hints.
+- Define and test last-known-good fallback behavior.
+- Run an optional local Redis experiment comparing per-process and shared caching; document whether it helps.
+
+Evidence: measured request reduction, stale-window observations, and tests proving a failed refresh does not erase good state.
+
+## Milestone 8 — Streaming and consistency
+
+**Outcome:** Deliver updates over SSE and converge after disconnects, duplicates, or reordered notifications.
+
+Work blocks:
+
+- Learn SSE's long-lived HTTP connection model and build a minimal local proof of concept.
+- Implement an update stream with a documented event schema and disconnect handling.
+- Consume stream events from the SDK and expose connection diagnostics.
+- Add bounded reconnect/backoff and a catch-up fetch after reconnect.
+- Test duplicate and out-of-order revisions and prove the SDK never moves backward.
+
+Evidence: interruption/restart experiment and automated ordering/idempotency tests.
+
+## Milestone 9 — Observability, resilience, and measurement
+
+**Outcome:** Explain system behavior using evidence from logs, metrics, failure tests, and bounded load tests.
+
+Work blocks:
+
+- Add structured logs without credentials or other sensitive values.
+- Instrument refresh/evaluation boundaries and expose useful local metrics.
+- Measure configuration-change-to-client-update propagation.
+- Inject local database/API/stream failures and record the actual fallback behavior.
+- Run a resource-bounded load test and report percentiles, throughput, and errors.
+
+Evidence: a failure matrix and benchmark report with environment and limitations recorded.
+
+## Milestone 10 — GCP and Terraform foundations
+
+**Outcome:** Understand the intended GCP deployment and validate infrastructure configuration without provisioning resources.
+
+Work blocks:
+
+- Review the cost boundary, billing requirements, resource ownership, and teardown plan.
+- Create Terraform configuration and run formatting, initialization as appropriate, validation, and static checks without applying it.
+- Build and run the container locally; document Artifact Registry image lifecycle.
+- Configure and validate a Cloud Run deployment plan with scale-to-zero intent, without deploying it.
+- Study Cloud Run logs and operations through local equivalents; document what remains cloud-specific.
+
+Evidence: reviewed Terraform plan/configuration and a resource inventory/cleanup runbook. Do not run `terraform apply` on the default path.
+
+## Milestone 11 — Document data, events, and IAM
+
+**Outcome:** Model the cloud data/event path and test its core semantics locally.
+
+Work blocks:
+
+- Map the relational domain to Firestore documents and explain query/transaction trade-offs.
+- Test the repository contract against a Firestore emulator or local adapter.
+- Publish configuration-change events through a Pub/Sub emulator or local event-bus adapter.
+- Consume duplicate events idempotently and connect event revision to the SDK catch-up path.
+- Design least-privilege IAM policies and cloud observability without creating live resources.
+
+Evidence: adapter/event tests, documented emulator limitations, and an IAM permission matrix.
+
+## Milestone 12 — CI/CD design and final engineering package
+
+**Outcome:** Demonstrate reproducible local checks, a safe release design, and the complete system's trade-offs.
+
+Work blocks:
+
+- Run lint, unit/integration tests, and builds locally; design optional hosted CI without enabling it by default.
+- Document a controlled deployment and rollback workflow; do not deploy without explicit approval.
+- Validate the end-to-end local path from dashboard through API and SDK, including propagation and failure fallback.
+- Compare benchmark results with the earlier baseline and update the architecture evolution record.
+- Present the demo, security/cost walkthrough, ADR review, and learning retrospective.
+
+Evidence: repeatable local validation, final report, and a list of known gaps and next experiments.
 
 ## Completion standard
 
-Do not mark a day complete because the code "exists."
+A milestone is complete when you can:
 
-Mark it complete when the learner can:
+- explain the central concept in your own words;
+- demonstrate the intended behavior;
+- point to a test or other repeatable evidence;
+- describe a relevant failure mode and its behavior;
+- explain the trade-off and what remains imperfect.
 
-- explain the concept;
-- demonstrate the behavior;
-- show a test;
-- describe a failure mode;
-- point to the Git commit;
-- state what remains imperfect.
+There is no penalty for taking longer, changing the order after documenting a dependency, or pausing to learn a prerequisite.

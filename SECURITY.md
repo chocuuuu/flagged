@@ -64,13 +64,9 @@ Primary threats:
 
 ## Admin
 
-For the learning MVP:
+Use the single-operator authentication model in [ADR-018](docs/adrs/ADR-018-single-admin-authentication.md). The personal-project scope does not require user registration, multi-user roles, or a hosted identity provider.
 
-- username/email + password
-- session/JWT
-- secure password hashing
-
-Do not invent cryptographic algorithms. Use a reputable password-hashing library.
+Do not invent cryptographic algorithms. Keep the configured password verifier and session-signing key out of source control and logs.
 
 ## Client SDK
 
@@ -87,11 +83,10 @@ The client key can read SDK-safe configuration but must not:
 
 # 5. Authorization
 
-Minimum roles:
+Initial admin authorization:
 
 ```text
-ADMIN
-VIEWER
+single configured ADMIN
 ```
 
 Admin:
@@ -100,13 +95,7 @@ Admin:
 - manage client keys
 - view audit history
 
-Viewer:
-
-- read configuration through dashboard
-- cannot mutate flags
-
 SDK:
-
 - evaluation/read-only configuration only
 
 ---
@@ -204,14 +193,14 @@ SDK API:
 
 # 10. Configuration integrity
 
-Every distributed configuration has a version.
+Every distributed configuration has an environment-wide revision.
 
 SDK rule:
 
 ```text
-accept incoming version
+accept incoming revision
 ONLY IF
-incoming.version > local.version
+incoming.revision > local.revision
 ```
 
 This protects against stale updates.

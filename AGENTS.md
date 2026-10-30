@@ -4,7 +4,7 @@
 
 ## Mission
 
-Build **Distributed Feature Flag & Configuration Platform** as a 12-week, learning-first cloud engineering project.
+Build **Distributed Feature Flag & Configuration Platform** as an outcome-based, learning-first cloud engineering project. Its 12 milestones are an ordered guide, not a calendar or deadline.
 
 The repository must remain understandable to a developer who did not watch the implementation happen.
 
@@ -16,7 +16,7 @@ The repository must remain understandable to a developer who did not watch the i
 4. **The database is the source of truth; SDK memory is a distributed cache.**
 5. **Configuration propagation must be observable and versioned.**
 6. **Stateless services are preferred.**
-7. **External managed services are introduced only when they teach a useful cloud concept.**
+7. **External managed services are optional experiments, never the default path.**
 8. **Every distributed behavior must have a failure story.**
 9. **Public SDK behavior is treated as an API contract.**
 10. **Infrastructure is reproducible with Terraform.**
@@ -53,7 +53,7 @@ The repository must remain understandable to a developer who did not watch the i
 
 ### Cloud
 - Google Cloud Run
-- Firestore (cloud deployment path)
+- Firestore (emulator/local by default; live use optional)
 - Pub/Sub
 - Artifact Registry
 - IAM
@@ -103,6 +103,8 @@ docs/benchmarks/
 
 ## AI collaboration protocol
 
+Before each meaningful change, explain its purpose, assumptions, files involved, tests/evidence, and why the chosen option is preferred over alternatives. Cover compatibility, concurrency, performance, and cost whenever relevant. Afterward, report what was verified and any failures or remaining risks.
+
 For each meaningful task:
 
 ```text
@@ -124,12 +126,8 @@ Do not generate the entire platform in one request. Work in the Jira sequence an
 
 ## Cloud cost safety
 
-Before any cloud provisioning:
-
-- state the services that will be created;
-- state whether each can incur charges;
-- use the smallest configuration;
-- add cleanup commands;
-- prefer free-tier-compatible usage;
-- verify the current price page when pricing could have changed.
-
+- The default development and validation path must not provision cloud resources or incur cloud-service charges.
+- Prefer local services, emulators, and local adapters for cloud learning.
+- Never treat free tiers, quotas, budgets, or alerts as guarantees that a workload cannot incur charges.
+- Before any live cloud provisioning, stop and get explicit user approval. First identify every resource, check current official pricing and billing prerequisites, estimate likely costs, and document cleanup commands.
+- Do not apply Terraform or enable a paid hosted workflow without that approval.

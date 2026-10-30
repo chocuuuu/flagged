@@ -91,6 +91,12 @@ Not required:
 
 > Every client changes at exactly the same instant.
 
+## Revision ownership and concurrent updates
+
+The server owns a monotonically increasing configuration revision per environment. Each client remembers the revision of its latest valid snapshot; this client-side value is a cache position, not an independent authority.
+
+When a transaction changes any client-visible flag or rule, it must update the configuration, append its audit event, and increment the environment revision atomically. Concurrent transactions must serialize revision allocation so two published snapshots cannot claim the same revision for different configuration states. A failed transaction publishes neither the mutation nor a new revision. Clients accept only strictly newer snapshots, making duplicate and out-of-order delivery harmless.
+
 ---
 
 # 5. Failure scenarios
@@ -123,11 +129,11 @@ bootstrap/poll to catch up
 
 ## Duplicate update
 
-Ignore based on version.
+Ignore based on environment revision.
 
 ## Out-of-order update
 
-Ignore older version.
+Ignore older revision.
 
 ## Corrupt payload
 
@@ -228,7 +234,7 @@ A stream event can be:
 ```json
 {
   "type": "config.updated",
-  "version": 43
+  "revision": 43
 }
 ```
 
@@ -241,12 +247,12 @@ fetch latest config
   ↓
 validate
   ↓
-compare version
+compare revision
   ↓
 replace snapshot
 ```
 
-Sending only "version changed" instead of the full config teaches an important concept:
+Sending only "revision changed" instead of the full config teaches an important concept:
 
 > notifications and state transfer are different concerns.
 
@@ -394,4 +400,3 @@ Possible future evolution:
 ```
 
 Only discuss this until the core system is stable.
-

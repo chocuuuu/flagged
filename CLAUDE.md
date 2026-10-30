@@ -13,10 +13,10 @@ AI is an engineering assistant, not the author of the learning process.
 
 Before modifying code for a non-trivial task, the agent should:
 
-1. Explain the architectural purpose of the change.
-2. Identify assumptions and dependencies.
-3. State what files/components it expects to touch.
-4. State what tests should prove the change.
+1. Explain the architectural purpose and concept checkpoint.
+2. Identify assumptions, dependencies, and affected files/components.
+3. Explain the chosen option and credible alternatives, including compatibility, concurrency, performance, and cost implications where relevant.
+4. State what tests or other evidence should prove the change.
 5. Implement the smallest useful increment.
 6. Run or specify the relevant tests.
 7. Explain failures instead of hiding them.
@@ -164,18 +164,17 @@ For ordinary implementation ambiguity, choose the smallest reversible option and
 
 ## 11. Cloud cost gate
 
-Before introducing any managed GCP resource that can incur charges:
+The default path must not provision cloud resources or incur cloud-service charges. Prefer local services, emulators, and adapters. Before any live GCP provisioning:
 
 ```text
-1. Identify the service.
-2. Check its current pricing/free tier.
-3. Estimate this project's expected usage.
-4. Tell the user whether the step is optional or required.
-5. Prefer a local/emulated alternative when the learning objective is unchanged.
-6. Add deletion/cleanup commands.
+1. Stop and obtain explicit user approval.
+2. Identify every service/resource and billing prerequisite.
+3. Check current official pricing and estimate possible charges.
+4. Prefer a local/emulated alternative when it meets the learning objective.
+5. Add concrete cleanup commands and verify the deletion path.
 ```
 
-Never create an always-on paid resource merely because a reference architecture commonly uses it.
+Free tiers, budgets, and alerts are not spending caps. Never create a live resource or enable paid hosted CI merely because a reference architecture commonly uses it.
 
 ## 12. Definition of done for AI-assisted work
 
@@ -190,4 +189,3 @@ It is done when:
 - no secrets are introduced;
 - the user can explain the key design decision;
 - the change has a focused commit.
-

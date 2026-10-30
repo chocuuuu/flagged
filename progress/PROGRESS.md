@@ -1,97 +1,25 @@
-# PROGRESS.md
-
-# Flagged — 60-Day Progress Tracker
+# Flagged — Milestone Progress Tracker
 
 ## How to use
 
-Each day is one focused learning/engineering session. A day does not mean "finish all code"; it means complete the learning target, record evidence, and commit progress.
+Progress is measured by outcomes and evidence, not elapsed calendar time. Check a milestone only when its completion evidence is available and you can explain the learning objective. Use `progress/DAILY-PLAN.md` for suggested work blocks; pause or resume whenever your other responsibilities require it.
 
-Suggested session structure:
+The full project contains 12 milestones. Milestone 5 is the first useful local end-to-end system, not the end of scope. Live GCP provisioning is not needed to complete any milestone.
 
-```text
-20–30 min  Learn/read
-60–120 min Implement
-20–45 min  Test/debug
-10 min     Notes/commit
-```
+## Milestones
 
-## Daily tracker
-
-- [ ] Day 01 — Project charter, terminology, environment setup
-- [ ] Day 02 — Read/annotate feature-flag concepts and LaunchDarkly/OpenFeature models
-- [ ] Day 03 — Define control plane vs data plane; draw first architecture
-- [ ] Day 04 — Repository bootstrap; GitHub branch/commit conventions
-- [ ] Day 05 — Local Docker Compose skeleton
-- [ ] Day 06 — FastAPI app shell and health endpoint
-- [ ] Day 07 — Pydantic models and API conventions
-- [ ] Day 08 — SQLAlchemy setup and database connection
-- [ ] Day 09 — Alembic migrations
-- [ ] Day 10 — Project/environment schema
-- [ ] Day 11 — Flag schema
-- [ ] Day 12 — CRUD API for projects/environments
-- [ ] Day 13 — CRUD API for flags
-- [ ] Day 14 — Validation/error handling
-- [ ] Day 15 — API integration tests
-- [ ] Day 16 — Admin authentication
-- [ ] Day 17 — Authorization boundaries
-- [ ] Day 18 — Audit event model
-- [ ] Day 19 — Audit trail implementation
-- [ ] Day 20 — Admin API cleanup and docs
-- [ ] Day 21 — Astro + React dashboard shell
-- [ ] Day 22 — Project/environment screens
-- [ ] Day 23 — Flag list/create/edit UI
-- [ ] Day 24 — Flag enable/disable workflow
-- [ ] Day 25 — Dashboard tests
-- [ ] Day 26 — SDK package skeleton
-- [ ] Day 27 — SDK bootstrap endpoint
-- [ ] Day 28 — Immutable in-memory config
-- [ ] Day 29 — Boolean evaluation
-- [ ] Day 30 — Demo Store integration
-- [ ] Day 31 — Environment/client-key model
-- [ ] Day 32 — Percentage rollout design
-- [ ] Day 33 — Deterministic hashing implementation
-- [ ] Day 34 — Targeting rules v1
-- [ ] Day 35 — Evaluation precedence and test matrix
-- [ ] Day 36 — Polling implementation
-- [ ] Day 37 — ETag/version optimization
-- [ ] Day 38 — Stale configuration and fallback
-- [ ] Day 39 — Redis cache experiment
-- [ ] Day 40 — Multi-instance cache behavior
-- [ ] Day 41 — SSE endpoint
-- [ ] Day 42 — SDK SSE client
-- [ ] Day 43 — Reconnect/backoff behavior
-- [ ] Day 44 — Out-of-order/duplicate update handling
-- [ ] Day 45 — Propagation-latency benchmark
-- [ ] Day 46 — Structured logging
-- [ ] Day 47 — Metrics and traces
-- [ ] Day 48 — Failure injection
-- [ ] Day 49 — Load testing
-- [ ] Day 50 — Performance tuning and report
-- [ ] Day 51 — GCP project cost guardrails
-- [ ] Day 52 — Terraform foundation
-- [ ] Day 53 — Cloud Run deployment
-- [ ] Day 54 — Firestore adapter
-- [ ] Day 55 — Pub/Sub integration
-- [ ] Day 56 — GCP IAM hardening
-- [ ] Day 57 — GitHub Actions CI
-- [ ] Day 58 — CD/deploy workflow
-- [ ] Day 59 — End-to-end cloud validation
-- [ ] Day 60 — Final demo, ADR review, documentation, retrospective
-
-## Sprint tracker
-
-- [ ] Sprint 1 — Domain, repo, local environment
-- [ ] Sprint 2 — Python API + database foundation
-- [ ] Sprint 3 — Core flag management + audit
-- [ ] Sprint 4 — Admin dashboard
-- [ ] Sprint 5 — SDK + local evaluation
-- [ ] Sprint 6 — Environments + rollouts + targeting
-- [ ] Sprint 7 — Polling + caching
-- [ ] Sprint 8 — SSE + consistency
-- [ ] Sprint 9 — Observability + resilience + load testing
-- [ ] Sprint 10 — Terraform + GCP foundation
-- [ ] Sprint 11 — Firestore + Pub/Sub + IAM
-- [ ] Sprint 12 — CI/CD + cloud validation + final documentation
+- [ ] **M1 — Domain and local foundation:** scope, glossary, architecture sketch, repository/tooling, reproducible local database.
+- [ ] **M2 — API and relational data foundation:** FastAPI, validation, SQLAlchemy, migrations, schema, tests.
+- [ ] **M3 — Flag control plane and admin access:** CRUD, optimistic flag edits, atomic audit, single-admin authentication, security tests.
+- [ ] **M4 — Admin dashboard:** project/environment/flag/audit workflows with loading, error, and accessibility behavior.
+- [ ] **M5 — SDK and first local end-to-end behavior:** bootstrap, immutable snapshot, evaluation/fallback, demo-store live update.
+- [ ] **M6 — Isolation, rollout, and targeting:** scoped client keys, environment isolation, deterministic bucketing, targeting precedence.
+- [ ] **M7 — Refresh, cache, and stale behavior:** polling, conditional HTTP, last-known-good state, optional local Redis experiment.
+- [ ] **M8 — Streaming and consistency:** SSE, reconnect/catch-up, environment revisions, duplicate/out-of-order update tests.
+- [ ] **M9 — Observability, resilience, and measurement:** structured logs, metrics, failure matrix, bounded load and propagation evidence.
+- [ ] **M10 — GCP and Terraform foundations:** cost review, local Terraform validation, container/Cloud Run plan, cleanup documentation; no apply by default.
+- [ ] **M11 — Document data, events, and IAM:** Firestore emulator/adapter, Pub/Sub emulator/local adapter, idempotency, least-privilege design.
+- [ ] **M12 — CI/CD design and final engineering package:** local checks, deployment/rollback design, final end-to-end evidence, report and retrospective.
 
 ## ADR tracker
 
@@ -100,43 +28,39 @@ Suggested session structure:
 - [ ] ADR-003 — Python + FastAPI for the control plane
 - [ ] ADR-004 — Astro + React for dashboard and demo app
 - [ ] ADR-005 — PostgreSQL as local source of truth
-- [ ] ADR-006 — Firestore as default GCP persistence path
+- [ ] ADR-006 — Firestore emulator by default; live use is optional
 - [ ] ADR-007 — Persistence repository boundary
 - [ ] ADR-008 — Evaluate feature flags in the SDK
 - [ ] ADR-009 — Polling before SSE before Pub/Sub
-- [ ] ADR-010 — Monotonic configuration versions
+- [ ] ADR-010 — Environment-wide monotonic configuration revisions
 - [ ] ADR-011 — Deterministic hashing for percentage rollouts
 - [ ] ADR-012 — Scoped read-only client keys
 - [ ] ADR-013 — Do not require managed Redis
-- [ ] ADR-014 — Cloud Run for stateless application hosting
+- [ ] ADR-014 — Cloud Run as an optional stateless deployment target
 - [ ] ADR-015 — Terraform for infrastructure
-- [ ] ADR-016 — GitHub Actions for CI/CD
+- [ ] ADR-016 — GitHub Actions as optional hosted CI/CD
 - [ ] ADR-017 — Observability is a core requirement
+- [ ] ADR-018 — Single-operator admin authentication
 
 ## Cost safety checklist
 
-- [ ] Budget/alert configured before cloud provisioning
-- [ ] No always-on paid cache created
-- [ ] No unnecessary Cloud SQL instance created
-- [ ] Cloud Run min instances = 0 unless deliberately testing otherwise
-- [ ] Logs are bounded
-- [ ] Artifact images are cleaned up
-- [ ] Firestore free-tier database is the default path
-- [ ] Pub/Sub usage monitored
-- [ ] GCP resources deleted after experiments
+- [ ] Default development, testing, and cloud-learning path uses local services, emulators, or adapters.
+- [ ] No live GCP resource is required for milestone completion.
+- [ ] `terraform apply` and paid hosted workflows remain disabled unless explicitly approved.
+- [ ] Before an approved live experiment, current pricing/billing prerequisites, resource limits, and cleanup steps are documented.
+- [ ] Free quotas, budgets, and alerts are not treated as spending caps.
+- [ ] Resources and data from any explicitly approved experiment are cleaned up and deletion is verified.
 
-## Evidence to record
-
-For each major milestone, record:
+## Evidence to record for each milestone
 
 ```text
-What I built:
+What I built or investigated:
 What I learned:
-What broke:
-Why it broke:
-How I fixed it:
-What test proves it:
-What trade-off I made:
+What confused me:
+What broke and why:
+What test or repeatable evidence proves the behavior:
+What trade-off I chose and why:
 What I would change at 10x scale:
-Commit:
+What remains incomplete:
+Commit or reference:
 ```
