@@ -59,6 +59,13 @@ Constraint:
 UNIQUE(project_id, key)
 ```
 
+ADR-019 requires an environment key never to be reused within its project, including
+after deletion. The persistence mechanism for retaining that key (for example, a
+tombstone or soft-deleted environment) is undecided. The draft v1 API does not expose
+environment deletion, so the initial schema does not yet add a deletion column.
+Resolve this before implementing environment deletion; do not make a deleted key
+available for reuse in the meantime.
+
 ## feature_flags
 
 | Column | Type | Notes |
@@ -70,7 +77,7 @@ UNIQUE(project_id, key)
 | description | text | nullable |
 | type | varchar | boolean/variant |
 | enabled | boolean | base state |
-| rollout_percentage | numeric | 0–100 |
+| rollout_basis_points | integer | 0–10000 inclusive; canonical rollout value |
 | version | bigint | optimistic version |
 | created_at | timestamptz | required |
 | updated_at | timestamptz | required |
@@ -78,8 +85,11 @@ UNIQUE(project_id, key)
 Constraint:
 
 ```text
-UNIQUE(environment_id, key)
+UNIQUE(environment_id, key),
+CHECK (rollout_basis_points BETWEEN 0 AND 10000)
 ```
+
+The admin API and SDK configuration payload use integer basis points, not decimal percentages. A presentation layer may display percentages but must submit an exact integer basis-point value.
 
 ## targeting_rules
 
@@ -92,6 +102,8 @@ UNIQUE(environment_id, key)
 | value | text | comparison target |
 | priority | integer | evaluation order |
 | enabled | boolean | rule switch |
+
+Targeting-rule priorities need not be unique. Enabled rules are ordered by ascending priority, then by canonical lowercase UUID rule ID in ascending ordinal/bytewise string order; see [ADR-020](docs/adrs/ADR-020-rule-precedence-and-rollout-bucketing.md). The SDK receives the resulting order and does not re-sort rules.
 
 ## client_keys
 
@@ -132,14 +144,13 @@ SDK bootstrap response:
 {
   "environment": "production",
   "revision": 42,
-  "generatedAt": "2026-01-01T00:00:00Z",
   "flags": [
     {
       "key": "new_checkout",
       "type": "boolean",
       "enabled": true,
       "rollout": {
-        "percentage": 10
+        "basisPoints": 1000
       },
       "rules": []
     }

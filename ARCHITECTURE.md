@@ -130,7 +130,7 @@ true / false / variant
 ```text
 SDK starts
    ↓
-GET /sdk/config
+GET /v1/sdk/projects/{projectKey}/environments/{environmentKey}/config
    ↓
 validate response
    ↓
@@ -144,7 +144,8 @@ ready
 ```text
 timer
   ↓
-GET /sdk/config?afterRevision=42
+GET /v1/sdk/projects/{projectKey}/environments/{environmentKey}/config
+If-None-Match: "config-r42"
   ↓
 newer revision?
   ├── no → keep snapshot
@@ -153,14 +154,16 @@ newer revision?
 
 ## Streaming
 
+Cross-instance delivery follows [ADR-021](docs/adrs/ADR-021-sse-delivery-across-instances.md): each active stream checks the database-backed environment revision (5-second local interval; 60-second live Firestore default), so an update made on another stateless instance is observed without process-local fan-out state. SSE events carry a revision hint, not configuration; the SDK fetches and validates the complete snapshot on notification and reconnect. Polling remains the recovery path.
+
 ```text
 SDK
  │
  │ SSE connection
  ▼
-/sdk/stream
+/v1/sdk/projects/{projectKey}/environments/{environmentKey}/stream
  │
- └── CONFIG_UPDATED(revision=43)
+ └── config.updated(revision=43)
          ↓
     fetch/validate config
          ↓
@@ -202,19 +205,14 @@ The server assigns a single monotonically increasing revision per environment. E
 
 # 8. Percentage rollout
 
-Use a stable hash:
+Use the deterministic, cross-language bucketing contract in [ADR-020](docs/adrs/ADR-020-rule-precedence-and-rollout-bucketing.md):
 
 ```text
-bucket = hash(flagKey + subjectKey) % 100
+bucket = floor(fnv1a32(encode(flagKey, subjectKey)) * 10000 / 2^32)
+enabled = bucket < rolloutBasisPoints
 ```
 
-Then:
-
-```text
-bucket < percentage
-```
-
-means the user is included.
+The subject is included exactly when `bucket < rolloutBasisPoints`.
 
 This creates stable assignment without server-side session storage.
 

@@ -1,6 +1,6 @@
 # ADR-004: Astro + React for dashboard and demo app
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

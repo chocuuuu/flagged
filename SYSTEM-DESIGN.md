@@ -95,7 +95,7 @@ Not required:
 
 The server owns a monotonically increasing configuration revision per environment. Each client remembers the revision of its latest valid snapshot; this client-side value is a cache position, not an independent authority.
 
-When a transaction changes any client-visible flag or rule, it must update the configuration, append its audit event, and increment the environment revision atomically. Concurrent transactions must serialize revision allocation so two published snapshots cannot claim the same revision for different configuration states. A failed transaction publishes neither the mutation nor a new revision. Clients accept only strictly newer snapshots, making duplicate and out-of-order delivery harmless.
+When a transaction creates, changes, or deletes a client-visible flag or changes an active client-visible rule, it must update the configuration, append its audit event, and increment the environment revision atomically. Concurrent transactions must serialize revision allocation so two published snapshots cannot claim the same revision for different configuration states. A failed transaction publishes neither the mutation nor a new revision. Clients accept only strictly newer snapshots, making duplicate and out-of-order delivery harmless.
 
 ---
 
@@ -126,6 +126,8 @@ exponential backoff
 ↓
 bootstrap/poll to catch up
 ```
+
+Cross-instance SSE delivery uses database revision polling, as specified by [ADR-021](docs/adrs/ADR-021-sse-delivery-across-instances.md). Each instance checks the source of truth for active streams; it does not depend on process-local update state or require Pub/Sub in the default path. During a database outage, clients keep their last-known-good snapshot and use polling/reconnect to catch up after recovery.
 
 ## Duplicate update
 

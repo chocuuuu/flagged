@@ -1,6 +1,6 @@
 # ADR-010: Environment-wide configuration revisions
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

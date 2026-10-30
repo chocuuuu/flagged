@@ -1,6 +1,6 @@
 # ADR-011: Deterministic hashing for percentage rollouts
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

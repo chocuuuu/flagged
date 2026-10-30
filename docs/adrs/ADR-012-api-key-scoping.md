@@ -1,6 +1,6 @@
 # ADR-012: Scoped read-only client keys
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

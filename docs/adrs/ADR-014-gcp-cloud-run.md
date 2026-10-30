@@ -1,6 +1,6 @@
 # ADR-014: Cloud Run for stateless application hosting
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

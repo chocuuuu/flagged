@@ -1,6 +1,6 @@
 # ADR-015: Terraform for infrastructure
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

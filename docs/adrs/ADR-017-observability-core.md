@@ -1,6 +1,6 @@
 # ADR-017: Observability is a core requirement
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

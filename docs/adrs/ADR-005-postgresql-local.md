@@ -1,6 +1,6 @@
 # ADR-005: PostgreSQL as local source of truth
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

@@ -1,6 +1,6 @@
 # ADR-009: Polling before SSE before Pub/Sub
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

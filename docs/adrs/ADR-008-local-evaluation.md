@@ -1,6 +1,6 @@
 # ADR-008: Evaluate feature flags in the SDK
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

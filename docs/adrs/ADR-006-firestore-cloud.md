@@ -1,6 +1,6 @@
 # ADR-006: Firestore as an optional cloud persistence experiment
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 

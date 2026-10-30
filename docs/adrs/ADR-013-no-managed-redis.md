@@ -1,6 +1,6 @@
 # ADR-013: Do not require managed Redis
 
-**Status:** Accepted
+**Status:** Proposed
 
 ## Decision
 
