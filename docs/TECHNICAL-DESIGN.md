@@ -60,7 +60,7 @@ flowchart LR
 
 - Admin operations require the proposed single-operator session and CSRF protections
   in ADR-018. SDK operations use an environment-scoped, read-only client key.
-- Flag deletion is included in M3 feature-flag CRUD (FF-302), not a claim that it
+- Flag deletion is included in M3 feature-flag CRUD (FLAG-22), not a claim that it
   ships in the initial M1 foundation.
 - The SDK evaluates against an immutable local snapshot and caller-provided context;
   normal evaluations do not call the API.
@@ -413,7 +413,7 @@ This is a navigation summary, not a substitute for the ADRs. All listed ADRs rem
 | Snapshot ordering | Environment revision plus per-flag edit version | Prevent stale SDK snapshots and lost admin edits with separate tokens for separate jobs | [ADR-019](adrs/ADR-019-configuration-version-semantics.md) |
 | Rollout and rule ordering | Deterministic integer-basis-point rollout and stable rule precedence | Makes evaluations reproducible across SDK implementations; does not provide authorization or cryptographic security | [ADR-020](adrs/ADR-020-rule-precedence-and-rollout-bucketing.md) |
 | Configuration propagation | Polling first, then SSE hints; Pub/Sub remains optional | Keeps the default path local and recoverable; a push bus adds infrastructure and delivery/idempotency work | [ADR-009](adrs/ADR-009-progressive-propagation.md), [ADR-021](adrs/ADR-021-sse-delivery-across-instances.md) |
-| Admin authentication | **Proposed** — one operator with signed session cookie and CSRF protection; planned implementation is M3 / FF-304 | Avoid browser bearer-token storage, user/role infrastructure, and a hosted identity dependency at this scope. The ADR is not Accepted before implementation and verification. | [ADR-018](adrs/ADR-018-single-admin-authentication.md) |
+| Admin authentication | **Proposed** — one operator with signed session cookie and CSRF protection; planned implementation is M3 / FLAG-24 | Avoid browser bearer-token storage, user/role infrastructure, and a hosted identity dependency at this scope. The ADR is not Accepted before implementation and verification. | [ADR-018](adrs/ADR-018-single-admin-authentication.md) |
 | Browser payload | Complete environment snapshot; configuration is public | Enables offline local evaluation; sensitive rules must remain server-side and must not be sent to a browser | [ADR-022](adrs/ADR-022-sdk-payload-and-client-visible-fields.md) |
 | Frontend and SDK | Astro + React dashboard/demo; TypeScript SDK | A cohesive browser-focused learning stack; the SDK's public API still needs implementation tests | [ADR-004](adrs/ADR-004-astro-react.md), [ADR-008](adrs/ADR-008-local-evaluation.md) |
 | Cloud and infrastructure | GCP/Cloud Run and Terraform are optional learning targets; no default apply | Supports infrastructure learning while keeping the default path free of cloud charges | [ADR-001](adrs/ADR-001-local-first-cloud-later.md), [ADR-014](adrs/ADR-014-gcp-cloud-run.md), [ADR-015](adrs/ADR-015-terraform.md) |

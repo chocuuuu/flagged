@@ -173,11 +173,11 @@ def check_jira() -> tuple[int, int, int]:
 
 def check_cloud_cost_gate() -> tuple[int, int]:
     text = BACKLOG.read_text(encoding="utf-8")
-    gate = re.search(r"^- \[ \] \*\*FF-1001-1\*\* .+$", text, re.MULTILINE)
+    gate = re.search(r"^- \[ \] \*\*FLAG-169\*\* .+$", text, re.MULTILINE)
     if not gate:
-        fail("Jira backlog is missing the FF-1001-1 budget/alert gate.")
+        fail("Jira backlog is missing the FLAG-169 budget/alert gate.")
     if "budget/alert" not in gate.group(0).lower() or "spend caps" not in gate.group(0).lower():
-        fail("FF-1001-1 must configure a budget/alert and state that alerts are not spend caps.")
+        fail("FLAG-169 must configure a budget/alert and state that alerts are not spend caps.")
     provisioning = re.compile(
         r"\b(?:terraform apply|provision (?:a )?(?:live )?(?:cloud|gcp)|"
         r"deploy (?:to )?cloud run|cloud run deployment|enable (?:cloud )?apis|"
@@ -186,14 +186,14 @@ def check_cloud_cost_gate() -> tuple[int, int]:
         re.IGNORECASE,
     )
     provisioning_matches = []
-    for match in re.finditer(r"^- \[ \] \*\*(FF-\d+-\d+)\*\* .+$", text, re.MULTILINE):
-        if match.group(1) == "FF-1001-1":
+    for match in re.finditer(r"^- \[ \] \*\*(FLAG-\d+)\*\* .+$", text, re.MULTILINE):
+        if match.group(1) == "FLAG-169":
             continue
         line = match.group(0)
         if provisioning.search(line):
             provisioning_matches.append(match)
             if match.start() < gate.start():
-                fail(f"{match.group(1)} appears before the FF-1001-1 cost gate.")
+                fail(f"{match.group(1)} appears before the FLAG-169 cost gate.")
 
     cloud_run_tasks = [
         line
@@ -319,9 +319,12 @@ def check_stale_terms() -> int:
         re.compile(r"config\.updated\s*\(\s*revision\s*="),
         re.compile(r"\b60-Day\b", re.IGNORECASE),
         re.compile(r"\b60-Working-Session\b", re.IGNORECASE),
+        re.compile(r"\b" + "F" * 2 + r"-\d+(?:-\d+)?\b"),
     ]
     findings = []
-    for path in ROOT.rglob("*.md"):
+    for path in ROOT.rglob("*"):
+        if path.suffix.lower() not in {".md", ".csv", ".py"}:
+            continue
         if ".git" in path.parts:
             continue
         text = path.read_text(encoding="utf-8", errors="replace")

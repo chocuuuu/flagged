@@ -24,7 +24,7 @@ Every entry below is an audit edit. The pre-existing worktree deletion of
 
 ### Jira source and enforcement
 
-- `jira/JIRA-BACKLOG.md` - standardized FF keys and 3-point stories; aligned sprint
+- `jira/JIRA-BACKLOG.md` - standardized workspace `FLAG-*` keys and 3-point stories; aligned sprint
   names, learning objectives, and success/failure Test IDs; added demo storefront,
   auth, shared API error-contract tests, cost-gate, and CI-check coverage; made Redis
   strictly optional/local.
@@ -36,8 +36,8 @@ Every entry below is an audit edit. The pre-existing worktree deletion of
   tracker titles, sprint/session coverage, Jira drift, README paths, secrets,
   retired terminology, budget-gate ordering, and Cloud Run minimum instances.
 - Jira count reconciliation - verified that the 149 source subtasks are intentional:
-  three additional demo tasks in FF-504, one Cloud Run default in FF-1002, and one
-  CI consistency-gate task in FF-1201; the other 45 stories have three subtasks each.
+  three additional demo tasks in FLAG-32, one Cloud Run default in FLAG-50, and one
+  CI consistency-gate task in FLAG-57; the other 45 stories have three subtasks each.
 - ADR count reconciliation - verified that the initial inventory had 22 ADR files;
   ADR-023 was then added for repository structure, so the final tracker/checker count
   is 23 ADR files, not a count that includes a tracker or template.
@@ -120,6 +120,21 @@ Every entry below is an audit edit. The pre-existing worktree deletion of
   `AUDIT-REPORT.md` - documented/generated the compatibility-preserving import.
 - Clean-clone verification - commit `0f9dd3a` passed the generator and consistency
   checks from a fresh Windows clone with an empty Git status before and after.
+
+## 2026-10-31 — Workspace issue-key alignment
+
+- `jira/JIRA-BACKLOG.md`, `DATA.md`, `SECURITY.md`, `FLAGGED-MASTER-PLAN.md`,
+  `docs/TECHNICAL-DESIGN.md`, and audit records - replaced planning-only issue
+  references with the actual `FLAG-*` keys from the supplied workspace CSV.
+- `jira/IMPORT-ID-MAP.csv` - retained all 209 existing numeric import IDs while
+  mapping them to workspace keys. Existing epics, stories, and subtasks use
+  `FLAG-1`–`FLAG-204`; the five added subtasks use `FLAG-205`–`FLAG-209`.
+- Workspace CSV comparison - all 12 epic keys, 48 story keys, 144 existing
+  subtask keys, and parent links match the supplied export; the existing numeric
+  import IDs remain unchanged.
+- `scripts/generate_jira_csv.py` and `scripts/check_consistency.py` - parse the
+  workspace key format, preserve numeric import IDs, and reject retired key
+  references in project documents.
 
 No application features were implemented, no dependencies installed, and no cloud
 resources created. Gitleaks 8.30.1 was installed as a local scanner (not a project

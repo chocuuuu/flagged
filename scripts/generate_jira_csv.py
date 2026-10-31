@@ -27,9 +27,9 @@ FIELDS = [
     "Priority",
     "Story Points",
 ]
-ISSUE_RE = re.compile(r"^## (FF-\d+) " + EM_DASH + r" (.+)$", re.MULTILINE)
+ISSUE_RE = re.compile(r"^## (FLAG-\d+) " + EM_DASH + r" (.+)$", re.MULTILINE)
 SUBTASK_RE = re.compile(
-    r"^- \[ \] \*\*(FF-\d+-\d+)\*\* " + EM_DASH + r" (.+)$", re.MULTILINE
+    r"^- \[ \] \*\*(FLAG-\d+)\*\* " + EM_DASH + r" (.+)$", re.MULTILINE
 )
 ID_MAP_FIELDS = ["Source Key", "Work item ID"]
 
@@ -51,7 +51,9 @@ def load_id_map(source_keys: set[str]) -> dict[str, str]:
         for row in reader:
             source_key = row["Source Key"].strip()
             work_item_id = row["Work item ID"].strip()
-            if not source_key or not re.fullmatch(r"\d+", work_item_id):
+            if not re.fullmatch(r"FLAG-\d+", source_key) or not re.fullmatch(
+                r"\d+", work_item_id
+            ):
                 raise ValueError(f"Invalid source key or numeric work item ID: {row}.")
             if source_key in identifiers:
                 raise ValueError(f"Duplicate source key in ID map: {source_key}")
@@ -115,7 +117,7 @@ def generate() -> str:
         raise ValueError("Jira sprint names do not match docs/SPRINT-CALENDAR.md.")
 
     epic_matches = list(
-        re.finditer(r"^- (EPIC-\d+) " + EM_DASH + r" (.+)$", text, re.MULTILINE)
+        re.finditer(r"^- (FLAG-\d+) " + EM_DASH + r" (.+)$", text, re.MULTILINE)
     )
     if len(epic_matches) != 12:
         raise ValueError(f"Expected 12 epic definitions, found {len(epic_matches)}.")
@@ -126,7 +128,7 @@ def generate() -> str:
         int(match.group(1)): match.group(2).strip() for match in sprint_matches
     }
     for sprint_number, sprint_name in sprint_names.items():
-        epic_key = f"EPIC-{sprint_number}"
+        epic_key = f"FLAG-{sprint_number}"
         if epic_key not in epics:
             raise ValueError(f"Missing {epic_key} definition.")
         rows.append(
@@ -170,7 +172,7 @@ def generate() -> str:
         priority = field(block, "Priority")
         points = field(block, "Story Points")
         test_evidence = field(block, "Test Evidence")
-        if sprint_number not in sprint_names or epic != f"EPIC-{sprint_number}":
+        if sprint_number not in sprint_names or epic != f"FLAG-{sprint_number}":
             raise ValueError(f"Sprint/Epic mismatch in {key}.")
         if objective != skills_focus[sprint_number]:
             raise ValueError(f"Learning Objective mismatch in {key}.")
@@ -187,10 +189,8 @@ def generate() -> str:
         if not re.search(rf"`{re.escape(key)}-T1`.*`{re.escape(key)}-T2`", test_evidence):
             raise ValueError(f"{key} must name success and failure test IDs.")
         for subtask_key, subtask_summary in subtasks:
-            if subtask_key in subtask_keys:
+            if subtask_key in subtask_keys or subtask_key in story_keys or subtask_key in epics:
                 raise ValueError(f"Duplicate subtask key: {subtask_key}")
-            if not subtask_key.startswith(f"{key}-"):
-                raise ValueError(f"Subtask {subtask_key} is listed under the wrong story {key}.")
             subtask_keys.add(subtask_key)
 
         rows.append(

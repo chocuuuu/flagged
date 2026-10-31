@@ -4,10 +4,11 @@
 
 `JIRA-BACKLOG.md` is the canonical issue source. Generate the CSV import with
 `python scripts/generate_jira_csv.py`; do not hand-edit the CSV. `IMPORT-ID-MAP.csv`
-preserves the numeric work item IDs already used by the Jira workspace and maps
-them to the internal epic/story/subtask keys in this backlog. Add a new unused
-numeric ID to that map for each new issue; never renumber an existing mapping.
-The generated import keeps the existing seven-column format and numeric parent IDs.
+maps the `FLAG-*` Jira keys shown in the workspace to the numeric work item IDs
+required by the existing import format. Preserve existing mappings. For a new
+issue, use the next key issued by the Jira workspace and add a unique numeric
+work item ID to the map. The generated import keeps the existing seven-column
+format and numeric parent IDs.
 
 **Execution model:** 12 ordered sprints x 5 working sessions; 60 working sessions over 12 weeks, with no fixed calendar dates or deadline
 
@@ -43,18 +44,18 @@ Epic
 - GitHub Branch
 - Status
 
-- EPIC-1 — Foundation
-- EPIC-2 — Backend & Data
-- EPIC-3 — Flag Management
-- EPIC-4 — Dashboard
-- EPIC-5 — SDK
-- EPIC-6 — Evaluation & Targeting
-- EPIC-7 — Caching & Polling
-- EPIC-8 — Streaming & Consistency
-- EPIC-9 — Observability & Resilience
-- EPIC-10 — GCP Infrastructure
-- EPIC-11 — Cloud Data & Events
-- EPIC-12 — CI/CD & Finalization
+- FLAG-1 — Foundation
+- FLAG-2 — Backend & Data
+- FLAG-3 — Flag Management
+- FLAG-4 — Dashboard
+- FLAG-5 — SDK
+- FLAG-6 — Evaluation & Targeting
+- FLAG-7 — Caching & Polling
+- FLAG-8 — Streaming & Consistency
+- FLAG-9 — Observability & Resilience
+- FLAG-10 — GCP Infrastructure
+- FLAG-11 — Cloud Data & Events
+- FLAG-12 — CI/CD & Finalization
 
 ---
 
@@ -62,16 +63,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-101 — Project charter and glossary
+## FLAG-13 — Project charter and glossary
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 1<br>
-**Epic:** EPIC-1
+**Epic:** FLAG-1
 **Learning Objective:** Domain & local foundation
 
-**Test Evidence:** `FF-101-T1` (success path) and `FF-101-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-13-T1` (success path) and `FLAG-13-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -83,21 +84,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-101-1** — Write problem statement
-- [ ] **FF-101-2** — Define control/data plane terms
-- [ ] **FF-101-3** — Write first architecture sketch
+- [ ] **FLAG-61** — Write problem statement
+- [ ] **FLAG-62** — Define control/data plane terms
+- [ ] **FLAG-63** — Write first architecture sketch
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-102 — Repository bootstrap
+## FLAG-14 — Repository bootstrap
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 1<br>
-**Epic:** EPIC-1
+**Epic:** FLAG-1
 **Learning Objective:** Domain & local foundation
 
-**Test Evidence:** `FF-102-T1` (success path) and `FF-102-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-14-T1` (success path) and `FLAG-14-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -109,21 +110,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-102-1** — Create monorepo structure
-- [ ] **FF-102-2** — Configure Python tooling
-- [ ] **FF-102-3** — Configure frontend/SDK workspace
+- [ ] **FLAG-64** — Create monorepo structure
+- [ ] **FLAG-65** — Configure Python tooling
+- [ ] **FLAG-66** — Configure frontend/SDK workspace
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-103 — Local infrastructure
+## FLAG-15 — Local infrastructure
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 1<br>
-**Epic:** EPIC-1
+**Epic:** FLAG-1
 **Learning Objective:** Domain & local foundation
 
-**Test Evidence:** `FF-103-T1` (success path) and `FF-103-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-15-T1` (success path) and `FLAG-15-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -135,21 +136,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-103-1** — Create Docker Compose
-- [ ] **FF-103-2** — Run PostgreSQL locally
-- [ ] **FF-103-3** — Add health checks and startup documentation
+- [ ] **FLAG-67** — Create Docker Compose
+- [ ] **FLAG-68** — Run PostgreSQL locally
+- [ ] **FLAG-69** — Add health checks and startup documentation
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-104 — Engineering workflow
+## FLAG-16 — Engineering workflow
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 1<br>
-**Epic:** EPIC-1
+**Epic:** FLAG-1
 **Learning Objective:** Domain & local foundation
 
-**Test Evidence:** `FF-104-T1` (success path) and `FF-104-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-16-T1` (success path) and `FLAG-16-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -161,9 +162,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-104-1** — Set branch strategy
-- [ ] **FF-104-2** — Add commit conventions
-- [ ] **FF-104-3** — Create issue/PR templates
+- [ ] **FLAG-70** — Set branch strategy
+- [ ] **FLAG-71** — Add commit conventions
+- [ ] **FLAG-72** — Create issue/PR templates
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -173,16 +174,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-201 — FastAPI foundation
+## FLAG-17 — FastAPI foundation
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 2<br>
-**Epic:** EPIC-2
+**Epic:** FLAG-2
 **Learning Objective:** Python API & relational data
 
-**Test Evidence:** `FF-201-T1` (success path) and `FF-201-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-17-T1` (success path) and `FLAG-17-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -194,21 +195,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-201-1** — Create app factory
-- [ ] **FF-201-2** — Add unauthenticated `/v1/health` and `/v1/ready` endpoints with bounded status responses
-- [ ] **FF-201-3** — Implement the shared error shape from `docs/API-CONTRACT.md` and test validation/server failures
+- [ ] **FLAG-73** — Create app factory
+- [ ] **FLAG-74** — Add unauthenticated `/v1/health` and `/v1/ready` endpoints with bounded status responses
+- [ ] **FLAG-75** — Implement the shared error shape from `docs/API-CONTRACT.md` and test validation/server failures
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-202 — Database layer
+## FLAG-18 — Database layer
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 2<br>
-**Epic:** EPIC-2
+**Epic:** FLAG-2
 **Learning Objective:** Python API & relational data
 
-**Test Evidence:** `FF-202-T1` (success path) and `FF-202-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-18-T1` (success path) and `FLAG-18-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -220,21 +221,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-202-1** — Configure SQLAlchemy
-- [ ] **FF-202-2** — Create Alembic baseline
-- [ ] **FF-202-3** — Implement DB session lifecycle
+- [ ] **FLAG-76** — Configure SQLAlchemy
+- [ ] **FLAG-77** — Create Alembic baseline
+- [ ] **FLAG-78** — Implement DB session lifecycle
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-203 — Core schema
+## FLAG-19 — Core schema
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 2<br>
-**Epic:** EPIC-2
+**Epic:** FLAG-2
 **Learning Objective:** Python API & relational data
 
-**Test Evidence:** `FF-203-T1` (success path) and `FF-203-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-19-T1` (success path) and `FLAG-19-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -246,21 +247,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-203-1** — Create projects/environments tables
-- [ ] **FF-203-2** — Create feature_flags table
-- [ ] **FF-203-3** — Add uniqueness/index constraints
+- [ ] **FLAG-79** — Create projects/environments tables
+- [ ] **FLAG-80** — Create feature_flags table
+- [ ] **FLAG-81** — Add uniqueness/index constraints
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-204 — API tests
+## FLAG-20 — API tests
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 2<br>
-**Epic:** EPIC-2
+**Epic:** FLAG-2
 **Learning Objective:** Python API & relational data
 
-**Test Evidence:** `FF-204-T1` (success path) and `FF-204-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-20-T1` (success path) and `FLAG-20-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -272,9 +273,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-204-1** — Create pytest fixtures
-- [ ] **FF-204-2** — Write CRUD integration tests
-- [ ] **FF-204-3** — Test invalid-input responses against the shared API error contract
+- [ ] **FLAG-82** — Create pytest fixtures
+- [ ] **FLAG-83** — Write CRUD integration tests
+- [ ] **FLAG-84** — Test invalid-input responses against the shared API error contract
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -284,16 +285,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-301 — Project/environment CRUD
+## FLAG-21 — Project/environment CRUD
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 3<br>
-**Epic:** EPIC-3
+**Epic:** FLAG-3
 **Learning Objective:** Flag management & admin access
 
-**Test Evidence:** `FF-301-T1` (success path) and `FF-301-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-21-T1` (success path) and `FLAG-21-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -305,21 +306,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-301-1** — Build create/list/update/delete endpoints
-- [ ] **FF-301-2** — Validate environment keys
-- [ ] **FF-301-3** — Document endpoint behavior
+- [ ] **FLAG-85** — Build create/list/update/delete endpoints
+- [ ] **FLAG-86** — Validate environment keys
+- [ ] **FLAG-87** — Document endpoint behavior
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-302 — Feature flag CRUD
+## FLAG-22 — Feature flag CRUD
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 3<br>
-**Epic:** EPIC-3
+**Epic:** FLAG-3
 **Learning Objective:** Flag management & admin access
 
-**Test Evidence:** `FF-302-T1` (success path) and `FF-302-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-22-T1` (success path) and `FLAG-22-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -331,21 +332,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-302-1** — Build create/list/update/delete
-- [ ] **FF-302-2** — Add version incrementing
-- [ ] **FF-302-3** — Add optimistic update protection
+- [ ] **FLAG-88** — Build create/list/update/delete
+- [ ] **FLAG-89** — Add version incrementing
+- [ ] **FLAG-90** — Add optimistic update protection
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-303 — Audit trail
+## FLAG-23 — Audit trail
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 3<br>
-**Epic:** EPIC-3
+**Epic:** FLAG-3
 **Learning Objective:** Flag management & admin access
 
-**Test Evidence:** `FF-303-T1` (success path) and `FF-303-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-23-T1` (success path) and `FLAG-23-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -357,21 +358,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-303-1** — Create audit_events table
-- [ ] **FF-303-2** — Record mutations
-- [ ] **FF-303-3** — Add audit read endpoint
+- [ ] **FLAG-91** — Create audit_events table
+- [ ] **FLAG-92** — Record mutations
+- [ ] **FLAG-93** — Add audit read endpoint
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-304 — Admin authentication
+## FLAG-24 — Admin authentication
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 3<br>
-**Epic:** EPIC-3
+**Epic:** FLAG-3
 **Learning Objective:** Flag management & admin access
 
-**Test Evidence:** `FF-304-T1` (success path) and `FF-304-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-24-T1` (success path) and `FLAG-24-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -383,9 +384,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-304-1** — Verify configured admin password and issue signed HttpOnly session cookie (ADR-018)
-- [ ] **FF-304-2** — Enforce session, Origin, and CSRF checks on admin mutations
-- [ ] **FF-304-3** — Test invalid password, expired session, CSRF failure, and authorized access
+- [ ] **FLAG-94** — Verify configured admin password and issue signed HttpOnly session cookie (ADR-018)
+- [ ] **FLAG-95** — Enforce session, Origin, and CSRF checks on admin mutations
+- [ ] **FLAG-96** — Test invalid password, expired session, CSRF failure, and authorized access
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -395,16 +396,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-401 — Astro/React shell
+## FLAG-25 — Astro/React shell
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 4<br>
-**Epic:** EPIC-4
+**Epic:** FLAG-4
 **Learning Objective:** Dashboard
 
-**Test Evidence:** `FF-401-T1` (success path) and `FF-401-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-25-T1` (success path) and `FLAG-25-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -416,21 +417,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-401-1** — Create dashboard layout
-- [ ] **FF-401-2** — Add routing/navigation
-- [ ] **FF-401-3** — Configure API client
+- [ ] **FLAG-97** — Create dashboard layout
+- [ ] **FLAG-98** — Add routing/navigation
+- [ ] **FLAG-99** — Configure API client
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-402 — Project/environment UI
+## FLAG-26 — Project/environment UI
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 4<br>
-**Epic:** EPIC-4
+**Epic:** FLAG-4
 **Learning Objective:** Dashboard
 
-**Test Evidence:** `FF-402-T1` (success path) and `FF-402-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-26-T1` (success path) and `FLAG-26-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -442,21 +443,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-402-1** — Project list
-- [ ] **FF-402-2** — Environment selector
-- [ ] **FF-402-3** — Environment state/loading/error UI
+- [ ] **FLAG-100** — Project list
+- [ ] **FLAG-101** — Environment selector
+- [ ] **FLAG-102** — Environment state/loading/error UI
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-403 — Flag management UI
+## FLAG-27 — Flag management UI
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 4<br>
-**Epic:** EPIC-4
+**Epic:** FLAG-4
 **Learning Objective:** Dashboard
 
-**Test Evidence:** `FF-403-T1` (success path) and `FF-403-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-27-T1` (success path) and `FLAG-27-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -468,21 +469,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-403-1** — Flag table
-- [ ] **FF-403-2** — Create/edit form
-- [ ] **FF-403-3** — Enable/disable control
+- [ ] **FLAG-103** — Flag table
+- [ ] **FLAG-104** — Create/edit form
+- [ ] **FLAG-105** — Enable/disable control
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-404 — Audit UX
+## FLAG-28 — Audit UX
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 4<br>
-**Epic:** EPIC-4
+**Epic:** FLAG-4
 **Learning Objective:** Dashboard
 
-**Test Evidence:** `FF-404-T1` (success path) and `FF-404-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-28-T1` (success path) and `FLAG-28-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -494,9 +495,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-404-1** — Audit history page
-- [ ] **FF-404-2** — Before/after display
-- [ ] **FF-404-3** — Error and empty states
+- [ ] **FLAG-106** — Audit history page
+- [ ] **FLAG-107** — Before/after display
+- [ ] **FLAG-108** — Error and empty states
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -506,16 +507,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-501 — SDK package
+## FLAG-29 — SDK package
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 5<br>
-**Epic:** EPIC-5
+**Epic:** FLAG-5
 **Learning Objective:** SDK & local evaluation
 
-**Test Evidence:** `FF-501-T1` (success path) and `FF-501-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-29-T1` (success path) and `FLAG-29-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -527,21 +528,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-501-1** — Create package structure
-- [ ] **FF-501-2** — Define the public SDK API against `docs/API-CONTRACT.md`
-- [ ] **FF-501-3** — Add SDK contract tests for response parsing, API errors, and fallback
+- [ ] **FLAG-109** — Create package structure
+- [ ] **FLAG-110** — Define the public SDK API against `docs/API-CONTRACT.md`
+- [ ] **FLAG-111** — Add SDK contract tests for response parsing, API errors, and fallback
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-502 — Configuration bootstrap
+## FLAG-30 — Configuration bootstrap
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 5<br>
-**Epic:** EPIC-5
+**Epic:** FLAG-5
 **Learning Objective:** SDK & local evaluation
 
-**Test Evidence:** `FF-502-T1` (success path) and `FF-502-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-30-T1` (success path) and `FLAG-30-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -553,21 +554,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-502-1** — Implement config fetch
-- [ ] **FF-502-2** — Validate config schema
-- [ ] **FF-502-3** — Store immutable snapshot
+- [ ] **FLAG-112** — Implement config fetch
+- [ ] **FLAG-113** — Validate config schema
+- [ ] **FLAG-114** — Store immutable snapshot
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-503 — Evaluation engine
+## FLAG-31 — Evaluation engine
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 5<br>
-**Epic:** EPIC-5
+**Epic:** FLAG-5
 **Learning Objective:** SDK & local evaluation
 
-**Test Evidence:** `FF-503-T1` (success path) and `FF-503-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-31-T1` (success path) and `FLAG-31-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -579,21 +580,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-503-1** — Boolean evaluation
-- [ ] **FF-503-2** — Default/fallback evaluation
-- [ ] **FF-503-3** — Evaluation unit-test matrix
+- [ ] **FLAG-115** — Boolean evaluation
+- [ ] **FLAG-116** — Default/fallback evaluation
+- [ ] **FLAG-117** — Evaluation unit-test matrix
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-504 — Demo Store integration
+## FLAG-32 — Demo Store integration
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 5<br>
-**Epic:** EPIC-5
+**Epic:** FLAG-5
 **Learning Objective:** SDK & local evaluation
 
-**Test Evidence:** `FF-504-T1` (success path) and `FF-504-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-32-T1` (success path) and `FLAG-32-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -605,12 +606,12 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-504-1** — Integrate SDK in `apps/demo-store/src/components/FlaggedDemo.tsx`
-- [ ] **FF-504-2** — Add `new_checkout` to the checkout page
-- [ ] **FF-504-3** — Demonstrate a live switch without rebuilding the demo store
-- [ ] **FF-504-4** — Use `new_product_card` on the product-list page
-- [ ] **FF-504-5** — Use `holiday_banner` on the home page
-- [ ] **FF-504-6** — Build Product detail and Cart pages and verify their navigation
+- [ ] **FLAG-118** — Integrate SDK in `apps/demo-store/src/components/FlaggedDemo.tsx`
+- [ ] **FLAG-119** — Add `new_checkout` to the checkout page
+- [ ] **FLAG-120** — Demonstrate a live switch without rebuilding the demo store
+- [ ] **FLAG-205** — Use `new_product_card` on the product-list page
+- [ ] **FLAG-206** — Use `holiday_banner` on the home page
+- [ ] **FLAG-207** — Build Product detail and Cart pages and verify their navigation
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -620,16 +621,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-601 — Client keys
+## FLAG-33 — Client keys
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 6<br>
-**Epic:** EPIC-6
+**Epic:** FLAG-6
 **Learning Objective:** Isolation, rollouts & targeting
 
-**Test Evidence:** `FF-601-T1` (success path) and `FF-601-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-33-T1` (success path) and `FLAG-33-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -641,21 +642,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-601-1** — Generate environment-scoped keys with `ff_client_` prefix and one-time display
-- [ ] **FF-601-2** — Hash stored secrets
-- [ ] **FF-601-3** — Build revoke flow
+- [ ] **FLAG-121** — Generate environment-scoped keys with `ff_client_` prefix and one-time display
+- [ ] **FLAG-122** — Hash stored secrets
+- [ ] **FLAG-123** — Build revoke flow
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-602 — Environment isolation
+## FLAG-34 — Environment isolation
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 6<br>
-**Epic:** EPIC-6
+**Epic:** FLAG-6
 **Learning Objective:** Isolation, rollouts & targeting
 
-**Test Evidence:** `FF-602-T1` (success path) and `FF-602-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-34-T1` (success path) and `FLAG-34-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -667,21 +668,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-602-1** — Prevent cross-environment reads
-- [ ] **FF-602-2** — Test staging/production separation
-- [ ] **FF-602-3** — Add SDK environment configuration
+- [ ] **FLAG-124** — Prevent cross-environment reads
+- [ ] **FLAG-125** — Test staging/production separation
+- [ ] **FLAG-126** — Add SDK environment configuration
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-603 — Percentage rollout
+## FLAG-35 — Percentage rollout
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 6<br>
-**Epic:** EPIC-6
+**Epic:** FLAG-6
 **Learning Objective:** Isolation, rollouts & targeting
 
-**Test Evidence:** `FF-603-T1` (success path) and `FF-603-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-35-T1` (success path) and `FLAG-35-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -693,21 +694,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-603-1** — Implement stable hashing
-- [ ] **FF-603-2** — Build 0/50/100% cases
-- [ ] **FF-603-3** — Test deterministic user assignment
+- [ ] **FLAG-127** — Implement stable hashing
+- [ ] **FLAG-128** — Build 0/50/100% cases
+- [ ] **FLAG-129** — Test deterministic user assignment
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-604 — Targeting rules
+## FLAG-36 — Targeting rules
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 6<br>
-**Epic:** EPIC-6
+**Epic:** FLAG-6
 **Learning Objective:** Isolation, rollouts & targeting
 
-**Test Evidence:** `FF-604-T1` (success path) and `FF-604-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-36-T1` (success path) and `FLAG-36-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -719,9 +720,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-604-1** — Define v1 rule model
-- [ ] **FF-604-2** — Implement equals/contains
-- [ ] **FF-604-3** — Test rule precedence
+- [ ] **FLAG-130** — Define v1 rule model
+- [ ] **FLAG-131** — Implement equals/contains
+- [ ] **FLAG-132** — Test rule precedence
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -731,16 +732,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-701 — In-memory configuration cache
+## FLAG-37 — In-memory configuration cache
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 7<br>
-**Epic:** EPIC-7
+**Epic:** FLAG-7
 **Learning Objective:** Refresh, caching & fallback
 
-**Test Evidence:** `FF-701-T1` (success path) and `FF-701-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-37-T1` (success path) and `FLAG-37-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -752,21 +753,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-701-1** — Atomic snapshot replacement
-- [ ] **FF-701-2** — Track version/age
-- [ ] **FF-701-3** — Expose cache diagnostics
+- [ ] **FLAG-133** — Atomic snapshot replacement
+- [ ] **FLAG-134** — Track version/age
+- [ ] **FLAG-135** — Expose cache diagnostics
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-702 — Polling
+## FLAG-38 — Polling
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 7<br>
-**Epic:** EPIC-7
+**Epic:** FLAG-7
 **Learning Objective:** Refresh, caching & fallback
 
-**Test Evidence:** `FF-702-T1` (success path) and `FF-702-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-38-T1` (success path) and `FLAG-38-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -778,21 +779,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-702-1** — Add polling scheduler
-- [ ] **FF-702-2** — Handle timeouts/errors
-- [ ] **FF-702-3** — Measure stale window
+- [ ] **FLAG-136** — Add polling scheduler
+- [ ] **FLAG-137** — Handle timeouts/errors
+- [ ] **FLAG-138** — Measure stale window
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-703 — HTTP cache optimization
+## FLAG-39 — HTTP cache optimization
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 7<br>
-**Epic:** EPIC-7
+**Epic:** FLAG-7
 **Learning Objective:** Refresh, caching & fallback
 
-**Test Evidence:** `FF-703-T1` (success path) and `FF-703-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-39-T1` (success path) and `FLAG-39-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -804,21 +805,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-703-1** — Implement ETag/version conditional requests
-- [ ] **FF-703-2** — Test 304 behavior
-- [ ] **FF-703-3** — Benchmark request reduction
+- [ ] **FLAG-139** — Implement ETag/version conditional requests
+- [ ] **FLAG-140** — Test 304 behavior
+- [ ] **FLAG-141** — Benchmark request reduction
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-704 — Redis experiment
+## FLAG-40 — Redis experiment
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 7<br>
-**Epic:** EPIC-7
+**Epic:** FLAG-7
 **Learning Objective:** Refresh, caching & fallback
 
-**Test Evidence:** `FF-704-T1` (success path) and `FF-704-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-40-T1` (success path) and `FLAG-40-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -830,9 +831,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-704-1** — Run the optional Redis experiment with a local-only container; do not use managed Memorystore
-- [ ] **FF-704-2** — Implement the shared-cache adapter for the local experiment only; the default evaluation path remains the SDK memory snapshot
-- [ ] **FF-704-3** — Compare local Redis with in-process caching and document when it helps
+- [ ] **FLAG-142** — Run the optional Redis experiment with a local-only container; do not use managed Memorystore
+- [ ] **FLAG-143** — Implement the shared-cache adapter for the local experiment only; the default evaluation path remains the SDK memory snapshot
+- [ ] **FLAG-144** — Compare local Redis with in-process caching and document when it helps
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -842,16 +843,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-801 — SSE stream
+## FLAG-41 — SSE stream
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 8<br>
-**Epic:** EPIC-8
+**Epic:** FLAG-8
 **Learning Objective:** SSE & consistency
 
-**Test Evidence:** `FF-801-T1` (success path) and `FF-801-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-41-T1` (success path) and `FLAG-41-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -863,21 +864,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-801-1** — Create stream endpoint
-- [ ] **FF-801-2** — Define event schema
-- [ ] **FF-801-3** — Handle client disconnects
+- [ ] **FLAG-145** — Create stream endpoint
+- [ ] **FLAG-146** — Define event schema
+- [ ] **FLAG-147** — Handle client disconnects
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-802 — SDK stream client
+## FLAG-42 — SDK stream client
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 8<br>
-**Epic:** EPIC-8
+**Epic:** FLAG-8
 **Learning Objective:** SSE & consistency
 
-**Test Evidence:** `FF-802-T1` (success path) and `FF-802-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-42-T1` (success path) and `FLAG-42-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -889,21 +890,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-802-1** — Connect to SSE
-- [ ] **FF-802-2** — Update snapshot from events
-- [ ] **FF-802-3** — Add stream status diagnostics
+- [ ] **FLAG-148** — Connect to SSE
+- [ ] **FLAG-149** — Update snapshot from events
+- [ ] **FLAG-150** — Add stream status diagnostics
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-803 — Reconnect behavior
+## FLAG-43 — Reconnect behavior
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 8<br>
-**Epic:** EPIC-8
+**Epic:** FLAG-8
 **Learning Objective:** SSE & consistency
 
-**Test Evidence:** `FF-803-T1` (success path) and `FF-803-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-43-T1` (success path) and `FLAG-43-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -915,21 +916,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-803-1** — Exponential backoff
-- [ ] **FF-803-2** — Catch-up bootstrap
-- [ ] **FF-803-3** — Test connection interruption
+- [ ] **FLAG-151** — Exponential backoff
+- [ ] **FLAG-152** — Catch-up bootstrap
+- [ ] **FLAG-153** — Test connection interruption
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-804 — Consistency controls
+## FLAG-44 — Consistency controls
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 8<br>
-**Epic:** EPIC-8
+**Epic:** FLAG-8
 **Learning Objective:** SSE & consistency
 
-**Test Evidence:** `FF-804-T1` (success path) and `FF-804-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-44-T1` (success path) and `FLAG-44-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -941,9 +942,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-804-1** — Reject stale versions
-- [ ] **FF-804-2** — Handle duplicates
-- [ ] **FF-804-3** — Test out-of-order events
+- [ ] **FLAG-154** — Reject stale versions
+- [ ] **FLAG-155** — Handle duplicates
+- [ ] **FLAG-156** — Test out-of-order events
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -953,16 +954,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-901 — Structured observability
+## FLAG-45 — Structured observability
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 9<br>
-**Epic:** EPIC-9
+**Epic:** FLAG-9
 **Learning Objective:** Observability & resilience
 
-**Test Evidence:** `FF-901-T1` (success path) and `FF-901-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-45-T1` (success path) and `FLAG-45-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -974,21 +975,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-901-1** — Add request logs
-- [ ] **FF-901-2** — Add evaluation telemetry
-- [ ] **FF-901-3** — Add propagation metrics
+- [ ] **FLAG-157** — Add request logs
+- [ ] **FLAG-158** — Add evaluation telemetry
+- [ ] **FLAG-159** — Add propagation metrics
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-902 — Tracing/metrics
+## FLAG-46 — Tracing/metrics
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 9<br>
-**Epic:** EPIC-9
+**Epic:** FLAG-9
 **Learning Objective:** Observability & resilience
 
-**Test Evidence:** `FF-902-T1` (success path) and `FF-902-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-46-T1` (success path) and `FLAG-46-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1000,21 +1001,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-902-1** — Instrument service boundaries
-- [ ] **FF-902-2** — Expose latency metrics
-- [ ] **FF-902-3** — Measure propagation delay
+- [ ] **FLAG-160** — Instrument service boundaries
+- [ ] **FLAG-161** — Expose latency metrics
+- [ ] **FLAG-162** — Measure propagation delay
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-903 — Failure injection
+## FLAG-47 — Failure injection
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 9<br>
-**Epic:** EPIC-9
+**Epic:** FLAG-9
 **Learning Objective:** Observability & resilience
 
-**Test Evidence:** `FF-903-T1` (success path) and `FF-903-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-47-T1` (success path) and `FLAG-47-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1026,21 +1027,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-903-1** — Break database
-- [ ] **FF-903-2** — Break stream connection
-- [ ] **FF-903-3** — Test stale-cache fallback
+- [ ] **FLAG-163** — Break database
+- [ ] **FLAG-164** — Break stream connection
+- [ ] **FLAG-165** — Test stale-cache fallback
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-904 — Load testing
+## FLAG-48 — Load testing
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 9<br>
-**Epic:** EPIC-9
+**Epic:** FLAG-9
 **Learning Objective:** Observability & resilience
 
-**Test Evidence:** `FF-904-T1` (success path) and `FF-904-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-48-T1` (success path) and `FLAG-48-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1052,9 +1053,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-904-1** — Create Locust scenarios
-- [ ] **FF-904-2** — Measure p50/p95/p99
-- [ ] **FF-904-3** — Write performance report
+- [ ] **FLAG-166** — Create Locust scenarios
+- [ ] **FLAG-167** — Measure p50/p95/p99
+- [ ] **FLAG-168** — Write performance report
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -1064,16 +1065,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-1001 — Cost guardrails
+## FLAG-49 — Cost guardrails
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 10<br>
-**Epic:** EPIC-10
+**Epic:** FLAG-10
 **Learning Objective:** GCP & Terraform foundations
 
-**Test Evidence:** `FF-1001-T1` (success path) and `FF-1001-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-49-T1` (success path) and `FLAG-49-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1085,21 +1086,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1001-1** — Review current pricing and billing, then configure a budget/alert before any optional provisioning; document that alerts are not spend caps
-- [ ] **FF-1001-2** — Record quotas as unverified until re-checked; do not rely on free-tier assumptions
-- [ ] **FF-1001-3** — Write and validate the resource cleanup checklist before any approved provisioning
+- [ ] **FLAG-169** — Review current pricing and billing, then configure a budget/alert before any optional provisioning; document that alerts are not spend caps
+- [ ] **FLAG-170** — Record quotas as unverified until re-checked; do not rely on free-tier assumptions
+- [ ] **FLAG-171** — Write and validate the resource cleanup checklist before any approved provisioning
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-1002 — Terraform foundation
+## FLAG-50 — Terraform foundation
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 10<br>
-**Epic:** EPIC-10
+**Epic:** FLAG-10
 **Learning Objective:** GCP & Terraform foundations
 
-**Test Evidence:** `FF-1002-T1` (success path) and `FF-1002-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-50-T1` (success path) and `FLAG-50-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1111,22 +1112,22 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1002-1** — Create provider/module layout
-- [ ] **FF-1002-2** — Document local state by default and optional GCS state cost, locking, access, and cleanup
-- [ ] **FF-1002-3** — Add variables/outputs
-- [ ] **FF-1002-4** — Set Cloud Run minimum instances to 0 in the Terraform default
+- [ ] **FLAG-172** — Create provider/module layout
+- [ ] **FLAG-173** — Document local state by default and optional GCS state cost, locking, access, and cleanup
+- [ ] **FLAG-174** — Add variables/outputs
+- [ ] **FLAG-208** — Set Cloud Run minimum instances to 0 in the Terraform default
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-1003 — Artifact Registry
+## FLAG-51 — Artifact Registry
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 10<br>
-**Epic:** EPIC-10
+**Epic:** FLAG-10
 **Learning Objective:** GCP & Terraform foundations
 
-**Test Evidence:** `FF-1003-T1` (success path) and `FF-1003-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-51-T1` (success path) and `FLAG-51-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1138,21 +1139,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1003-1** — Define optional Artifact Registry resource; do not apply by default
-- [ ] **FF-1003-2** — Build container locally
-- [ ] **FF-1003-3** — Document image push and cleanup; execute only after explicit cloud approval
+- [ ] **FLAG-175** — Define optional Artifact Registry resource; do not apply by default
+- [ ] **FLAG-176** — Build container locally
+- [ ] **FLAG-177** — Document image push and cleanup; execute only after explicit cloud approval
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-1004 — Cloud Run foundation
+## FLAG-52 — Cloud Run foundation
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 10<br>
-**Epic:** EPIC-10
+**Epic:** FLAG-10
 **Learning Objective:** GCP & Terraform foundations
 
-**Test Evidence:** `FF-1004-T1` (success path) and `FF-1004-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-52-T1` (success path) and `FLAG-52-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1164,9 +1165,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1004-1** — Validate a stateless API plan without applying; set Cloud Run minimum instances to 0
-- [ ] **FF-1004-2** — Configure environment variables
-- [ ] **FF-1004-3** — Verify Cloud Run minimum instances = 0 and scale-to-zero configuration in Terraform
+- [ ] **FLAG-178** — Validate a stateless API plan without applying; set Cloud Run minimum instances to 0
+- [ ] **FLAG-179** — Configure environment variables
+- [ ] **FLAG-180** — Verify Cloud Run minimum instances = 0 and scale-to-zero configuration in Terraform
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -1176,16 +1177,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-1101 — Firestore adapter
+## FLAG-53 — Firestore adapter
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 11<br>
-**Epic:** EPIC-11
+**Epic:** FLAG-11
 **Learning Objective:** Cloud data, events & IAM
 
-**Test Evidence:** `FF-1101-T1` (success path) and `FF-1101-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-53-T1` (success path) and `FLAG-53-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1197,21 +1198,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1101-1** — Map local domain to documents
-- [ ] **FF-1101-2** — Implement repository methods
-- [ ] **FF-1101-3** — Run parity tests vs PostgreSQL
+- [ ] **FLAG-181** — Map local domain to documents
+- [ ] **FLAG-182** — Implement repository methods
+- [ ] **FLAG-183** — Run parity tests vs PostgreSQL
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-1102 — Pub/Sub propagation
+## FLAG-54 — Pub/Sub propagation
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 11<br>
-**Epic:** EPIC-11
+**Epic:** FLAG-11
 **Learning Objective:** Cloud data, events & IAM
 
-**Test Evidence:** `FF-1102-T1` (success path) and `FF-1102-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-54-T1` (success path) and `FLAG-54-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1223,21 +1224,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1102-1** — Create topic/subscription
-- [ ] **FF-1102-2** — Publish configuration events
-- [ ] **FF-1102-3** — Consume and handle duplicates
+- [ ] **FLAG-184** — Create topic/subscription
+- [ ] **FLAG-185** — Publish configuration events
+- [ ] **FLAG-186** — Consume and handle duplicates
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-1103 — GCP IAM
+## FLAG-55 — GCP IAM
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 11<br>
-**Epic:** EPIC-11
+**Epic:** FLAG-11
 **Learning Objective:** Cloud data, events & IAM
 
-**Test Evidence:** `FF-1103-T1` (success path) and `FF-1103-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-55-T1` (success path) and `FLAG-55-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1249,21 +1250,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1103-1** — Create least-privilege runtime identity
-- [ ] **FF-1103-2** — Limit Firestore permissions
-- [ ] **FF-1103-3** — Limit Pub/Sub permissions
+- [ ] **FLAG-187** — Create least-privilege runtime identity
+- [ ] **FLAG-188** — Limit Firestore permissions
+- [ ] **FLAG-189** — Limit Pub/Sub permissions
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-1104 — Cloud observability
+## FLAG-56 — Cloud observability
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 11<br>
-**Epic:** EPIC-11
+**Epic:** FLAG-11
 **Learning Objective:** Cloud data, events & IAM
 
-**Test Evidence:** `FF-1104-T1` (success path) and `FF-1104-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-56-T1` (success path) and `FLAG-56-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1275,9 +1276,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1104-1** — Configure useful logs
-- [ ] **FF-1104-2** — Validate log volume
-- [ ] **FF-1104-3** — Create basic operational dashboard/queries
+- [ ] **FLAG-190** — Configure useful logs
+- [ ] **FLAG-191** — Validate log volume
+- [ ] **FLAG-192** — Create basic operational dashboard/queries
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
@@ -1287,16 +1288,16 @@ Epic
 
 **Timing:** Outcome-based; no fixed duration
 
-## FF-1201 — GitHub Actions CI
+## FLAG-57 — GitHub Actions CI
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 12<br>
-**Epic:** EPIC-12
+**Epic:** FLAG-12
 **Learning Objective:** CI/CD & finalization
 
-**Test Evidence:** `FF-1201-T1` (success path) and `FF-1201-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-57-T1` (success path) and `FLAG-57-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1308,22 +1309,22 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1201-1** — Lint and type-check workflow
-- [ ] **FF-1201-2** — Unit and integration test workflow
-- [ ] **FF-1201-3** — Build artifact workflow
-- [ ] **FF-1201-4** — Run the consistency checker locally and in the optional hosted CI gate
+- [ ] **FLAG-193** — Lint and type-check workflow
+- [ ] **FLAG-194** — Unit and integration test workflow
+- [ ] **FLAG-195** — Build artifact workflow
+- [ ] **FLAG-209** — Run the consistency checker locally and in the optional hosted CI gate
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-1202 — Deployment workflow
+## FLAG-58 — Deployment workflow
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 12<br>
-**Epic:** EPIC-12
+**Epic:** FLAG-12
 **Learning Objective:** CI/CD & finalization
 
-**Test Evidence:** `FF-1202-T1` (success path) and `FF-1202-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-58-T1` (success path) and `FLAG-58-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1335,21 +1336,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1202-1** — Document optional Cloud Run deployment from a trusted branch; deploy only after explicit approval and the cost gate
-- [ ] **FF-1202-2** — Use environment configuration
-- [ ] **FF-1202-3** — Add rollback procedure
+- [ ] **FLAG-196** — Document optional Cloud Run deployment from a trusted branch; deploy only after explicit approval and the cost gate
+- [ ] **FLAG-197** — Use environment configuration
+- [ ] **FLAG-198** — Add rollback procedure
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-1203 — End-to-end validation
+## FLAG-59 — End-to-end validation
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 12<br>
-**Epic:** EPIC-12
+**Epic:** FLAG-12
 **Learning Objective:** CI/CD & finalization
 
-**Test Evidence:** `FF-1203-T1` (success path) and `FF-1203-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-59-T1` (success path) and `FLAG-59-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1361,21 +1362,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1203-1** — Test cloud SDK bootstrap
-- [ ] **FF-1203-2** — Test Pub/Sub/SSE propagation
-- [ ] **FF-1203-3** — Test failure fallback
+- [ ] **FLAG-199** — Test cloud SDK bootstrap
+- [ ] **FLAG-200** — Test Pub/Sub/SSE propagation
+- [ ] **FLAG-201** — Test failure fallback
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
-## FF-1204 — Final engineering package
+## FLAG-60 — Final engineering package
 
 **Issue Type:** Story  
 **Priority:** High  
 **Story Points:** 3<br>
 **Sprint:** Sprint 12<br>
-**Epic:** EPIC-12
+**Epic:** FLAG-12
 **Learning Objective:** CI/CD & finalization
 
-**Test Evidence:** `FF-1204-T1` (success path) and `FF-1204-T2` (failure path); name the implemented test file when the test is added.
+**Test Evidence:** `FLAG-60-T1` (success path) and `FLAG-60-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1387,9 +1388,9 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1204-1** — Review ADRs
-- [ ] **FF-1204-2** — Write architecture/benchmark report
-- [ ] **FF-1204-3** — Record final demo and retrospective
+- [ ] **FLAG-202** — Review ADRs
+- [ ] **FLAG-203** — Write architecture/benchmark report
+- [ ] **FLAG-204** — Record final demo and retrospective
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 

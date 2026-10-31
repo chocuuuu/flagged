@@ -49,342 +49,342 @@ Learning Objective:
 CI/CD & Finalization",,High,
 2001,Story,Project charter and glossary,"Sprint: Sprint 1
 Learning Objective: Domain & local foundation
-Test Evidence: `FF-101-T1` (success path) and `FF-101-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-13-T1` (success path) and `FLAG-13-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1001,High,3
-3001,Sub-task,Write problem statement,Parent story: FF-101. See the parent story's test evidence and acceptance criteria.,2001,High,1
-3002,Sub-task,Define control/data plane terms,Parent story: FF-101. See the parent story's test evidence and acceptance criteria.,2001,High,1
-3003,Sub-task,Write first architecture sketch,Parent story: FF-101. See the parent story's test evidence and acceptance criteria.,2001,High,1
+3001,Sub-task,Write problem statement,Parent story: FLAG-13. See the parent story's test evidence and acceptance criteria.,2001,High,1
+3002,Sub-task,Define control/data plane terms,Parent story: FLAG-13. See the parent story's test evidence and acceptance criteria.,2001,High,1
+3003,Sub-task,Write first architecture sketch,Parent story: FLAG-13. See the parent story's test evidence and acceptance criteria.,2001,High,1
 2002,Story,Repository bootstrap,"Sprint: Sprint 1
 Learning Objective: Domain & local foundation
-Test Evidence: `FF-102-T1` (success path) and `FF-102-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-14-T1` (success path) and `FLAG-14-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1001,High,3
-3004,Sub-task,Create monorepo structure,Parent story: FF-102. See the parent story's test evidence and acceptance criteria.,2002,High,1
-3005,Sub-task,Configure Python tooling,Parent story: FF-102. See the parent story's test evidence and acceptance criteria.,2002,High,1
-3006,Sub-task,Configure frontend/SDK workspace,Parent story: FF-102. See the parent story's test evidence and acceptance criteria.,2002,High,1
+3004,Sub-task,Create monorepo structure,Parent story: FLAG-14. See the parent story's test evidence and acceptance criteria.,2002,High,1
+3005,Sub-task,Configure Python tooling,Parent story: FLAG-14. See the parent story's test evidence and acceptance criteria.,2002,High,1
+3006,Sub-task,Configure frontend/SDK workspace,Parent story: FLAG-14. See the parent story's test evidence and acceptance criteria.,2002,High,1
 2003,Story,Local infrastructure,"Sprint: Sprint 1
 Learning Objective: Domain & local foundation
-Test Evidence: `FF-103-T1` (success path) and `FF-103-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-15-T1` (success path) and `FLAG-15-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1001,High,3
-3007,Sub-task,Create Docker Compose,Parent story: FF-103. See the parent story's test evidence and acceptance criteria.,2003,High,1
-3008,Sub-task,Run PostgreSQL locally,Parent story: FF-103. See the parent story's test evidence and acceptance criteria.,2003,High,1
-3009,Sub-task,Add health checks and startup documentation,Parent story: FF-103. See the parent story's test evidence and acceptance criteria.,2003,High,1
+3007,Sub-task,Create Docker Compose,Parent story: FLAG-15. See the parent story's test evidence and acceptance criteria.,2003,High,1
+3008,Sub-task,Run PostgreSQL locally,Parent story: FLAG-15. See the parent story's test evidence and acceptance criteria.,2003,High,1
+3009,Sub-task,Add health checks and startup documentation,Parent story: FLAG-15. See the parent story's test evidence and acceptance criteria.,2003,High,1
 2004,Story,Engineering workflow,"Sprint: Sprint 1
 Learning Objective: Domain & local foundation
-Test Evidence: `FF-104-T1` (success path) and `FF-104-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-16-T1` (success path) and `FLAG-16-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1001,High,3
-3010,Sub-task,Set branch strategy,Parent story: FF-104. See the parent story's test evidence and acceptance criteria.,2004,High,1
-3011,Sub-task,Add commit conventions,Parent story: FF-104. See the parent story's test evidence and acceptance criteria.,2004,High,1
-3012,Sub-task,Create issue/PR templates,Parent story: FF-104. See the parent story's test evidence and acceptance criteria.,2004,High,1
+3010,Sub-task,Set branch strategy,Parent story: FLAG-16. See the parent story's test evidence and acceptance criteria.,2004,High,1
+3011,Sub-task,Add commit conventions,Parent story: FLAG-16. See the parent story's test evidence and acceptance criteria.,2004,High,1
+3012,Sub-task,Create issue/PR templates,Parent story: FLAG-16. See the parent story's test evidence and acceptance criteria.,2004,High,1
 2005,Story,FastAPI foundation,"Sprint: Sprint 2
 Learning Objective: Python API & relational data
-Test Evidence: `FF-201-T1` (success path) and `FF-201-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-17-T1` (success path) and `FLAG-17-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1002,High,3
-3013,Sub-task,Create app factory,Parent story: FF-201. See the parent story's test evidence and acceptance criteria.,2005,High,1
-3014,Sub-task,Add unauthenticated `/v1/health` and `/v1/ready` endpoints with bounded status responses,Parent story: FF-201. See the parent story's test evidence and acceptance criteria.,2005,High,1
-3015,Sub-task,Implement the shared error shape from `docs/API-CONTRACT.md` and test validation/server failures,Parent story: FF-201. See the parent story's test evidence and acceptance criteria.,2005,High,1
+3013,Sub-task,Create app factory,Parent story: FLAG-17. See the parent story's test evidence and acceptance criteria.,2005,High,1
+3014,Sub-task,Add unauthenticated `/v1/health` and `/v1/ready` endpoints with bounded status responses,Parent story: FLAG-17. See the parent story's test evidence and acceptance criteria.,2005,High,1
+3015,Sub-task,Implement the shared error shape from `docs/API-CONTRACT.md` and test validation/server failures,Parent story: FLAG-17. See the parent story's test evidence and acceptance criteria.,2005,High,1
 2006,Story,Database layer,"Sprint: Sprint 2
 Learning Objective: Python API & relational data
-Test Evidence: `FF-202-T1` (success path) and `FF-202-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-18-T1` (success path) and `FLAG-18-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1002,High,3
-3016,Sub-task,Configure SQLAlchemy,Parent story: FF-202. See the parent story's test evidence and acceptance criteria.,2006,High,1
-3017,Sub-task,Create Alembic baseline,Parent story: FF-202. See the parent story's test evidence and acceptance criteria.,2006,High,1
-3018,Sub-task,Implement DB session lifecycle,Parent story: FF-202. See the parent story's test evidence and acceptance criteria.,2006,High,1
+3016,Sub-task,Configure SQLAlchemy,Parent story: FLAG-18. See the parent story's test evidence and acceptance criteria.,2006,High,1
+3017,Sub-task,Create Alembic baseline,Parent story: FLAG-18. See the parent story's test evidence and acceptance criteria.,2006,High,1
+3018,Sub-task,Implement DB session lifecycle,Parent story: FLAG-18. See the parent story's test evidence and acceptance criteria.,2006,High,1
 2007,Story,Core schema,"Sprint: Sprint 2
 Learning Objective: Python API & relational data
-Test Evidence: `FF-203-T1` (success path) and `FF-203-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-19-T1` (success path) and `FLAG-19-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1002,High,3
-3019,Sub-task,Create projects/environments tables,Parent story: FF-203. See the parent story's test evidence and acceptance criteria.,2007,High,1
-3020,Sub-task,Create feature_flags table,Parent story: FF-203. See the parent story's test evidence and acceptance criteria.,2007,High,1
-3021,Sub-task,Add uniqueness/index constraints,Parent story: FF-203. See the parent story's test evidence and acceptance criteria.,2007,High,1
+3019,Sub-task,Create projects/environments tables,Parent story: FLAG-19. See the parent story's test evidence and acceptance criteria.,2007,High,1
+3020,Sub-task,Create feature_flags table,Parent story: FLAG-19. See the parent story's test evidence and acceptance criteria.,2007,High,1
+3021,Sub-task,Add uniqueness/index constraints,Parent story: FLAG-19. See the parent story's test evidence and acceptance criteria.,2007,High,1
 2008,Story,API tests,"Sprint: Sprint 2
 Learning Objective: Python API & relational data
-Test Evidence: `FF-204-T1` (success path) and `FF-204-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-20-T1` (success path) and `FLAG-20-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1002,High,3
-3022,Sub-task,Create pytest fixtures,Parent story: FF-204. See the parent story's test evidence and acceptance criteria.,2008,High,1
-3023,Sub-task,Write CRUD integration tests,Parent story: FF-204. See the parent story's test evidence and acceptance criteria.,2008,High,1
-3024,Sub-task,Test invalid-input responses against the shared API error contract,Parent story: FF-204. See the parent story's test evidence and acceptance criteria.,2008,High,1
+3022,Sub-task,Create pytest fixtures,Parent story: FLAG-20. See the parent story's test evidence and acceptance criteria.,2008,High,1
+3023,Sub-task,Write CRUD integration tests,Parent story: FLAG-20. See the parent story's test evidence and acceptance criteria.,2008,High,1
+3024,Sub-task,Test invalid-input responses against the shared API error contract,Parent story: FLAG-20. See the parent story's test evidence and acceptance criteria.,2008,High,1
 2009,Story,Project/environment CRUD,"Sprint: Sprint 3
 Learning Objective: Flag management & admin access
-Test Evidence: `FF-301-T1` (success path) and `FF-301-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-21-T1` (success path) and `FLAG-21-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1003,High,3
-3025,Sub-task,Build create/list/update/delete endpoints,Parent story: FF-301. See the parent story's test evidence and acceptance criteria.,2009,High,1
-3026,Sub-task,Validate environment keys,Parent story: FF-301. See the parent story's test evidence and acceptance criteria.,2009,High,1
-3027,Sub-task,Document endpoint behavior,Parent story: FF-301. See the parent story's test evidence and acceptance criteria.,2009,High,1
+3025,Sub-task,Build create/list/update/delete endpoints,Parent story: FLAG-21. See the parent story's test evidence and acceptance criteria.,2009,High,1
+3026,Sub-task,Validate environment keys,Parent story: FLAG-21. See the parent story's test evidence and acceptance criteria.,2009,High,1
+3027,Sub-task,Document endpoint behavior,Parent story: FLAG-21. See the parent story's test evidence and acceptance criteria.,2009,High,1
 2010,Story,Feature flag CRUD,"Sprint: Sprint 3
 Learning Objective: Flag management & admin access
-Test Evidence: `FF-302-T1` (success path) and `FF-302-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-22-T1` (success path) and `FLAG-22-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1003,High,3
-3028,Sub-task,Build create/list/update/delete,Parent story: FF-302. See the parent story's test evidence and acceptance criteria.,2010,High,1
-3029,Sub-task,Add version incrementing,Parent story: FF-302. See the parent story's test evidence and acceptance criteria.,2010,High,1
-3030,Sub-task,Add optimistic update protection,Parent story: FF-302. See the parent story's test evidence and acceptance criteria.,2010,High,1
+3028,Sub-task,Build create/list/update/delete,Parent story: FLAG-22. See the parent story's test evidence and acceptance criteria.,2010,High,1
+3029,Sub-task,Add version incrementing,Parent story: FLAG-22. See the parent story's test evidence and acceptance criteria.,2010,High,1
+3030,Sub-task,Add optimistic update protection,Parent story: FLAG-22. See the parent story's test evidence and acceptance criteria.,2010,High,1
 2011,Story,Audit trail,"Sprint: Sprint 3
 Learning Objective: Flag management & admin access
-Test Evidence: `FF-303-T1` (success path) and `FF-303-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-23-T1` (success path) and `FLAG-23-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1003,High,3
-3031,Sub-task,Create audit_events table,Parent story: FF-303. See the parent story's test evidence and acceptance criteria.,2011,High,1
-3032,Sub-task,Record mutations,Parent story: FF-303. See the parent story's test evidence and acceptance criteria.,2011,High,1
-3033,Sub-task,Add audit read endpoint,Parent story: FF-303. See the parent story's test evidence and acceptance criteria.,2011,High,1
+3031,Sub-task,Create audit_events table,Parent story: FLAG-23. See the parent story's test evidence and acceptance criteria.,2011,High,1
+3032,Sub-task,Record mutations,Parent story: FLAG-23. See the parent story's test evidence and acceptance criteria.,2011,High,1
+3033,Sub-task,Add audit read endpoint,Parent story: FLAG-23. See the parent story's test evidence and acceptance criteria.,2011,High,1
 2012,Story,Admin authentication,"Sprint: Sprint 3
 Learning Objective: Flag management & admin access
-Test Evidence: `FF-304-T1` (success path) and `FF-304-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-24-T1` (success path) and `FLAG-24-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1003,High,3
-3034,Sub-task,Verify configured admin password and issue signed HttpOnly session cookie (ADR-018),Parent story: FF-304. See the parent story's test evidence and acceptance criteria.,2012,High,1
-3035,Sub-task,"Enforce session, Origin, and CSRF checks on admin mutations",Parent story: FF-304. See the parent story's test evidence and acceptance criteria.,2012,High,1
-3036,Sub-task,"Test invalid password, expired session, CSRF failure, and authorized access",Parent story: FF-304. See the parent story's test evidence and acceptance criteria.,2012,High,1
+3034,Sub-task,Verify configured admin password and issue signed HttpOnly session cookie (ADR-018),Parent story: FLAG-24. See the parent story's test evidence and acceptance criteria.,2012,High,1
+3035,Sub-task,"Enforce session, Origin, and CSRF checks on admin mutations",Parent story: FLAG-24. See the parent story's test evidence and acceptance criteria.,2012,High,1
+3036,Sub-task,"Test invalid password, expired session, CSRF failure, and authorized access",Parent story: FLAG-24. See the parent story's test evidence and acceptance criteria.,2012,High,1
 2013,Story,Astro/React shell,"Sprint: Sprint 4
 Learning Objective: Dashboard
-Test Evidence: `FF-401-T1` (success path) and `FF-401-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-25-T1` (success path) and `FLAG-25-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1004,High,3
-3037,Sub-task,Create dashboard layout,Parent story: FF-401. See the parent story's test evidence and acceptance criteria.,2013,High,1
-3038,Sub-task,Add routing/navigation,Parent story: FF-401. See the parent story's test evidence and acceptance criteria.,2013,High,1
-3039,Sub-task,Configure API client,Parent story: FF-401. See the parent story's test evidence and acceptance criteria.,2013,High,1
+3037,Sub-task,Create dashboard layout,Parent story: FLAG-25. See the parent story's test evidence and acceptance criteria.,2013,High,1
+3038,Sub-task,Add routing/navigation,Parent story: FLAG-25. See the parent story's test evidence and acceptance criteria.,2013,High,1
+3039,Sub-task,Configure API client,Parent story: FLAG-25. See the parent story's test evidence and acceptance criteria.,2013,High,1
 2014,Story,Project/environment UI,"Sprint: Sprint 4
 Learning Objective: Dashboard
-Test Evidence: `FF-402-T1` (success path) and `FF-402-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-26-T1` (success path) and `FLAG-26-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1004,High,3
-3040,Sub-task,Project list,Parent story: FF-402. See the parent story's test evidence and acceptance criteria.,2014,High,1
-3041,Sub-task,Environment selector,Parent story: FF-402. See the parent story's test evidence and acceptance criteria.,2014,High,1
-3042,Sub-task,Environment state/loading/error UI,Parent story: FF-402. See the parent story's test evidence and acceptance criteria.,2014,High,1
+3040,Sub-task,Project list,Parent story: FLAG-26. See the parent story's test evidence and acceptance criteria.,2014,High,1
+3041,Sub-task,Environment selector,Parent story: FLAG-26. See the parent story's test evidence and acceptance criteria.,2014,High,1
+3042,Sub-task,Environment state/loading/error UI,Parent story: FLAG-26. See the parent story's test evidence and acceptance criteria.,2014,High,1
 2015,Story,Flag management UI,"Sprint: Sprint 4
 Learning Objective: Dashboard
-Test Evidence: `FF-403-T1` (success path) and `FF-403-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-27-T1` (success path) and `FLAG-27-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1004,High,3
-3043,Sub-task,Flag table,Parent story: FF-403. See the parent story's test evidence and acceptance criteria.,2015,High,1
-3044,Sub-task,Create/edit form,Parent story: FF-403. See the parent story's test evidence and acceptance criteria.,2015,High,1
-3045,Sub-task,Enable/disable control,Parent story: FF-403. See the parent story's test evidence and acceptance criteria.,2015,High,1
+3043,Sub-task,Flag table,Parent story: FLAG-27. See the parent story's test evidence and acceptance criteria.,2015,High,1
+3044,Sub-task,Create/edit form,Parent story: FLAG-27. See the parent story's test evidence and acceptance criteria.,2015,High,1
+3045,Sub-task,Enable/disable control,Parent story: FLAG-27. See the parent story's test evidence and acceptance criteria.,2015,High,1
 2016,Story,Audit UX,"Sprint: Sprint 4
 Learning Objective: Dashboard
-Test Evidence: `FF-404-T1` (success path) and `FF-404-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-28-T1` (success path) and `FLAG-28-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1004,High,3
-3046,Sub-task,Audit history page,Parent story: FF-404. See the parent story's test evidence and acceptance criteria.,2016,High,1
-3047,Sub-task,Before/after display,Parent story: FF-404. See the parent story's test evidence and acceptance criteria.,2016,High,1
-3048,Sub-task,Error and empty states,Parent story: FF-404. See the parent story's test evidence and acceptance criteria.,2016,High,1
+3046,Sub-task,Audit history page,Parent story: FLAG-28. See the parent story's test evidence and acceptance criteria.,2016,High,1
+3047,Sub-task,Before/after display,Parent story: FLAG-28. See the parent story's test evidence and acceptance criteria.,2016,High,1
+3048,Sub-task,Error and empty states,Parent story: FLAG-28. See the parent story's test evidence and acceptance criteria.,2016,High,1
 2017,Story,SDK package,"Sprint: Sprint 5
 Learning Objective: SDK & local evaluation
-Test Evidence: `FF-501-T1` (success path) and `FF-501-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-29-T1` (success path) and `FLAG-29-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1005,High,3
-3049,Sub-task,Create package structure,Parent story: FF-501. See the parent story's test evidence and acceptance criteria.,2017,High,1
-3050,Sub-task,Define the public SDK API against `docs/API-CONTRACT.md`,Parent story: FF-501. See the parent story's test evidence and acceptance criteria.,2017,High,1
-3051,Sub-task,"Add SDK contract tests for response parsing, API errors, and fallback",Parent story: FF-501. See the parent story's test evidence and acceptance criteria.,2017,High,1
+3049,Sub-task,Create package structure,Parent story: FLAG-29. See the parent story's test evidence and acceptance criteria.,2017,High,1
+3050,Sub-task,Define the public SDK API against `docs/API-CONTRACT.md`,Parent story: FLAG-29. See the parent story's test evidence and acceptance criteria.,2017,High,1
+3051,Sub-task,"Add SDK contract tests for response parsing, API errors, and fallback",Parent story: FLAG-29. See the parent story's test evidence and acceptance criteria.,2017,High,1
 2018,Story,Configuration bootstrap,"Sprint: Sprint 5
 Learning Objective: SDK & local evaluation
-Test Evidence: `FF-502-T1` (success path) and `FF-502-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-30-T1` (success path) and `FLAG-30-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1005,High,3
-3052,Sub-task,Implement config fetch,Parent story: FF-502. See the parent story's test evidence and acceptance criteria.,2018,High,1
-3053,Sub-task,Validate config schema,Parent story: FF-502. See the parent story's test evidence and acceptance criteria.,2018,High,1
-3054,Sub-task,Store immutable snapshot,Parent story: FF-502. See the parent story's test evidence and acceptance criteria.,2018,High,1
+3052,Sub-task,Implement config fetch,Parent story: FLAG-30. See the parent story's test evidence and acceptance criteria.,2018,High,1
+3053,Sub-task,Validate config schema,Parent story: FLAG-30. See the parent story's test evidence and acceptance criteria.,2018,High,1
+3054,Sub-task,Store immutable snapshot,Parent story: FLAG-30. See the parent story's test evidence and acceptance criteria.,2018,High,1
 2019,Story,Evaluation engine,"Sprint: Sprint 5
 Learning Objective: SDK & local evaluation
-Test Evidence: `FF-503-T1` (success path) and `FF-503-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-31-T1` (success path) and `FLAG-31-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1005,High,3
-3055,Sub-task,Boolean evaluation,Parent story: FF-503. See the parent story's test evidence and acceptance criteria.,2019,High,1
-3056,Sub-task,Default/fallback evaluation,Parent story: FF-503. See the parent story's test evidence and acceptance criteria.,2019,High,1
-3057,Sub-task,Evaluation unit-test matrix,Parent story: FF-503. See the parent story's test evidence and acceptance criteria.,2019,High,1
+3055,Sub-task,Boolean evaluation,Parent story: FLAG-31. See the parent story's test evidence and acceptance criteria.,2019,High,1
+3056,Sub-task,Default/fallback evaluation,Parent story: FLAG-31. See the parent story's test evidence and acceptance criteria.,2019,High,1
+3057,Sub-task,Evaluation unit-test matrix,Parent story: FLAG-31. See the parent story's test evidence and acceptance criteria.,2019,High,1
 2020,Story,Demo Store integration,"Sprint: Sprint 5
 Learning Objective: SDK & local evaluation
-Test Evidence: `FF-504-T1` (success path) and `FF-504-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-32-T1` (success path) and `FLAG-32-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1005,High,3
-3058,Sub-task,Integrate SDK in `apps/demo-store/src/components/FlaggedDemo.tsx`,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,2020,High,1
-3059,Sub-task,Add `new_checkout` to the checkout page,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,2020,High,1
-3060,Sub-task,Demonstrate a live switch without rebuilding the demo store,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,2020,High,1
-3145,Sub-task,Use `new_product_card` on the product-list page,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,2020,High,1
-3146,Sub-task,Use `holiday_banner` on the home page,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,2020,High,1
-3147,Sub-task,Build Product detail and Cart pages and verify their navigation,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,2020,High,1
+3058,Sub-task,Integrate SDK in `apps/demo-store/src/components/FlaggedDemo.tsx`,Parent story: FLAG-32. See the parent story's test evidence and acceptance criteria.,2020,High,1
+3059,Sub-task,Add `new_checkout` to the checkout page,Parent story: FLAG-32. See the parent story's test evidence and acceptance criteria.,2020,High,1
+3060,Sub-task,Demonstrate a live switch without rebuilding the demo store,Parent story: FLAG-32. See the parent story's test evidence and acceptance criteria.,2020,High,1
+3145,Sub-task,Use `new_product_card` on the product-list page,Parent story: FLAG-32. See the parent story's test evidence and acceptance criteria.,2020,High,1
+3146,Sub-task,Use `holiday_banner` on the home page,Parent story: FLAG-32. See the parent story's test evidence and acceptance criteria.,2020,High,1
+3147,Sub-task,Build Product detail and Cart pages and verify their navigation,Parent story: FLAG-32. See the parent story's test evidence and acceptance criteria.,2020,High,1
 2021,Story,Client keys,"Sprint: Sprint 6
 Learning Objective: Isolation, rollouts & targeting
-Test Evidence: `FF-601-T1` (success path) and `FF-601-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-33-T1` (success path) and `FLAG-33-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1006,High,3
-3061,Sub-task,Generate environment-scoped keys with `ff_client_` prefix and one-time display,Parent story: FF-601. See the parent story's test evidence and acceptance criteria.,2021,High,1
-3062,Sub-task,Hash stored secrets,Parent story: FF-601. See the parent story's test evidence and acceptance criteria.,2021,High,1
-3063,Sub-task,Build revoke flow,Parent story: FF-601. See the parent story's test evidence and acceptance criteria.,2021,High,1
+3061,Sub-task,Generate environment-scoped keys with `ff_client_` prefix and one-time display,Parent story: FLAG-33. See the parent story's test evidence and acceptance criteria.,2021,High,1
+3062,Sub-task,Hash stored secrets,Parent story: FLAG-33. See the parent story's test evidence and acceptance criteria.,2021,High,1
+3063,Sub-task,Build revoke flow,Parent story: FLAG-33. See the parent story's test evidence and acceptance criteria.,2021,High,1
 2022,Story,Environment isolation,"Sprint: Sprint 6
 Learning Objective: Isolation, rollouts & targeting
-Test Evidence: `FF-602-T1` (success path) and `FF-602-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-34-T1` (success path) and `FLAG-34-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1006,High,3
-3064,Sub-task,Prevent cross-environment reads,Parent story: FF-602. See the parent story's test evidence and acceptance criteria.,2022,High,1
-3065,Sub-task,Test staging/production separation,Parent story: FF-602. See the parent story's test evidence and acceptance criteria.,2022,High,1
-3066,Sub-task,Add SDK environment configuration,Parent story: FF-602. See the parent story's test evidence and acceptance criteria.,2022,High,1
+3064,Sub-task,Prevent cross-environment reads,Parent story: FLAG-34. See the parent story's test evidence and acceptance criteria.,2022,High,1
+3065,Sub-task,Test staging/production separation,Parent story: FLAG-34. See the parent story's test evidence and acceptance criteria.,2022,High,1
+3066,Sub-task,Add SDK environment configuration,Parent story: FLAG-34. See the parent story's test evidence and acceptance criteria.,2022,High,1
 2023,Story,Percentage rollout,"Sprint: Sprint 6
 Learning Objective: Isolation, rollouts & targeting
-Test Evidence: `FF-603-T1` (success path) and `FF-603-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-35-T1` (success path) and `FLAG-35-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1006,High,3
-3067,Sub-task,Implement stable hashing,Parent story: FF-603. See the parent story's test evidence and acceptance criteria.,2023,High,1
-3068,Sub-task,Build 0/50/100% cases,Parent story: FF-603. See the parent story's test evidence and acceptance criteria.,2023,High,1
-3069,Sub-task,Test deterministic user assignment,Parent story: FF-603. See the parent story's test evidence and acceptance criteria.,2023,High,1
+3067,Sub-task,Implement stable hashing,Parent story: FLAG-35. See the parent story's test evidence and acceptance criteria.,2023,High,1
+3068,Sub-task,Build 0/50/100% cases,Parent story: FLAG-35. See the parent story's test evidence and acceptance criteria.,2023,High,1
+3069,Sub-task,Test deterministic user assignment,Parent story: FLAG-35. See the parent story's test evidence and acceptance criteria.,2023,High,1
 2024,Story,Targeting rules,"Sprint: Sprint 6
 Learning Objective: Isolation, rollouts & targeting
-Test Evidence: `FF-604-T1` (success path) and `FF-604-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-36-T1` (success path) and `FLAG-36-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1006,High,3
-3070,Sub-task,Define v1 rule model,Parent story: FF-604. See the parent story's test evidence and acceptance criteria.,2024,High,1
-3071,Sub-task,Implement equals/contains,Parent story: FF-604. See the parent story's test evidence and acceptance criteria.,2024,High,1
-3072,Sub-task,Test rule precedence,Parent story: FF-604. See the parent story's test evidence and acceptance criteria.,2024,High,1
+3070,Sub-task,Define v1 rule model,Parent story: FLAG-36. See the parent story's test evidence and acceptance criteria.,2024,High,1
+3071,Sub-task,Implement equals/contains,Parent story: FLAG-36. See the parent story's test evidence and acceptance criteria.,2024,High,1
+3072,Sub-task,Test rule precedence,Parent story: FLAG-36. See the parent story's test evidence and acceptance criteria.,2024,High,1
 2025,Story,In-memory configuration cache,"Sprint: Sprint 7
 Learning Objective: Refresh, caching & fallback
-Test Evidence: `FF-701-T1` (success path) and `FF-701-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-37-T1` (success path) and `FLAG-37-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1007,High,3
-3073,Sub-task,Atomic snapshot replacement,Parent story: FF-701. See the parent story's test evidence and acceptance criteria.,2025,High,1
-3074,Sub-task,Track version/age,Parent story: FF-701. See the parent story's test evidence and acceptance criteria.,2025,High,1
-3075,Sub-task,Expose cache diagnostics,Parent story: FF-701. See the parent story's test evidence and acceptance criteria.,2025,High,1
+3073,Sub-task,Atomic snapshot replacement,Parent story: FLAG-37. See the parent story's test evidence and acceptance criteria.,2025,High,1
+3074,Sub-task,Track version/age,Parent story: FLAG-37. See the parent story's test evidence and acceptance criteria.,2025,High,1
+3075,Sub-task,Expose cache diagnostics,Parent story: FLAG-37. See the parent story's test evidence and acceptance criteria.,2025,High,1
 2026,Story,Polling,"Sprint: Sprint 7
 Learning Objective: Refresh, caching & fallback
-Test Evidence: `FF-702-T1` (success path) and `FF-702-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-38-T1` (success path) and `FLAG-38-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1007,High,3
-3076,Sub-task,Add polling scheduler,Parent story: FF-702. See the parent story's test evidence and acceptance criteria.,2026,High,1
-3077,Sub-task,Handle timeouts/errors,Parent story: FF-702. See the parent story's test evidence and acceptance criteria.,2026,High,1
-3078,Sub-task,Measure stale window,Parent story: FF-702. See the parent story's test evidence and acceptance criteria.,2026,High,1
+3076,Sub-task,Add polling scheduler,Parent story: FLAG-38. See the parent story's test evidence and acceptance criteria.,2026,High,1
+3077,Sub-task,Handle timeouts/errors,Parent story: FLAG-38. See the parent story's test evidence and acceptance criteria.,2026,High,1
+3078,Sub-task,Measure stale window,Parent story: FLAG-38. See the parent story's test evidence and acceptance criteria.,2026,High,1
 2027,Story,HTTP cache optimization,"Sprint: Sprint 7
 Learning Objective: Refresh, caching & fallback
-Test Evidence: `FF-703-T1` (success path) and `FF-703-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-39-T1` (success path) and `FLAG-39-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1007,High,3
-3079,Sub-task,Implement ETag/version conditional requests,Parent story: FF-703. See the parent story's test evidence and acceptance criteria.,2027,High,1
-3080,Sub-task,Test 304 behavior,Parent story: FF-703. See the parent story's test evidence and acceptance criteria.,2027,High,1
-3081,Sub-task,Benchmark request reduction,Parent story: FF-703. See the parent story's test evidence and acceptance criteria.,2027,High,1
+3079,Sub-task,Implement ETag/version conditional requests,Parent story: FLAG-39. See the parent story's test evidence and acceptance criteria.,2027,High,1
+3080,Sub-task,Test 304 behavior,Parent story: FLAG-39. See the parent story's test evidence and acceptance criteria.,2027,High,1
+3081,Sub-task,Benchmark request reduction,Parent story: FLAG-39. See the parent story's test evidence and acceptance criteria.,2027,High,1
 2028,Story,Redis experiment,"Sprint: Sprint 7
 Learning Objective: Refresh, caching & fallback
-Test Evidence: `FF-704-T1` (success path) and `FF-704-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-40-T1` (success path) and `FLAG-40-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1007,High,3
-3082,Sub-task,Run the optional Redis experiment with a local-only container; do not use managed Memorystore,Parent story: FF-704. See the parent story's test evidence and acceptance criteria.,2028,High,1
-3083,Sub-task,Implement the shared-cache adapter for the local experiment only; the default evaluation path remains the SDK memory snapshot,Parent story: FF-704. See the parent story's test evidence and acceptance criteria.,2028,High,1
-3084,Sub-task,Compare local Redis with in-process caching and document when it helps,Parent story: FF-704. See the parent story's test evidence and acceptance criteria.,2028,High,1
+3082,Sub-task,Run the optional Redis experiment with a local-only container; do not use managed Memorystore,Parent story: FLAG-40. See the parent story's test evidence and acceptance criteria.,2028,High,1
+3083,Sub-task,Implement the shared-cache adapter for the local experiment only; the default evaluation path remains the SDK memory snapshot,Parent story: FLAG-40. See the parent story's test evidence and acceptance criteria.,2028,High,1
+3084,Sub-task,Compare local Redis with in-process caching and document when it helps,Parent story: FLAG-40. See the parent story's test evidence and acceptance criteria.,2028,High,1
 2029,Story,SSE stream,"Sprint: Sprint 8
 Learning Objective: SSE & consistency
-Test Evidence: `FF-801-T1` (success path) and `FF-801-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-41-T1` (success path) and `FLAG-41-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1008,High,3
-3085,Sub-task,Create stream endpoint,Parent story: FF-801. See the parent story's test evidence and acceptance criteria.,2029,High,1
-3086,Sub-task,Define event schema,Parent story: FF-801. See the parent story's test evidence and acceptance criteria.,2029,High,1
-3087,Sub-task,Handle client disconnects,Parent story: FF-801. See the parent story's test evidence and acceptance criteria.,2029,High,1
+3085,Sub-task,Create stream endpoint,Parent story: FLAG-41. See the parent story's test evidence and acceptance criteria.,2029,High,1
+3086,Sub-task,Define event schema,Parent story: FLAG-41. See the parent story's test evidence and acceptance criteria.,2029,High,1
+3087,Sub-task,Handle client disconnects,Parent story: FLAG-41. See the parent story's test evidence and acceptance criteria.,2029,High,1
 2030,Story,SDK stream client,"Sprint: Sprint 8
 Learning Objective: SSE & consistency
-Test Evidence: `FF-802-T1` (success path) and `FF-802-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-42-T1` (success path) and `FLAG-42-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1008,High,3
-3088,Sub-task,Connect to SSE,Parent story: FF-802. See the parent story's test evidence and acceptance criteria.,2030,High,1
-3089,Sub-task,Update snapshot from events,Parent story: FF-802. See the parent story's test evidence and acceptance criteria.,2030,High,1
-3090,Sub-task,Add stream status diagnostics,Parent story: FF-802. See the parent story's test evidence and acceptance criteria.,2030,High,1
+3088,Sub-task,Connect to SSE,Parent story: FLAG-42. See the parent story's test evidence and acceptance criteria.,2030,High,1
+3089,Sub-task,Update snapshot from events,Parent story: FLAG-42. See the parent story's test evidence and acceptance criteria.,2030,High,1
+3090,Sub-task,Add stream status diagnostics,Parent story: FLAG-42. See the parent story's test evidence and acceptance criteria.,2030,High,1
 2031,Story,Reconnect behavior,"Sprint: Sprint 8
 Learning Objective: SSE & consistency
-Test Evidence: `FF-803-T1` (success path) and `FF-803-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-43-T1` (success path) and `FLAG-43-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1008,High,3
-3091,Sub-task,Exponential backoff,Parent story: FF-803. See the parent story's test evidence and acceptance criteria.,2031,High,1
-3092,Sub-task,Catch-up bootstrap,Parent story: FF-803. See the parent story's test evidence and acceptance criteria.,2031,High,1
-3093,Sub-task,Test connection interruption,Parent story: FF-803. See the parent story's test evidence and acceptance criteria.,2031,High,1
+3091,Sub-task,Exponential backoff,Parent story: FLAG-43. See the parent story's test evidence and acceptance criteria.,2031,High,1
+3092,Sub-task,Catch-up bootstrap,Parent story: FLAG-43. See the parent story's test evidence and acceptance criteria.,2031,High,1
+3093,Sub-task,Test connection interruption,Parent story: FLAG-43. See the parent story's test evidence and acceptance criteria.,2031,High,1
 2032,Story,Consistency controls,"Sprint: Sprint 8
 Learning Objective: SSE & consistency
-Test Evidence: `FF-804-T1` (success path) and `FF-804-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-44-T1` (success path) and `FLAG-44-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1008,High,3
-3094,Sub-task,Reject stale versions,Parent story: FF-804. See the parent story's test evidence and acceptance criteria.,2032,High,1
-3095,Sub-task,Handle duplicates,Parent story: FF-804. See the parent story's test evidence and acceptance criteria.,2032,High,1
-3096,Sub-task,Test out-of-order events,Parent story: FF-804. See the parent story's test evidence and acceptance criteria.,2032,High,1
+3094,Sub-task,Reject stale versions,Parent story: FLAG-44. See the parent story's test evidence and acceptance criteria.,2032,High,1
+3095,Sub-task,Handle duplicates,Parent story: FLAG-44. See the parent story's test evidence and acceptance criteria.,2032,High,1
+3096,Sub-task,Test out-of-order events,Parent story: FLAG-44. See the parent story's test evidence and acceptance criteria.,2032,High,1
 2033,Story,Structured observability,"Sprint: Sprint 9
 Learning Objective: Observability & resilience
-Test Evidence: `FF-901-T1` (success path) and `FF-901-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-45-T1` (success path) and `FLAG-45-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1009,High,3
-3097,Sub-task,Add request logs,Parent story: FF-901. See the parent story's test evidence and acceptance criteria.,2033,High,1
-3098,Sub-task,Add evaluation telemetry,Parent story: FF-901. See the parent story's test evidence and acceptance criteria.,2033,High,1
-3099,Sub-task,Add propagation metrics,Parent story: FF-901. See the parent story's test evidence and acceptance criteria.,2033,High,1
+3097,Sub-task,Add request logs,Parent story: FLAG-45. See the parent story's test evidence and acceptance criteria.,2033,High,1
+3098,Sub-task,Add evaluation telemetry,Parent story: FLAG-45. See the parent story's test evidence and acceptance criteria.,2033,High,1
+3099,Sub-task,Add propagation metrics,Parent story: FLAG-45. See the parent story's test evidence and acceptance criteria.,2033,High,1
 2034,Story,Tracing/metrics,"Sprint: Sprint 9
 Learning Objective: Observability & resilience
-Test Evidence: `FF-902-T1` (success path) and `FF-902-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-46-T1` (success path) and `FLAG-46-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1009,High,3
-3100,Sub-task,Instrument service boundaries,Parent story: FF-902. See the parent story's test evidence and acceptance criteria.,2034,High,1
-3101,Sub-task,Expose latency metrics,Parent story: FF-902. See the parent story's test evidence and acceptance criteria.,2034,High,1
-3102,Sub-task,Measure propagation delay,Parent story: FF-902. See the parent story's test evidence and acceptance criteria.,2034,High,1
+3100,Sub-task,Instrument service boundaries,Parent story: FLAG-46. See the parent story's test evidence and acceptance criteria.,2034,High,1
+3101,Sub-task,Expose latency metrics,Parent story: FLAG-46. See the parent story's test evidence and acceptance criteria.,2034,High,1
+3102,Sub-task,Measure propagation delay,Parent story: FLAG-46. See the parent story's test evidence and acceptance criteria.,2034,High,1
 2035,Story,Failure injection,"Sprint: Sprint 9
 Learning Objective: Observability & resilience
-Test Evidence: `FF-903-T1` (success path) and `FF-903-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-47-T1` (success path) and `FLAG-47-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1009,High,3
-3103,Sub-task,Break database,Parent story: FF-903. See the parent story's test evidence and acceptance criteria.,2035,High,1
-3104,Sub-task,Break stream connection,Parent story: FF-903. See the parent story's test evidence and acceptance criteria.,2035,High,1
-3105,Sub-task,Test stale-cache fallback,Parent story: FF-903. See the parent story's test evidence and acceptance criteria.,2035,High,1
+3103,Sub-task,Break database,Parent story: FLAG-47. See the parent story's test evidence and acceptance criteria.,2035,High,1
+3104,Sub-task,Break stream connection,Parent story: FLAG-47. See the parent story's test evidence and acceptance criteria.,2035,High,1
+3105,Sub-task,Test stale-cache fallback,Parent story: FLAG-47. See the parent story's test evidence and acceptance criteria.,2035,High,1
 2036,Story,Load testing,"Sprint: Sprint 9
 Learning Objective: Observability & resilience
-Test Evidence: `FF-904-T1` (success path) and `FF-904-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-48-T1` (success path) and `FLAG-48-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1009,High,3
-3106,Sub-task,Create Locust scenarios,Parent story: FF-904. See the parent story's test evidence and acceptance criteria.,2036,High,1
-3107,Sub-task,Measure p50/p95/p99,Parent story: FF-904. See the parent story's test evidence and acceptance criteria.,2036,High,1
-3108,Sub-task,Write performance report,Parent story: FF-904. See the parent story's test evidence and acceptance criteria.,2036,High,1
+3106,Sub-task,Create Locust scenarios,Parent story: FLAG-48. See the parent story's test evidence and acceptance criteria.,2036,High,1
+3107,Sub-task,Measure p50/p95/p99,Parent story: FLAG-48. See the parent story's test evidence and acceptance criteria.,2036,High,1
+3108,Sub-task,Write performance report,Parent story: FLAG-48. See the parent story's test evidence and acceptance criteria.,2036,High,1
 2037,Story,Cost guardrails,"Sprint: Sprint 10
 Learning Objective: GCP & Terraform foundations
-Test Evidence: `FF-1001-T1` (success path) and `FF-1001-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-49-T1` (success path) and `FLAG-49-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1010,High,3
-3109,Sub-task,"Review current pricing and billing, then configure a budget/alert before any optional provisioning; document that alerts are not spend caps",Parent story: FF-1001. See the parent story's test evidence and acceptance criteria.,2037,High,1
-3110,Sub-task,Record quotas as unverified until re-checked; do not rely on free-tier assumptions,Parent story: FF-1001. See the parent story's test evidence and acceptance criteria.,2037,High,1
-3111,Sub-task,Write and validate the resource cleanup checklist before any approved provisioning,Parent story: FF-1001. See the parent story's test evidence and acceptance criteria.,2037,High,1
+3109,Sub-task,"Review current pricing and billing, then configure a budget/alert before any optional provisioning; document that alerts are not spend caps",Parent story: FLAG-49. See the parent story's test evidence and acceptance criteria.,2037,High,1
+3110,Sub-task,Record quotas as unverified until re-checked; do not rely on free-tier assumptions,Parent story: FLAG-49. See the parent story's test evidence and acceptance criteria.,2037,High,1
+3111,Sub-task,Write and validate the resource cleanup checklist before any approved provisioning,Parent story: FLAG-49. See the parent story's test evidence and acceptance criteria.,2037,High,1
 2038,Story,Terraform foundation,"Sprint: Sprint 10
 Learning Objective: GCP & Terraform foundations
-Test Evidence: `FF-1002-T1` (success path) and `FF-1002-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-50-T1` (success path) and `FLAG-50-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1010,High,3
-3112,Sub-task,Create provider/module layout,Parent story: FF-1002. See the parent story's test evidence and acceptance criteria.,2038,High,1
-3113,Sub-task,"Document local state by default and optional GCS state cost, locking, access, and cleanup",Parent story: FF-1002. See the parent story's test evidence and acceptance criteria.,2038,High,1
-3114,Sub-task,Add variables/outputs,Parent story: FF-1002. See the parent story's test evidence and acceptance criteria.,2038,High,1
-3148,Sub-task,Set Cloud Run minimum instances to 0 in the Terraform default,Parent story: FF-1002. See the parent story's test evidence and acceptance criteria.,2038,High,1
+3112,Sub-task,Create provider/module layout,Parent story: FLAG-50. See the parent story's test evidence and acceptance criteria.,2038,High,1
+3113,Sub-task,"Document local state by default and optional GCS state cost, locking, access, and cleanup",Parent story: FLAG-50. See the parent story's test evidence and acceptance criteria.,2038,High,1
+3114,Sub-task,Add variables/outputs,Parent story: FLAG-50. See the parent story's test evidence and acceptance criteria.,2038,High,1
+3148,Sub-task,Set Cloud Run minimum instances to 0 in the Terraform default,Parent story: FLAG-50. See the parent story's test evidence and acceptance criteria.,2038,High,1
 2039,Story,Artifact Registry,"Sprint: Sprint 10
 Learning Objective: GCP & Terraform foundations
-Test Evidence: `FF-1003-T1` (success path) and `FF-1003-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-51-T1` (success path) and `FLAG-51-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1010,High,3
-3115,Sub-task,Define optional Artifact Registry resource; do not apply by default,Parent story: FF-1003. See the parent story's test evidence and acceptance criteria.,2039,High,1
-3116,Sub-task,Build container locally,Parent story: FF-1003. See the parent story's test evidence and acceptance criteria.,2039,High,1
-3117,Sub-task,Document image push and cleanup; execute only after explicit cloud approval,Parent story: FF-1003. See the parent story's test evidence and acceptance criteria.,2039,High,1
+3115,Sub-task,Define optional Artifact Registry resource; do not apply by default,Parent story: FLAG-51. See the parent story's test evidence and acceptance criteria.,2039,High,1
+3116,Sub-task,Build container locally,Parent story: FLAG-51. See the parent story's test evidence and acceptance criteria.,2039,High,1
+3117,Sub-task,Document image push and cleanup; execute only after explicit cloud approval,Parent story: FLAG-51. See the parent story's test evidence and acceptance criteria.,2039,High,1
 2040,Story,Cloud Run foundation,"Sprint: Sprint 10
 Learning Objective: GCP & Terraform foundations
-Test Evidence: `FF-1004-T1` (success path) and `FF-1004-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-52-T1` (success path) and `FLAG-52-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1010,High,3
-3118,Sub-task,Validate a stateless API plan without applying; set Cloud Run minimum instances to 0,Parent story: FF-1004. See the parent story's test evidence and acceptance criteria.,2040,High,1
-3119,Sub-task,Configure environment variables,Parent story: FF-1004. See the parent story's test evidence and acceptance criteria.,2040,High,1
-3120,Sub-task,Verify Cloud Run minimum instances = 0 and scale-to-zero configuration in Terraform,Parent story: FF-1004. See the parent story's test evidence and acceptance criteria.,2040,High,1
+3118,Sub-task,Validate a stateless API plan without applying; set Cloud Run minimum instances to 0,Parent story: FLAG-52. See the parent story's test evidence and acceptance criteria.,2040,High,1
+3119,Sub-task,Configure environment variables,Parent story: FLAG-52. See the parent story's test evidence and acceptance criteria.,2040,High,1
+3120,Sub-task,Verify Cloud Run minimum instances = 0 and scale-to-zero configuration in Terraform,Parent story: FLAG-52. See the parent story's test evidence and acceptance criteria.,2040,High,1
 2041,Story,Firestore adapter,"Sprint: Sprint 11
 Learning Objective: Cloud data, events & IAM
-Test Evidence: `FF-1101-T1` (success path) and `FF-1101-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-53-T1` (success path) and `FLAG-53-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1011,High,3
-3121,Sub-task,Map local domain to documents,Parent story: FF-1101. See the parent story's test evidence and acceptance criteria.,2041,High,1
-3122,Sub-task,Implement repository methods,Parent story: FF-1101. See the parent story's test evidence and acceptance criteria.,2041,High,1
-3123,Sub-task,Run parity tests vs PostgreSQL,Parent story: FF-1101. See the parent story's test evidence and acceptance criteria.,2041,High,1
+3121,Sub-task,Map local domain to documents,Parent story: FLAG-53. See the parent story's test evidence and acceptance criteria.,2041,High,1
+3122,Sub-task,Implement repository methods,Parent story: FLAG-53. See the parent story's test evidence and acceptance criteria.,2041,High,1
+3123,Sub-task,Run parity tests vs PostgreSQL,Parent story: FLAG-53. See the parent story's test evidence and acceptance criteria.,2041,High,1
 2042,Story,Pub/Sub propagation,"Sprint: Sprint 11
 Learning Objective: Cloud data, events & IAM
-Test Evidence: `FF-1102-T1` (success path) and `FF-1102-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-54-T1` (success path) and `FLAG-54-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1011,High,3
-3124,Sub-task,Create topic/subscription,Parent story: FF-1102. See the parent story's test evidence and acceptance criteria.,2042,High,1
-3125,Sub-task,Publish configuration events,Parent story: FF-1102. See the parent story's test evidence and acceptance criteria.,2042,High,1
-3126,Sub-task,Consume and handle duplicates,Parent story: FF-1102. See the parent story's test evidence and acceptance criteria.,2042,High,1
+3124,Sub-task,Create topic/subscription,Parent story: FLAG-54. See the parent story's test evidence and acceptance criteria.,2042,High,1
+3125,Sub-task,Publish configuration events,Parent story: FLAG-54. See the parent story's test evidence and acceptance criteria.,2042,High,1
+3126,Sub-task,Consume and handle duplicates,Parent story: FLAG-54. See the parent story's test evidence and acceptance criteria.,2042,High,1
 2043,Story,GCP IAM,"Sprint: Sprint 11
 Learning Objective: Cloud data, events & IAM
-Test Evidence: `FF-1103-T1` (success path) and `FF-1103-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-55-T1` (success path) and `FLAG-55-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1011,High,3
-3127,Sub-task,Create least-privilege runtime identity,Parent story: FF-1103. See the parent story's test evidence and acceptance criteria.,2043,High,1
-3128,Sub-task,Limit Firestore permissions,Parent story: FF-1103. See the parent story's test evidence and acceptance criteria.,2043,High,1
-3129,Sub-task,Limit Pub/Sub permissions,Parent story: FF-1103. See the parent story's test evidence and acceptance criteria.,2043,High,1
+3127,Sub-task,Create least-privilege runtime identity,Parent story: FLAG-55. See the parent story's test evidence and acceptance criteria.,2043,High,1
+3128,Sub-task,Limit Firestore permissions,Parent story: FLAG-55. See the parent story's test evidence and acceptance criteria.,2043,High,1
+3129,Sub-task,Limit Pub/Sub permissions,Parent story: FLAG-55. See the parent story's test evidence and acceptance criteria.,2043,High,1
 2044,Story,Cloud observability,"Sprint: Sprint 11
 Learning Objective: Cloud data, events & IAM
-Test Evidence: `FF-1104-T1` (success path) and `FF-1104-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-56-T1` (success path) and `FLAG-56-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1011,High,3
-3130,Sub-task,Configure useful logs,Parent story: FF-1104. See the parent story's test evidence and acceptance criteria.,2044,High,1
-3131,Sub-task,Validate log volume,Parent story: FF-1104. See the parent story's test evidence and acceptance criteria.,2044,High,1
-3132,Sub-task,Create basic operational dashboard/queries,Parent story: FF-1104. See the parent story's test evidence and acceptance criteria.,2044,High,1
+3130,Sub-task,Configure useful logs,Parent story: FLAG-56. See the parent story's test evidence and acceptance criteria.,2044,High,1
+3131,Sub-task,Validate log volume,Parent story: FLAG-56. See the parent story's test evidence and acceptance criteria.,2044,High,1
+3132,Sub-task,Create basic operational dashboard/queries,Parent story: FLAG-56. See the parent story's test evidence and acceptance criteria.,2044,High,1
 2045,Story,GitHub Actions CI,"Sprint: Sprint 12
 Learning Objective: CI/CD & finalization
-Test Evidence: `FF-1201-T1` (success path) and `FF-1201-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-57-T1` (success path) and `FLAG-57-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1012,High,3
-3133,Sub-task,Lint and type-check workflow,Parent story: FF-1201. See the parent story's test evidence and acceptance criteria.,2045,High,1
-3134,Sub-task,Unit and integration test workflow,Parent story: FF-1201. See the parent story's test evidence and acceptance criteria.,2045,High,1
-3135,Sub-task,Build artifact workflow,Parent story: FF-1201. See the parent story's test evidence and acceptance criteria.,2045,High,1
-3149,Sub-task,Run the consistency checker locally and in the optional hosted CI gate,Parent story: FF-1201. See the parent story's test evidence and acceptance criteria.,2045,High,1
+3133,Sub-task,Lint and type-check workflow,Parent story: FLAG-57. See the parent story's test evidence and acceptance criteria.,2045,High,1
+3134,Sub-task,Unit and integration test workflow,Parent story: FLAG-57. See the parent story's test evidence and acceptance criteria.,2045,High,1
+3135,Sub-task,Build artifact workflow,Parent story: FLAG-57. See the parent story's test evidence and acceptance criteria.,2045,High,1
+3149,Sub-task,Run the consistency checker locally and in the optional hosted CI gate,Parent story: FLAG-57. See the parent story's test evidence and acceptance criteria.,2045,High,1
 2046,Story,Deployment workflow,"Sprint: Sprint 12
 Learning Objective: CI/CD & finalization
-Test Evidence: `FF-1202-T1` (success path) and `FF-1202-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-58-T1` (success path) and `FLAG-58-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1012,High,3
-3136,Sub-task,Document optional Cloud Run deployment from a trusted branch; deploy only after explicit approval and the cost gate,Parent story: FF-1202. See the parent story's test evidence and acceptance criteria.,2046,High,1
-3137,Sub-task,Use environment configuration,Parent story: FF-1202. See the parent story's test evidence and acceptance criteria.,2046,High,1
-3138,Sub-task,Add rollback procedure,Parent story: FF-1202. See the parent story's test evidence and acceptance criteria.,2046,High,1
+3136,Sub-task,Document optional Cloud Run deployment from a trusted branch; deploy only after explicit approval and the cost gate,Parent story: FLAG-58. See the parent story's test evidence and acceptance criteria.,2046,High,1
+3137,Sub-task,Use environment configuration,Parent story: FLAG-58. See the parent story's test evidence and acceptance criteria.,2046,High,1
+3138,Sub-task,Add rollback procedure,Parent story: FLAG-58. See the parent story's test evidence and acceptance criteria.,2046,High,1
 2047,Story,End-to-end validation,"Sprint: Sprint 12
 Learning Objective: CI/CD & finalization
-Test Evidence: `FF-1203-T1` (success path) and `FF-1203-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-59-T1` (success path) and `FLAG-59-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1012,High,3
-3139,Sub-task,Test cloud SDK bootstrap,Parent story: FF-1203. See the parent story's test evidence and acceptance criteria.,2047,High,1
-3140,Sub-task,Test Pub/Sub/SSE propagation,Parent story: FF-1203. See the parent story's test evidence and acceptance criteria.,2047,High,1
-3141,Sub-task,Test failure fallback,Parent story: FF-1203. See the parent story's test evidence and acceptance criteria.,2047,High,1
+3139,Sub-task,Test cloud SDK bootstrap,Parent story: FLAG-59. See the parent story's test evidence and acceptance criteria.,2047,High,1
+3140,Sub-task,Test Pub/Sub/SSE propagation,Parent story: FLAG-59. See the parent story's test evidence and acceptance criteria.,2047,High,1
+3141,Sub-task,Test failure fallback,Parent story: FLAG-59. See the parent story's test evidence and acceptance criteria.,2047,High,1
 2048,Story,Final engineering package,"Sprint: Sprint 12
 Learning Objective: CI/CD & finalization
-Test Evidence: `FF-1204-T1` (success path) and `FF-1204-T2` (failure path); name the implemented test file when the test is added.
+Test Evidence: `FLAG-60-T1` (success path) and `FLAG-60-T2` (failure path); name the implemented test file when the test is added.
 Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",1012,High,3
-3142,Sub-task,Review ADRs,Parent story: FF-1204. See the parent story's test evidence and acceptance criteria.,2048,High,1
-3143,Sub-task,Write architecture/benchmark report,Parent story: FF-1204. See the parent story's test evidence and acceptance criteria.,2048,High,1
-3144,Sub-task,Record final demo and retrospective,Parent story: FF-1204. See the parent story's test evidence and acceptance criteria.,2048,High,1
+3142,Sub-task,Review ADRs,Parent story: FLAG-60. See the parent story's test evidence and acceptance criteria.,2048,High,1
+3143,Sub-task,Write architecture/benchmark report,Parent story: FLAG-60. See the parent story's test evidence and acceptance criteria.,2048,High,1
+3144,Sub-task,Record final demo and retrospective,Parent story: FLAG-60. See the parent story's test evidence and acceptance criteria.,2048,High,1

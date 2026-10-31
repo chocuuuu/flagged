@@ -301,10 +301,10 @@ Avoid unlimited historical growth.
 
 | Invariant | Planned Jira test evidence |
 |---|---|
-| 1. Flag keys are unique per environment | FF-203-T1 and FF-302-T2 |
-| 2. Environment revisions increase monotonically; flag edit versions are separate | FF-302-T2 and FF-804-T2 |
-| 3. Revoked client key cannot read SDK configuration | FF-601-T2 |
-| 4. Admin credentials cannot authenticate as SDK clients | FF-601-T2 and FF-602-T2 |
-| 5. Equal or lower snapshot revision is ignored | FF-503-T2 and FF-804-T2 |
-| 6. Audit records are append-only | FF-303-T2 |
-| 7. Evaluation does not mutate configuration | FF-503-T2 |
+| 1. Flag keys are unique per environment | FLAG-19-T1 and FLAG-22-T2 |
+| 2. Environment revisions increase monotonically; flag edit versions are separate | FLAG-22-T2 and FLAG-44-T2 |
+| 3. Revoked client key cannot read SDK configuration | FLAG-33-T2 |
+| 4. Admin credentials cannot authenticate as SDK clients | FLAG-33-T2 and FLAG-34-T2 |
+| 5. Equal or lower snapshot revision is ignored | FLAG-31-T2 and FLAG-44-T2 |
+| 6. Audit records are append-only | FLAG-23-T2 |
+| 7. Evaluation does not mutate configuration | FLAG-31-T2 |

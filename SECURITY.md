@@ -349,9 +349,9 @@ No release is complete if:
 
 | Invariant | Planned test evidence |
 |---|---|
-| No secret is committed | FF-104-T2 (secret scan detects a canary pattern) |
-| Admin API rejects unauthenticated access | FF-304-T2 |
-| SDK key cannot mutate configuration | FF-601-T2 and FF-602-T2 |
-| Revoked client key is rejected | FF-601-T2 |
-| Stale configuration cannot overwrite newer configuration | FF-804-T2 |
-| Sensitive values are absent from logs | FF-901-T2 |
+| No secret is committed | FLAG-16-T2 (secret scan detects a canary pattern) |
+| Admin API rejects unauthenticated access | FLAG-24-T2 |
+| SDK key cannot mutate configuration | FLAG-33-T2 and FLAG-34-T2 |
+| Revoked client key is rejected | FLAG-33-T2 |
+| Stale configuration cannot overwrite newer configuration | FLAG-44-T2 |
+| Sensitive values are absent from logs | FLAG-45-T2 |
