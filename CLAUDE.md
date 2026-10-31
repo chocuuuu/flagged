@@ -99,6 +99,9 @@ Every new dependency needs:
 - cost impact, if any
 - whether standard-library functionality could reasonably solve the need
 
+Maintain these decisions in [`DEPENDENCIES.md`](DEPENDENCIES.md); do not install
+planned dependencies until the relevant sprint needs them.
+
 ## 8. Security policy
 
 Never:

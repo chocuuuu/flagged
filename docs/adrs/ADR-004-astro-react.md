@@ -4,7 +4,7 @@
 
 ## Decision
 
-Astro with React islands and TypeScript.
+Astro with React islands and TypeScript, with Tailwind CSS for styling.
 
 ## Context
 

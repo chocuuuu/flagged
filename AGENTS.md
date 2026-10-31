@@ -68,6 +68,30 @@ The repository must remain understandable to a developer who did not watch the i
 - Redis
 - optional Pub/Sub emulator or local event-bus adapter
 
+## Test and local CI baseline
+
+The default validation path is local and must not require GitHub Actions, cloud
+resources, or additional paid services. At Sprint 1, pin the language and tool
+versions and add the chosen frontend/browser runners without changing the stack
+without an ADR.
+
+Use [`DEPENDENCIES.md`](DEPENDENCIES.md) as the dependency/tooling register; document
+purpose, alternatives, maintenance/complexity, and cost for each choice before adding
+it to a manifest.
+
+| Layer | Required checks / planned tools |
+|---|---|
+| Python API | pytest + httpx; enforce at least 80% branch coverage once the API exists |
+| TypeScript SDK | Vitest unit tests; strict TypeScript type-check |
+| Dashboard and demo store | React component tests and Playwright browser tests |
+| Load | Locust, bounded to local services and documented test targets |
+| Lint / types / formatting | Ruff, mypy, ESLint, TypeScript strict mode; Prettier only if selected at Sprint 1 |
+| Secrets | Gitleaks when installed; never make local checks depend on GitHub Actions |
+
+The minimum CI gate is lint, type-check, unit tests, and integration tests. Keep
+each command runnable locally; hosted workflow execution remains optional and subject
+to `COST-BOUNDARY.md`.
+
 ## Rules for architecture changes
 
 Changes to the following require an ADR:
@@ -108,6 +132,7 @@ docs/adrs/
 docs/ARCHITECTURE-FREEZE-GATE.md
 docs/runbooks/
 docs/benchmarks/
+DEPENDENCIES.md
 ```
 
 ## AI collaboration protocol
