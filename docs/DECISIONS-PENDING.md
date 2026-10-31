@@ -92,17 +92,17 @@ approval to implement Firestore. No open owner decision blocks the local-first
 planning baseline; the final readiness report separately identifies items that
 cannot be certified before implementation or a clean-clone run.
 
-## Validation evidence and remaining gates (not owner decisions)
+## Validation evidence and deferred gates (not owner decisions)
 
 - Gitleaks 8.30.1 was installed for this local scan. Both
   `gitleaks detect --source . --no-git --redact --exit-code 1` and
-  `gitleaks git . --redact --exit-code 1` passed with no findings; the history
-  scan covered 28 local commits. Re-run before the first push if repository
-  content changes afterward.
-- Run `python scripts/generate_jira_csv.py --check` and
-  `python scripts/check_consistency.py` in a clean clone after the audit changes
-  are preserved. This dirty worktree also contains a pre-existing deletion of
-  `jira/JIRA-BACKLOG.csv`, which this audit intentionally did not restore.
+  `gitleaks git . --redact --exit-code 1` passed with no findings. The working-tree
+  scan passed with no findings, and the history scan covered 29 local commits
+  with no findings. Re-run before the first push if repository content changes
+  afterward.
+- Clean-clone validation passed at commit `f16bb37`: the Jira generator check and
+  consistency checker passed, and `git status --short` was empty. The source
+  worktree's pre-existing deletion of `jira/JIRA-BACKLOG.csv` remains untouched.
 - Live cloud pricing review/provisioning is not required for Sprint 1 or the
   local-first baseline. Before any future live experiment, re-verify current
   official pricing, billing prerequisites, and cleanup, then obtain explicit

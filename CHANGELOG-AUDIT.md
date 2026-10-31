@@ -101,6 +101,9 @@ Every entry below is an audit edit. The pre-existing worktree deletion of
   historical, recorded reconciliations, risk levels, added-file inventory, and
   pass/deferred readiness evidence.
 - `CHANGELOG-AUDIT.md` - records this file-by-file audit trail.
+- Final validation evidence - a fresh clone of commit `f16bb37` passed the Jira
+  generator check and consistency gate with a clean status; working-tree and
+  29-commit Gitleaks scans reported no findings.
 
 No application features were implemented, no dependencies installed, and no cloud
 resources created. Gitleaks 8.30.1 was installed as a local scanner (not a project

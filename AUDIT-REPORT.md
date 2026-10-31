@@ -1,9 +1,9 @@
 # Flagged pre-flight audit
 
 **Audit date:** 2026-10-31
-**Status:** Inventory and reconciliation complete. The local consistency gate
-passes. Clean-clone verification and Gitleaks execution remain deferred validation
-items; this report does not claim implementation readiness.
+**Status:** Inventory, reconciliation, and local clean-clone checks complete.
+Documentation/planning readiness is verified; product behavior and architecture
+decisions remain subject to the implementation milestones and listed deferrals.
 
 ## Scope and worktree state
 
@@ -193,18 +193,18 @@ changes and has not been restored or otherwise altered.
 | Demo pages, flags, and SDK integration point | PASS | PRD, FF-504, Session 25. |
 | Runbook stubs and README paths | PASS | Six runbooks; checker reports 28 README paths exist. |
 | Local consistency check | PASS | `python scripts/check_consistency.py`: `CONSISTENCY CHECK PASSED`; secret scan reports `heuristics + Gitleaks`. No GitHub Actions dependency. |
-| Gitleaks working-tree scan | PASS | `gitleaks detect --source . --no-git --redact --exit-code 1`: no leaks found (524,928 bytes). |
-| Gitleaks local-history scan | PASS | `gitleaks git . --redact --exit-code 1`: 28 commits scanned; no leaks found (2,218,518 bytes). |
-| Clean-clone execution | IN PROGRESS | Run after the four audit commits so the separate clone includes all audit changes; preserve the pre-existing legacy CSV deletion. |
+| Gitleaks working-tree scan | PASS | `gitleaks detect --source . --no-git --redact --exit-code 1`: no leaks found. |
+| Gitleaks local-history scan | PASS | `gitleaks git . --redact --exit-code 1`: 29 commits scanned; no leaks found. |
+| Clean-clone execution | PASS | Cloned commit `f16bb37` to a new temporary directory. `python scripts/generate_jira_csv.py --check` passed (12 epics, 48 stories, 149 subtasks); `python scripts/check_consistency.py` passed (23 ADRs, 12 sprints/60 contiguous sessions, 28 README paths, Gitleaks). Clone `git status --short` was empty. The clone was removed after verification; the pre-existing legacy CSV deletion remains untouched in the source worktree. |
 | Live pricing/provisioning | DEFERRED / NOT REQUIRED | Re-verify official pricing and obtain explicit approval before any cloud action. No resources were created. |
 | Feature implementation and ADR acceptance | DEFERRED TO MILESTONES | Audit is planning/documentation only. Accept an ADR only after implementation and verification. |
 
 ### Audit result
 
-The local-first planning baseline is consistent enough to begin Sprint 1's local
-learning sessions after the clean-clone check. Gitleaks passed against the working
-tree and existing local history. Do not begin live cloud work without current
-pricing review and explicit approval. The historical
+The local-first planning baseline and repository checks are ready for Sprint 1's
+local learning sessions. Clean-clone, working-tree Gitleaks, and local-history
+checks passed. Do not begin live cloud work without current pricing review and
+explicit approval. The historical
 `FLAGGED-MASTER-PLAN.md` and pre-existing deleted legacy CSV remain untouched.
 The API contract remains a draft and ADRs remain Proposed until implementation
 evidence exists.
