@@ -126,19 +126,47 @@ def check_jira() -> tuple[int, int, int]:
 
     with CSV_PATH.open(encoding="utf-8-sig", newline="") as stream:
         rows = list(csv.DictReader(stream))
+    expected_fields = [
+        "Work item ID",
+        "Work type",
+        "Summary",
+        "Description",
+        "Parent",
+        "Priority",
+        "Story Points",
+    ]
+    if not rows or list(rows[0]) != expected_fields:
+        fail(f"Jira CSV columns must match the existing import format: {expected_fields}.")
     kinds = {kind: sum(row["Work type"] == kind for row in rows) for kind in ("Epic", "Story", "Sub-task")}
-    if kinds["Epic"] != 12 or kinds["Story"] != 48:
-        fail(f"Jira requires 12 epics and 48 stories; found {kinds}.")
-    keys = [row["Issue Key"] for row in rows]
-    if len(keys) != len(set(keys)):
-        fail("Jira CSV contains duplicate issue keys.")
+    if kinds != {"Epic": 12, "Story": 48, "Sub-task": 149}:
+        fail(f"Jira requires 12 epics, 48 stories, and 149 subtasks; found {kinds}.")
+    work_item_ids = [row["Work item ID"] for row in rows]
+    if any(not re.fullmatch(r"\d+", value) for value in work_item_ids):
+        fail("Jira CSV work item IDs must be numeric.")
+    if len(work_item_ids) != len(set(work_item_ids)):
+        fail("Jira CSV contains duplicate work item IDs.")
+    rows_by_id = {row["Work item ID"]: row for row in rows}
     for row in rows:
-        if not row["Sprint"] or not row["Priority"]:
-            fail(f"Jira row {row['Issue Key']} lacks Sprint or Priority.")
-        if row["Work type"] == "Story" and row["Story Points"] != "3":
-            fail(f"Jira story {row['Issue Key']} does not have the canonical 3 points.")
-        if row["Work type"] == "Sub-task" and row["Parent"] not in set(keys):
-            fail(f"Subtask {row['Issue Key']} has missing parent {row['Parent']}.")
+        item_id = row["Work item ID"]
+        if not row["Priority"]:
+            fail(f"Jira row {item_id} lacks Priority.")
+        if row["Work type"] == "Epic":
+            if row["Parent"]:
+                fail(f"Jira epic {item_id} must not have a parent.")
+        elif row["Work type"] in ("Story", "Sub-task"):
+            parent = rows_by_id.get(row["Parent"])
+            expected_parent_type = "Epic" if row["Work type"] == "Story" else "Story"
+            if not parent or parent["Work type"] != expected_parent_type:
+                fail(f"Jira row {item_id} has an invalid {expected_parent_type} parent.")
+        else:
+            fail(f"Jira row {item_id} has unsupported work type {row['Work type']}.")
+        if row["Work type"] == "Story":
+            if row["Story Points"] != "3":
+                fail(f"Jira story {item_id} does not have the canonical 3 points.")
+            if not re.search(r"^Sprint: Sprint \d+$", row["Description"], re.MULTILINE):
+                fail(f"Jira story {item_id} has no sprint in its description.")
+        if row["Work type"] == "Sub-task" and row["Story Points"] != "1":
+            fail(f"Jira subtask {item_id} does not have the canonical 1 point.")
     return kinds["Epic"], kinds["Story"], kinds["Sub-task"]
 
 

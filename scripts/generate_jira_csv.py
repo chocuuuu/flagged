@@ -13,18 +13,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BACKLOG = ROOT / "jira" / "JIRA-BACKLOG.md"
 OUTPUT = ROOT / "jira" / "FLAGGED-JIRA-IMPORT.csv"
+ID_MAP = ROOT / "jira" / "IMPORT-ID-MAP.csv"
 SKILLS = ROOT / "SKILLS.md"
 CALENDAR = ROOT / "docs" / "SPRINT-CALENDAR.md"
 EM_DASH = "\u2014"
 EN_DASH = "\u2013"
 FIELDS = [
-    "Issue Key",
+    "Work item ID",
     "Work type",
     "Summary",
     "Description",
-    "Epic",
     "Parent",
-    "Sprint",
     "Priority",
     "Story Points",
 ]
@@ -32,6 +31,7 @@ ISSUE_RE = re.compile(r"^## (FF-\d+) " + EM_DASH + r" (.+)$", re.MULTILINE)
 SUBTASK_RE = re.compile(
     r"^- \[ \] \*\*(FF-\d+-\d+)\*\* " + EM_DASH + r" (.+)$", re.MULTILINE
 )
+ID_MAP_FIELDS = ["Source Key", "Work item ID"]
 
 
 def field(block: str, name: str) -> str:
@@ -39,6 +39,37 @@ def field(block: str, name: str) -> str:
     if not match:
         raise ValueError(f"Missing `{name}` field in Jira story.")
     return match.group(1).replace("<br>", "").strip()
+
+
+def load_id_map(source_keys: set[str]) -> dict[str, str]:
+    with ID_MAP.open(encoding="utf-8-sig", newline="") as stream:
+        reader = csv.DictReader(stream)
+        if reader.fieldnames != ID_MAP_FIELDS:
+            raise ValueError(f"{ID_MAP.relative_to(ROOT)} must have columns {ID_MAP_FIELDS}.")
+        identifiers: dict[str, str] = {}
+        used_ids: set[str] = set()
+        for row in reader:
+            source_key = row["Source Key"].strip()
+            work_item_id = row["Work item ID"].strip()
+            if not source_key or not re.fullmatch(r"\d+", work_item_id):
+                raise ValueError(f"Invalid source key or numeric work item ID: {row}.")
+            if source_key in identifiers:
+                raise ValueError(f"Duplicate source key in ID map: {source_key}")
+            if work_item_id in used_ids:
+                raise ValueError(f"Duplicate work item ID in ID map: {work_item_id}")
+            identifiers[source_key] = work_item_id
+            used_ids.add(work_item_id)
+
+    missing = sorted(source_keys - identifiers.keys())
+    unexpected = sorted(identifiers.keys() - source_keys)
+    if missing or unexpected:
+        details = []
+        if missing:
+            details.append(f"missing mappings: {', '.join(missing)}")
+        if unexpected:
+            details.append(f"unused mappings: {', '.join(unexpected)}")
+        raise ValueError(f"{ID_MAP.relative_to(ROOT)} does not match the backlog ({'; '.join(details)}).")
+    return identifiers
 
 
 def generate() -> str:
@@ -100,13 +131,14 @@ def generate() -> str:
             raise ValueError(f"Missing {epic_key} definition.")
         rows.append(
             {
-                "Issue Key": epic_key,
+                "Source Key": epic_key,
                 "Work type": "Epic",
                 "Summary": epics[epic_key],
-                "Description": f"Sprint {sprint_number}: {sprint_name}",
-                "Epic": "",
+                "Description": (
+                    f"Flagged epic {epics[epic_key]}.\n\n"
+                    f"Learning Objective:\n{epics[epic_key]}"
+                ),
                 "Parent": "",
-                "Sprint": f"Sprint {sprint_number}",
                 "Priority": "High",
                 "Story Points": "",
             }
@@ -163,7 +195,7 @@ def generate() -> str:
 
         rows.append(
             {
-                "Issue Key": key,
+                "Source Key": key,
                 "Work type": "Story",
                 "Summary": summary,
                 "Description": (
@@ -174,9 +206,7 @@ def generate() -> str:
                     "documented design; no accidental secrets or paid infrastructure; "
                     "focused commit/PR."
                 ),
-                "Epic": epic,
-                "Parent": "",
-                "Sprint": sprint_value,
+                "Parent": epic,
                 "Priority": priority,
                 "Story Points": points,
             }
@@ -184,13 +214,11 @@ def generate() -> str:
         for subtask_key, subtask_summary in subtasks:
             rows.append(
                 {
-                    "Issue Key": subtask_key,
+                    "Source Key": subtask_key,
                     "Work type": "Sub-task",
                     "Summary": subtask_summary.strip(),
                     "Description": f"Parent story: {key}. See the parent story's test evidence and acceptance criteria.",
-                    "Epic": epic,
                     "Parent": key,
-                    "Sprint": sprint_value,
                     "Priority": priority,
                     "Story Points": "1",
                 }
@@ -199,6 +227,13 @@ def generate() -> str:
     wrong_counts = {number: count for number, count in story_counts.items() if count != 4}
     if wrong_counts:
         raise ValueError(f"Each sprint must have four stories: {wrong_counts}")
+    identifiers = load_id_map({row["Source Key"] for row in rows})
+    for row in rows:
+        source_key = row.pop("Source Key")
+        parent_key = row["Parent"]
+        row["Work item ID"] = identifiers[source_key]
+        row["Parent"] = identifiers[parent_key] if parent_key else ""
+
     buffer = io.StringIO(newline="")
     writer = csv.DictWriter(buffer, fieldnames=FIELDS, lineterminator="\n")
     writer.writeheader()

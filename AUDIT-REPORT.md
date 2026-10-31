@@ -7,8 +7,9 @@ decisions remain subject to the implementation milestones and listed deferrals.
 
 ## Scope and worktree state
 
-The inventory below covers the 45 tracked paths listed by `git ls-files` in the
-working tree. The worktree had one pre-existing change at audit start:
+The initial inventory covered the 45 tracked paths listed by `git ls-files` at
+audit start; the Jira compatibility follow-up adds the stable import ID map below.
+The worktree had one pre-existing change at audit start:
 `jira/JIRA-BACKLOG.csv` was deleted. This audit did not restore or otherwise alter it.
 It is mentioned in `README.md` and the historical `FLAGGED-MASTER-PLAN.md`, but is
 not the active generated Jira import.
@@ -87,7 +88,8 @@ the supplemental inventory lists files added during the audit.
 | `progress/PROGRESS.md` | Derived 60-session checklist and ADR tracker (001–023) / progress | `FLAGGED-MASTER-PLAN.md`, `README.md`, `docs/SPRINT-CALENDAR.md`, `progress/DAILY-PLAN.md` | Yes |
 | `progress/DAILY-PLAN.md` | Canonical 60-session plan / planning | `FLAGGED-MASTER-PLAN.md`, `README.md`, `docs/SPRINT-CALENDAR.md`, `progress/PROGRESS.md` | Yes |
 | `jira/JIRA-BACKLOG.md` | Markdown Jira hierarchy and story definitions / backlog | `FLAGGED-MASTER-PLAN.md`, `README.md` | Yes |
-| `jira/FLAGGED-JIRA-IMPORT.csv` | Generated FF-key Jira import dataset / backlog | `FLAGGED-MASTER-PLAN.md`, `README.md` | Yes |
+| `jira/FLAGGED-JIRA-IMPORT.csv` | Generated numeric-ID Jira import dataset / backlog | `FLAGGED-MASTER-PLAN.md`, `README.md` | Yes |
+| `jira/IMPORT-ID-MAP.csv` | Stable mapping from backlog keys to existing numeric Jira IDs / backlog | `README.md`, `jira/JIRA-BACKLOG.md`, generator | Yes |
 | `jira/JIRA-BACKLOG.csv` | Older CSV export, tracked but absent from worktree / backlog | `FLAGGED-MASTER-PLAN.md`, `README.md`, `docs/SPRINT-CALENDAR.md` | Yes (stale reference) |
 
 ## Inventory flags at audit start
@@ -165,7 +167,7 @@ changes and has not been restored or otherwise altered.
 |---|---|---|---|
 | A. Plan identity and naming | Progress and daily plans had incompatible schedules; labels mixed days, working sessions, and weeks. | High | `progress/DAILY-PLAN.md` is canonical: 60 working sessions over 12 weeks, 12 sprints of five. Each session has a goal, Test ID/line, evidence, and proposed commit. `progress/PROGRESS.md` is its checklist. Calendar ranges cover 1-5 through 56-60 without gaps/overlaps. |
 | A. Sprint names | Sprint 9/10 labels differed among backlog, skill focus, and calendar. | Medium | Jira, `SKILLS.md`, and `docs/SPRINT-CALENDAR.md` now share all 12 focus names. Generator rejects a mismatch. |
-| B. Jira integrity | Markdown used FF keys; import CSV used numeric keys; estimates and evidence differed. | High | Markdown is the canonical FF-key source. Generator/check verifies 12 epics, 48 stories, 149 subtasks, unique keys/parents, four stories per sprint, 3 story points, Test IDs, and sprint objectives. The 149 are deliberate Markdown tasks: FF-504 adds FF-504-4/-5/-6 for demo flags/pages; FF-1002 adds FF-1002-4 for Cloud Run scale-to-zero; FF-1201 adds FF-1201-4 for the local/hosted consistency gate. The other 45 stories have three subtasks each. |
+| B. Jira integrity | Markdown uses FF keys; the existing Jira workspace uses numeric work item IDs and a seven-column import schema. | High | Markdown remains the canonical issue source. `jira/IMPORT-ID-MAP.csv` preserves all 204 legacy IDs and assigns 3145–3149 to the five later-added subtasks. The generated CSV keeps the original headers and numeric parent IDs. Generator/check verifies the complete mapping, 12 epics, 48 stories, 149 subtasks, unique IDs/parents, four stories per sprint, 3 story points, test IDs, and sprint objectives. |
 | C. ADR status and tracker | At start, 22 ADRs existed, all Proposed; tracker omitted later ADRs. AGENTS.md forbids acceptance without implementation verification. | High | The audit added ADR-023 for repository structure, so the checker now finds 23 actual ADR files (001–023); it does not count the tracker or templates. It verifies all filenames, titles, and actual Proposed statuses. None is falsely marked Accepted. All AGENTS architecture-change categories have an ADR. |
 | C. Owner decisions | SSE cursor, audit-history route, and Firestore read model were undecided. | Blocker | DP-001/002/003 are resolved: keep `config.updated` with `{"revision":N}`, SSE ID equal to the revision, and `Last-Event-ID`; use the project audit route with optional environment filter; defer Firestore and retain PostgreSQL baseline. Details are in `docs/DECISIONS-PENDING.md`. |
 | D. Event/API/error/config contract | Event naming, revision semantics, audit route, route inventory, and shared errors needed one source. | High | Existing `docs/API-CONTRACT.md` remains the single draft; no duplicate `docs/api/CONTRACT.md` was created. It defines health/admin/audit/SDK/SSE routes, auth, requests, responses, statuses, common error shape, conditional requests, `config.updated`, and the selected cursor. `DATA.md` and the API contract distinguish database/admin rows from the client snapshot. SDK types do not exist yet; implementation comparison is deferred. |
@@ -184,7 +186,7 @@ changes and has not been restored or otherwise altered.
 |---|---|---|
 | Canonical 12 x 5 plan and exact session ranges | PASS | `python scripts/check_consistency.py`: 12 sprints, 60 contiguous sessions. |
 | Goal, Test, and proposed commit for all sessions | PASS | Checker validates all 60 session blocks; see `progress/DAILY-PLAN.md`. |
-| Jira keys, hierarchy, points, sprint objectives, generated CSV | PASS | `python scripts/generate_jira_csv.py --check`; 12 epics, 48 stories, 149 subtasks. |
+| Jira IDs, hierarchy, points, sprint objectives, generated CSV | PASS | `python scripts/generate_jira_csv.py --check`; the legacy seven-column format and all 204 prior IDs/parent links are preserved; the five later-added subtasks use IDs 3145–3149. Counts: 12 epics, 48 stories, 149 subtasks. |
 | ADR references and tracker title/status consistency | PASS | Checker confirms all 23 ADRs resolve and tracker matches; statuses correctly remain Proposed. |
 | API/SSE/error/audit/config draft | PASS - IMPLEMENTATION DEFERRED | `docs/API-CONTRACT.md`, DP-001/002/003; SDK/API implementation types do not exist yet. |
 | Data and SECURITY section 16 test mappings | PASS | Mapping tables in DATA.md and SECURITY.md; Jira success/failure IDs. |

@@ -83,7 +83,8 @@ Free tiers are quotas, not a zero-cost guarantee. Live GCP resources and hosted 
 - `progress/PROGRESS.md`
 - `progress/DAILY-PLAN.md`
 - `jira/JIRA-BACKLOG.md`
-- `jira/FLAGGED-JIRA-IMPORT.csv` (generated)
+- `jira/IMPORT-ID-MAP.csv` (stable mapping from backlog keys to existing Jira IDs)
+- `jira/FLAGGED-JIRA-IMPORT.csv` (generated in the existing numeric-ID format)
 - `AUDIT-REPORT.md`
 - `CHANGELOG-AUDIT.md`
 - `docs/DECISIONS-PENDING.md`
@@ -92,10 +93,11 @@ Free tiers are quotas, not a zero-cost guarantee. Live GCP resources and hosted 
 - `docs/TECHNICAL-DESIGN.md` (planning draft: use cases, architecture, data, and sequence diagrams)
 - `docs/API-CONTRACT.md` (draft; proposed v1 HTTP contract)
 
-Generate `jira/FLAGGED-JIRA-IMPORT.csv` from the canonical Markdown backlog with
-`python scripts/generate_jira_csv.py`; do not hand-edit the generated CSV. The
-legacy `jira/JIRA-BACKLOG.csv` export is not the active import source; its tracked
-deletion was already present when this audit began and was left untouched.
+Generate `jira/FLAGGED-JIRA-IMPORT.csv` from the canonical Markdown backlog and
+stable ID map with `python scripts/generate_jira_csv.py`; do not hand-edit the
+generated CSV or reassign IDs that already exist in Jira. The legacy
+`jira/JIRA-BACKLOG.csv` export is not the active import source; its tracked deletion
+was already present when this audit began and was left untouched.
 
 ## Suggested repo layout
 
@@ -106,6 +108,9 @@ Flagged/
 │   ├── benchmarks/
 │   └── runbooks/
 ├── jira/
+│   ├── JIRA-BACKLOG.md
+│   ├── IMPORT-ID-MAP.csv
+│   └── FLAGGED-JIRA-IMPORT.csv
 ├── progress/
 ├── scripts/
 ├── PRD.md

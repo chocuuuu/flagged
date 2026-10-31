@@ -105,6 +105,19 @@ Every entry below is an audit edit. The pre-existing worktree deletion of
   generator check and consistency gate with a clean status; working-tree and
   29-commit Gitleaks scans reported no findings.
 
+## 2026-10-31 — Jira import compatibility follow-up
+
+- `jira/IMPORT-ID-MAP.csv` - retained the existing numeric Jira IDs and mapped
+  them to the canonical backlog keys. Legacy epics, stories, and subtasks retain
+  IDs 1001–1012, 2001–2048, and 3001–3144; new subtasks use 3145–3149.
+- `scripts/generate_jira_csv.py` - restored the existing seven-column import
+  schema (`Work item ID`, `Work type`, `Summary`, `Description`, `Parent`,
+  `Priority`, `Story Points`) and numeric parent references.
+- `scripts/check_consistency.py` - validates exact import columns, stable numeric
+  IDs, supported hierarchy, counts, and points.
+- `jira/FLAGGED-JIRA-IMPORT.csv`, `jira/JIRA-BACKLOG.md`, `README.md`, and
+  `AUDIT-REPORT.md` - documented/generated the compatibility-preserving import.
+
 No application features were implemented, no dependencies installed, and no cloud
 resources created. Gitleaks 8.30.1 was installed as a local scanner (not a project
 dependency); both working-tree and local-history scans passed with no findings.

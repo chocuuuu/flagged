@@ -2,7 +2,12 @@
 
 # Flagged - Jira Backlog
 
-`JIRA-BACKLOG.md` is the canonical issue source. Generate the CSV import with `python scripts/generate_jira_csv.py`; do not hand-edit the CSV.
+`JIRA-BACKLOG.md` is the canonical issue source. Generate the CSV import with
+`python scripts/generate_jira_csv.py`; do not hand-edit the CSV. `IMPORT-ID-MAP.csv`
+preserves the numeric work item IDs already used by the Jira workspace and maps
+them to the internal epic/story/subtask keys in this backlog. Add a new unused
+numeric ID to that map for each new issue; never renumber an existing mapping.
+The generated import keeps the existing seven-column format and numeric parent IDs.
 
 **Execution model:** 12 ordered sprints x 5 working sessions; 60 working sessions over 12 weeks, with no fixed calendar dates or deadline
 
