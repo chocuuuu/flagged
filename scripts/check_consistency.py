@@ -325,6 +325,8 @@ def check_stale_terms() -> int:
     for path in ROOT.rglob("*"):
         if path.suffix.lower() not in {".md", ".csv", ".py"}:
             continue
+        if path == ROOT / "jira" / "JIRA-BACKLOG.csv":
+            continue
         if ".git" in path.parts:
             continue
         text = path.read_text(encoding="utf-8", errors="replace")

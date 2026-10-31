@@ -134,7 +134,8 @@ Every entry below is an audit edit. The pre-existing worktree deletion of
   import IDs remain unchanged.
 - `scripts/generate_jira_csv.py` and `scripts/check_consistency.py` - parse the
   workspace key format, preserve numeric import IDs, and reject retired key
-  references in project documents.
+  references in active project files. The explicitly retired
+  `jira/JIRA-BACKLOG.csv` export remains excluded and untouched.
 
 No application features were implemented, no dependencies installed, and no cloud
 resources created. Gitleaks 8.30.1 was installed as a local scanner (not a project
