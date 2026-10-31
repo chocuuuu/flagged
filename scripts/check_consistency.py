@@ -163,7 +163,8 @@ def check_jira() -> tuple[int, int, int]:
         if row["Work type"] == "Story":
             if row["Story Points"] != "3":
                 fail(f"Jira story {item_id} does not have the canonical 3 points.")
-            if not re.search(r"^Sprint: Sprint \d+$", row["Description"], re.MULTILINE):
+            description = row["Description"].replace("\r\n", "\n").replace("\r", "\n")
+            if not re.search(r"^Sprint: Sprint \d+$", description, re.MULTILINE):
                 fail(f"Jira story {item_id} has no sprint in its description.")
         if row["Work type"] == "Sub-task" and row["Story Points"] != "1":
             fail(f"Jira subtask {item_id} does not have the canonical 1 point.")
