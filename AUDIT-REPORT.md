@@ -193,11 +193,11 @@ changes and has not been restored or otherwise altered.
 | Cost inventory, cleanup notes, budget ordering, scale-to-zero | PASS | `COST-BOUNDARY.md` and checker; current pricing intentionally unasserted. |
 | Testing/tooling/dependency policy and CI gate | PASS | `AGENTS.md`, `DEPENDENCIES.md`, Jira FF-1201; versions intentionally pin at Sprint 1. |
 | Demo pages, flags, and SDK integration point | PASS | PRD, FF-504, Session 25. |
-| Runbook stubs and README paths | PASS | Six runbooks; checker reports 28 README paths exist. |
+| Runbook stubs and README paths | PASS | Six runbooks; checker reports 29 README paths exist. |
 | Local consistency check | PASS | `python scripts/check_consistency.py`: `CONSISTENCY CHECK PASSED`; secret scan reports `heuristics + Gitleaks`. No GitHub Actions dependency. |
 | Gitleaks working-tree scan | PASS | `gitleaks detect --source . --no-git --redact --exit-code 1`: no leaks found. |
 | Gitleaks local-history scan | PASS | `gitleaks git . --redact --exit-code 1`: 29 commits scanned; no leaks found. |
-| Clean-clone execution | PASS | Cloned commit `f16bb37` to a new temporary directory. `python scripts/generate_jira_csv.py --check` passed (12 epics, 48 stories, 149 subtasks); `python scripts/check_consistency.py` passed (23 ADRs, 12 sprints/60 contiguous sessions, 28 README paths, Gitleaks). Clone `git status --short` was empty. The clone was removed after verification; the pre-existing legacy CSV deletion remains untouched in the source worktree. |
+| Clean-clone execution | PASS | Cloned commit `0f9dd3a` to a new temporary directory with Windows CRLF checkout. `python scripts/generate_jira_csv.py --check` passed (12 epics, 48 stories, 149 subtasks); `python scripts/check_consistency.py` passed (23 ADRs, 12 sprints/60 contiguous sessions, 29 README paths, Gitleaks). Clone `git status --short` was empty before and after validation. The clone was removed after verification; the pre-existing legacy CSV deletion remains untouched in the source worktree. |
 | Live pricing/provisioning | DEFERRED / NOT REQUIRED | Re-verify official pricing and obtain explicit approval before any cloud action. No resources were created. |
 | Feature implementation and ADR acceptance | DEFERRED TO MILESTONES | Audit is planning/documentation only. Accept an ADR only after implementation and verification. |
 

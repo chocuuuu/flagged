@@ -114,9 +114,12 @@ Every entry below is an audit edit. The pre-existing worktree deletion of
   schema (`Work item ID`, `Work type`, `Summary`, `Description`, `Parent`,
   `Priority`, `Story Points`) and numeric parent references.
 - `scripts/check_consistency.py` - validates exact import columns, stable numeric
-  IDs, supported hierarchy, counts, and points.
+  IDs, supported hierarchy, counts, and points; normalizes Windows CRLF in
+  multiline CSV descriptions so fresh clones pass the same checks.
 - `jira/FLAGGED-JIRA-IMPORT.csv`, `jira/JIRA-BACKLOG.md`, `README.md`, and
   `AUDIT-REPORT.md` - documented/generated the compatibility-preserving import.
+- Clean-clone verification - commit `0f9dd3a` passed the generator and consistency
+  checks from a fresh Windows clone with an empty Git status before and after.
 
 No application features were implemented, no dependencies installed, and no cloud
 resources created. Gitleaks 8.30.1 was installed as a local scanner (not a project
