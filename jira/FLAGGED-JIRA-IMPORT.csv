@@ -1,1825 +1,354 @@
-﻿Work item ID,Work type,Summary,Description,Parent,Priority,Story Points
-1001,Epic,Foundation,"Flagged epic Foundation.
-
-Learning Objective:
-Foundation",,High,
-1002,Epic,Backend & Data,"Flagged epic Backend & Data.
-
-Learning Objective:
-Backend & Data",,High,
-1003,Epic,Flag Management,"Flagged epic Flag Management.
-
-Learning Objective:
-Flag Management",,High,
-1004,Epic,Dashboard,"Flagged epic Dashboard.
-
-Learning Objective:
-Dashboard",,High,
-1005,Epic,SDK,"Flagged epic SDK.
-
-Learning Objective:
-SDK",,High,
-1006,Epic,Evaluation & Targeting,"Flagged epic Evaluation & Targeting.
-
-Learning Objective:
-Evaluation & Targeting",,High,
-1007,Epic,Caching & Polling,"Flagged epic Caching & Polling.
-
-Learning Objective:
-Caching & Polling",,High,
-1008,Epic,Streaming & Consistency,"Flagged epic Streaming & Consistency.
-
-Learning Objective:
-Streaming & Consistency",,High,
-1009,Epic,Observability & Resilience,"Flagged epic Observability & Resilience.
-
-Learning Objective:
-Observability & Resilience",,High,
-1010,Epic,GCP Infrastructure,"Flagged epic GCP Infrastructure.
-
-Learning Objective:
-GCP Infrastructure",,High,
-1011,Epic,Cloud Data & Events,"Flagged epic Cloud Data & Events.
-
-Learning Objective:
-Cloud Data & Events",,High,
-1012,Epic,CI/CD & Finalization,"Flagged epic CI/CD & Finalization.
-
-Learning Objective:
-CI/CD & Finalization",,High,
-2001,Story,Project charter and glossary,"Milestone 1 work in Foundation & Domain.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Foundation & Domain",1001,High,3
-2002,Story,Repository bootstrap,"Milestone 1 work in Foundation & Domain.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Foundation & Domain",1001,High,3
-2003,Story,Local infrastructure,"Milestone 1 work in Foundation & Domain.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Foundation & Domain",1001,High,3
-2004,Story,Engineering workflow,"Milestone 1 work in Foundation & Domain.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Foundation & Domain",1001,High,3
-2005,Story,FastAPI foundation,"Milestone 2 work in Python API & Database.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Python API & Database",1002,High,3
-2006,Story,Database layer,"Milestone 2 work in Python API & Database.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Python API & Database",1002,High,3
-2007,Story,Core schema,"Milestone 2 work in Python API & Database.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Python API & Database",1002,High,3
-2008,Story,API tests,"Milestone 2 work in Python API & Database.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Python API & Database",1002,High,3
-2009,Story,Project/environment CRUD,"Milestone 3 work in Flag Management & Audit.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Flag Management & Audit",1003,High,3
-2010,Story,Feature flag CRUD,"Milestone 3 work in Flag Management & Audit.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Flag Management & Audit",1003,High,3
-2011,Story,Audit trail,"Milestone 3 work in Flag Management & Audit.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Flag Management & Audit",1003,High,3
-2012,Story,Admin authentication,"Milestone 3 work in Flag Management & Audit.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Flag Management & Audit",1003,High,3
-2013,Story,Astro/React shell,"Milestone 4 work in Dashboard.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Dashboard",1004,High,3
-2014,Story,Project/environment UI,"Milestone 4 work in Dashboard.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Dashboard",1004,High,3
-2015,Story,Flag management UI,"Milestone 4 work in Dashboard.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Dashboard",1004,High,3
-2016,Story,Audit UX,"Milestone 4 work in Dashboard.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Dashboard",1004,High,3
-2017,Story,SDK package,"Milestone 5 work in SDK & Local Evaluation.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-SDK & Local Evaluation",1005,High,3
-2018,Story,Configuration bootstrap,"Milestone 5 work in SDK & Local Evaluation.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-SDK & Local Evaluation",1005,High,3
-2019,Story,Evaluation engine,"Milestone 5 work in SDK & Local Evaluation.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-SDK & Local Evaluation",1005,High,3
-2020,Story,Demo Store integration,"Milestone 5 work in SDK & Local Evaluation.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-SDK & Local Evaluation",1005,High,3
-2021,Story,Client keys,"Milestone 6 work in Environments, Rollouts & Targeting.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Environments, Rollouts & Targeting",1006,High,3
-2022,Story,Environment isolation,"Milestone 6 work in Environments, Rollouts & Targeting.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Environments, Rollouts & Targeting",1006,High,3
-2023,Story,Percentage rollout,"Milestone 6 work in Environments, Rollouts & Targeting.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Environments, Rollouts & Targeting",1006,High,3
-2024,Story,Targeting rules,"Milestone 6 work in Environments, Rollouts & Targeting.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Environments, Rollouts & Targeting",1006,High,3
-2025,Story,In-memory configuration cache,"Milestone 7 work in Caching & Polling.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Caching & Polling",1007,High,3
-2026,Story,Polling,"Milestone 7 work in Caching & Polling.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Caching & Polling",1007,High,3
-2027,Story,HTTP cache optimization,"Milestone 7 work in Caching & Polling.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Caching & Polling",1007,High,3
-2028,Story,Redis experiment,"Milestone 7 work in Caching & Polling.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Caching & Polling",1007,High,3
-2029,Story,SSE stream,"Milestone 8 work in SSE & Consistency.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-SSE & Consistency",1008,High,3
-2030,Story,SDK stream client,"Milestone 8 work in SSE & Consistency.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-SSE & Consistency",1008,High,3
-2031,Story,Reconnect behavior,"Milestone 8 work in SSE & Consistency.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-SSE & Consistency",1008,High,3
-2032,Story,Consistency controls,"Milestone 8 work in SSE & Consistency.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-SSE & Consistency",1008,High,3
-2033,Story,Structured observability,"Milestone 9 work in Observability, Resilience & Load.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Observability, Resilience & Load",1009,High,3
-2034,Story,Tracing/metrics,"Milestone 9 work in Observability, Resilience & Load.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Observability, Resilience & Load",1009,High,3
-2035,Story,Failure injection,"Milestone 9 work in Observability, Resilience & Load.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Observability, Resilience & Load",1009,High,3
-2036,Story,Load testing,"Milestone 9 work in Observability, Resilience & Load.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Observability, Resilience & Load",1009,High,3
-2037,Story,Cost guardrails,"Milestone 10 work in Terraform & GCP Foundation.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Terraform & GCP Foundation",1010,High,3
-2038,Story,Terraform foundation,"Milestone 10 work in Terraform & GCP Foundation.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Terraform & GCP Foundation",1010,High,3
-2039,Story,Artifact Registry,"Milestone 10 work in Terraform & GCP Foundation.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Terraform & GCP Foundation",1010,High,3
-2040,Story,Cloud Run foundation,"Milestone 10 work in Terraform & GCP Foundation.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Terraform & GCP Foundation",1010,High,3
-2041,Story,Firestore adapter,"Milestone 11 work in Firestore, Pub/Sub & IAM.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Firestore, Pub/Sub & IAM",1011,High,3
-2042,Story,Pub/Sub propagation,"Milestone 11 work in Firestore, Pub/Sub & IAM.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Firestore, Pub/Sub & IAM",1011,High,3
-2043,Story,GCP IAM,"Milestone 11 work in Firestore, Pub/Sub & IAM.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Firestore, Pub/Sub & IAM",1011,High,3
-2044,Story,Cloud observability,"Milestone 11 work in Firestore, Pub/Sub & IAM.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-Firestore, Pub/Sub & IAM",1011,High,3
-2045,Story,GitHub Actions CI,"Milestone 12 work in CI/CD, Cloud Validation & Finalization.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization",1012,High,3
-2046,Story,Deployment workflow,"Milestone 12 work in CI/CD, Cloud Validation & Finalization.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization",1012,High,3
-2047,Story,End-to-end validation,"Milestone 12 work in CI/CD, Cloud Validation & Finalization.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization",1012,High,3
-2048,Story,Final engineering package,"Milestone 12 work in CI/CD, Cloud Validation & Finalization.
-
-Acceptance Criteria:
-Story DoD satisfied
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization",1012,High,3
-3001,Sub-task,Write problem statement,"Implementation subtask for Project charter and glossary.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2001,High,1
-3002,Sub-task,Define control/data plane terms,"Implementation subtask for Project charter and glossary.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2001,High,1
-3003,Sub-task,Write first architecture sketch,"Implementation subtask for Project charter and glossary.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2001,High,1
-3004,Sub-task,Create monorepo structure,"Implementation subtask for Repository bootstrap.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2002,High,1
-3005,Sub-task,Configure Python tooling,"Implementation subtask for Repository bootstrap.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2002,High,1
-3006,Sub-task,Configure frontend/SDK workspace,"Implementation subtask for Repository bootstrap.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2002,High,1
-3007,Sub-task,Create Docker Compose,"Implementation subtask for Local infrastructure.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2003,High,1
-3008,Sub-task,Run PostgreSQL locally,"Implementation subtask for Local infrastructure.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2003,High,1
-3009,Sub-task,Add health checks and startup documentation,"Implementation subtask for Local infrastructure.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2003,High,1
-3010,Sub-task,Set branch strategy,"Implementation subtask for Engineering workflow.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2004,High,1
-3011,Sub-task,Add commit conventions,"Implementation subtask for Engineering workflow.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2004,High,1
-3012,Sub-task,Create issue/PR templates,"Implementation subtask for Engineering workflow.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Foundation & Domain
-
-Dependencies:
-See story",2004,High,1
-3013,Sub-task,Create app factory,"Implementation subtask for FastAPI foundation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2005,High,1
-3014,Sub-task,Add health/readiness endpoints,"Implementation subtask for FastAPI foundation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2005,High,1
-3015,Sub-task,Configure structured error handling,"Implementation subtask for FastAPI foundation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2005,High,1
-3016,Sub-task,Configure SQLAlchemy,"Implementation subtask for Database layer.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2006,High,1
-3017,Sub-task,Create Alembic baseline,"Implementation subtask for Database layer.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2006,High,1
-3018,Sub-task,Implement DB session lifecycle,"Implementation subtask for Database layer.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2006,High,1
-3019,Sub-task,Create projects/environments tables,"Implementation subtask for Core schema.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2007,High,1
-3020,Sub-task,Create feature_flags table,"Implementation subtask for Core schema.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2007,High,1
-3021,Sub-task,Add uniqueness/index constraints,"Implementation subtask for Core schema.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2007,High,1
-3022,Sub-task,Create pytest fixtures,"Implementation subtask for API tests.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2008,High,1
-3023,Sub-task,Write CRUD integration tests,"Implementation subtask for API tests.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2008,High,1
-3024,Sub-task,Add invalid-input tests,"Implementation subtask for API tests.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Python API & Database
-
-Dependencies:
-See story",2008,High,1
-3025,Sub-task,Build create/list/update/delete endpoints,"Implementation subtask for Project/environment CRUD.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2009,High,1
-3026,Sub-task,Validate environment keys,"Implementation subtask for Project/environment CRUD.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2009,High,1
-3027,Sub-task,Document endpoint behavior,"Implementation subtask for Project/environment CRUD.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2009,High,1
-3028,Sub-task,Build create/list/update/delete,"Implementation subtask for Feature flag CRUD.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2010,High,1
-3029,Sub-task,Add version incrementing,"Implementation subtask for Feature flag CRUD.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2010,High,1
-3030,Sub-task,Add optimistic update protection,"Implementation subtask for Feature flag CRUD.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2010,High,1
-3031,Sub-task,Create audit_events table,"Implementation subtask for Audit trail.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2011,High,1
-3032,Sub-task,Record mutations,"Implementation subtask for Audit trail.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2011,High,1
-3033,Sub-task,Add audit read endpoint,"Implementation subtask for Audit trail.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2011,High,1
-3034,Sub-task,Implement login,"Implementation subtask for Admin authentication.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2012,High,1
-3035,Sub-task,Protect admin routes,"Implementation subtask for Admin authentication.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2012,High,1
-3036,Sub-task,Add authorization tests,"Implementation subtask for Admin authentication.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Flag Management & Audit
-
-Dependencies:
-See story",2012,High,1
-3037,Sub-task,Create dashboard layout,"Implementation subtask for Astro/React shell.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2013,High,1
-3038,Sub-task,Add routing/navigation,"Implementation subtask for Astro/React shell.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2013,High,1
-3039,Sub-task,Configure API client,"Implementation subtask for Astro/React shell.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2013,High,1
-3040,Sub-task,Project list,"Implementation subtask for Project/environment UI.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2014,High,1
-3041,Sub-task,Environment selector,"Implementation subtask for Project/environment UI.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2014,High,1
-3042,Sub-task,Environment state/loading/error UI,"Implementation subtask for Project/environment UI.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2014,High,1
-3043,Sub-task,Flag table,"Implementation subtask for Flag management UI.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2015,High,1
-3044,Sub-task,Create/edit form,"Implementation subtask for Flag management UI.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2015,High,1
-3045,Sub-task,Enable/disable control,"Implementation subtask for Flag management UI.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2015,High,1
-3046,Sub-task,Audit history page,"Implementation subtask for Audit UX.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2016,High,1
-3047,Sub-task,Before/after display,"Implementation subtask for Audit UX.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2016,High,1
-3048,Sub-task,Error and empty states,"Implementation subtask for Audit UX.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Dashboard
-
-Dependencies:
-See story",2016,High,1
-3049,Sub-task,Create package structure,"Implementation subtask for SDK package.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2017,High,1
-3050,Sub-task,Define public SDK API,"Implementation subtask for SDK package.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2017,High,1
-3051,Sub-task,Add build/test pipeline,"Implementation subtask for SDK package.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2017,High,1
-3052,Sub-task,Implement config fetch,"Implementation subtask for Configuration bootstrap.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2018,High,1
-3053,Sub-task,Validate config schema,"Implementation subtask for Configuration bootstrap.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2018,High,1
-3054,Sub-task,Store immutable snapshot,"Implementation subtask for Configuration bootstrap.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2018,High,1
-3055,Sub-task,Boolean evaluation,"Implementation subtask for Evaluation engine.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2019,High,1
-3056,Sub-task,Default/fallback evaluation,"Implementation subtask for Evaluation engine.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2019,High,1
-3057,Sub-task,Evaluation unit-test matrix,"Implementation subtask for Evaluation engine.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2019,High,1
-3058,Sub-task,Integrate SDK,"Implementation subtask for Demo Store integration.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2020,High,1
-3059,Sub-task,Add new checkout flag,"Implementation subtask for Demo Store integration.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2020,High,1
-3060,Sub-task,Demonstrate live switch without rebuild,"Implementation subtask for Demo Store integration.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SDK & Local Evaluation
-
-Dependencies:
-See story",2020,High,1
-3061,Sub-task,Generate scoped keys,"Implementation subtask for Client keys.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2021,High,1
-3062,Sub-task,Hash stored secrets,"Implementation subtask for Client keys.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2021,High,1
-3063,Sub-task,Build revoke flow,"Implementation subtask for Client keys.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2021,High,1
-3064,Sub-task,Prevent cross-environment reads,"Implementation subtask for Environment isolation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2022,High,1
-3065,Sub-task,Test staging/production separation,"Implementation subtask for Environment isolation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2022,High,1
-3066,Sub-task,Add SDK environment configuration,"Implementation subtask for Environment isolation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2022,High,1
-3067,Sub-task,Implement stable hashing,"Implementation subtask for Percentage rollout.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2023,High,1
-3068,Sub-task,Build 0/50/100% cases,"Implementation subtask for Percentage rollout.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2023,High,1
-3069,Sub-task,Test deterministic user assignment,"Implementation subtask for Percentage rollout.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2023,High,1
-3070,Sub-task,Define v1 rule model,"Implementation subtask for Targeting rules.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2024,High,1
-3071,Sub-task,Implement equals/contains,"Implementation subtask for Targeting rules.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2024,High,1
-3072,Sub-task,Test rule precedence,"Implementation subtask for Targeting rules.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Environments, Rollouts & Targeting
-
-Dependencies:
-See story",2024,High,1
-3073,Sub-task,Atomic snapshot replacement,"Implementation subtask for In-memory configuration cache.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2025,High,1
-3074,Sub-task,Track version/age,"Implementation subtask for In-memory configuration cache.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2025,High,1
-3075,Sub-task,Expose cache diagnostics,"Implementation subtask for In-memory configuration cache.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2025,High,1
-3076,Sub-task,Add polling scheduler,"Implementation subtask for Polling.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2026,High,1
-3077,Sub-task,Handle timeouts/errors,"Implementation subtask for Polling.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2026,High,1
-3078,Sub-task,Measure stale window,"Implementation subtask for Polling.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2026,High,1
-3079,Sub-task,Implement ETag/version conditional requests,"Implementation subtask for HTTP cache optimization.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2027,High,1
-3080,Sub-task,Test 304 behavior,"Implementation subtask for HTTP cache optimization.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2027,High,1
-3081,Sub-task,Benchmark request reduction,"Implementation subtask for HTTP cache optimization.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2027,High,1
-3082,Sub-task,Run Redis locally,"Implementation subtask for Redis experiment.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2028,High,1
-3083,Sub-task,Implement shared cache adapter,"Implementation subtask for Redis experiment.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2028,High,1
-3084,Sub-task,Document when Redis helps,"Implementation subtask for Redis experiment.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Caching & Polling
-
-Dependencies:
-See story",2028,High,1
-3085,Sub-task,Create stream endpoint,"Implementation subtask for SSE stream.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2029,High,1
-3086,Sub-task,Define event schema,"Implementation subtask for SSE stream.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2029,High,1
-3087,Sub-task,Handle client disconnects,"Implementation subtask for SSE stream.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2029,High,1
-3088,Sub-task,Connect to SSE,"Implementation subtask for SDK stream client.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2030,High,1
-3089,Sub-task,Update snapshot from events,"Implementation subtask for SDK stream client.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2030,High,1
-3090,Sub-task,Add stream status diagnostics,"Implementation subtask for SDK stream client.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2030,High,1
-3091,Sub-task,Exponential backoff,"Implementation subtask for Reconnect behavior.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2031,High,1
-3092,Sub-task,Catch-up bootstrap,"Implementation subtask for Reconnect behavior.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2031,High,1
-3093,Sub-task,Test connection interruption,"Implementation subtask for Reconnect behavior.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2031,High,1
-3094,Sub-task,Reject stale versions,"Implementation subtask for Consistency controls.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2032,High,1
-3095,Sub-task,Handle duplicates,"Implementation subtask for Consistency controls.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2032,High,1
-3096,Sub-task,Test out-of-order events,"Implementation subtask for Consistency controls.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-SSE & Consistency
-
-Dependencies:
-See story",2032,High,1
-3097,Sub-task,Add request logs,"Implementation subtask for Structured observability.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2033,High,1
-3098,Sub-task,Add evaluation telemetry,"Implementation subtask for Structured observability.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2033,High,1
-3099,Sub-task,Add propagation metrics,"Implementation subtask for Structured observability.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2033,High,1
-3100,Sub-task,Instrument service boundaries,"Implementation subtask for Tracing/metrics.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2034,High,1
-3101,Sub-task,Expose latency metrics,"Implementation subtask for Tracing/metrics.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2034,High,1
-3102,Sub-task,Measure propagation delay,"Implementation subtask for Tracing/metrics.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2034,High,1
-3103,Sub-task,Break database,"Implementation subtask for Failure injection.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2035,High,1
-3104,Sub-task,Break stream connection,"Implementation subtask for Failure injection.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2035,High,1
-3105,Sub-task,Test stale-cache fallback,"Implementation subtask for Failure injection.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2035,High,1
-3106,Sub-task,Create Locust scenarios,"Implementation subtask for Load testing.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2036,High,1
-3107,Sub-task,Measure p50/p95/p99,"Implementation subtask for Load testing.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2036,High,1
-3108,Sub-task,Write performance report,"Implementation subtask for Load testing.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Observability, Resilience & Load
-
-Dependencies:
-See story",2036,High,1
-3109,Sub-task,Document the $0 default path and approval gate,"Implementation subtask for Cost guardrails.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2037,High,1
-3110,Sub-task,Check pricing and billing before optional provisioning,"Implementation subtask for Cost guardrails.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2037,High,1
-3111,Sub-task,Write cleanup checklist,"Implementation subtask for Cost guardrails.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2037,High,1
-3112,Sub-task,Create provider/module layout,"Implementation subtask for Terraform foundation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2038,High,1
-3113,Sub-task,Create state configuration,"Implementation subtask for Terraform foundation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2038,High,1
-3114,Sub-task,Add variables/outputs,"Implementation subtask for Terraform foundation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2038,High,1
-3115,Sub-task,Create repository,"Implementation subtask for Artifact Registry.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2039,High,1
-3116,Sub-task,Build container locally,"Implementation subtask for Artifact Registry.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2039,High,1
-3117,Sub-task,Push versioned image,"Implementation subtask for Artifact Registry.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2039,High,1
-3118,Sub-task,Deploy stateless API,"Implementation subtask for Cloud Run foundation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2040,High,1
-3119,Sub-task,Configure environment variables,"Implementation subtask for Cloud Run foundation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2040,High,1
-3120,Sub-task,Validate scale-to-zero behavior,"Implementation subtask for Cloud Run foundation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Terraform & GCP Foundation
-
-Dependencies:
-See story",2040,High,1
-3121,Sub-task,Map local domain to documents,"Implementation subtask for Firestore adapter.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2041,High,1
-3122,Sub-task,Implement repository methods,"Implementation subtask for Firestore adapter.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2041,High,1
-3123,Sub-task,Run parity tests vs PostgreSQL,"Implementation subtask for Firestore adapter.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2041,High,1
-3124,Sub-task,Create topic/subscription,"Implementation subtask for Pub/Sub propagation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2042,High,1
-3125,Sub-task,Publish configuration events,"Implementation subtask for Pub/Sub propagation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2042,High,1
-3126,Sub-task,Consume and handle duplicates,"Implementation subtask for Pub/Sub propagation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2042,High,1
-3127,Sub-task,Create least-privilege runtime identity,"Implementation subtask for GCP IAM.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2043,High,1
-3128,Sub-task,Limit Firestore permissions,"Implementation subtask for GCP IAM.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2043,High,1
-3129,Sub-task,Limit Pub/Sub permissions,"Implementation subtask for GCP IAM.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2043,High,1
-3130,Sub-task,Configure useful logs,"Implementation subtask for Cloud observability.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2044,High,1
-3131,Sub-task,Validate log volume,"Implementation subtask for Cloud observability.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2044,High,1
-3132,Sub-task,Create basic operational dashboard/queries,"Implementation subtask for Cloud observability.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-Firestore, Pub/Sub & IAM
-
-Dependencies:
-See story",2044,High,1
-3133,Sub-task,Lint workflow,"Implementation subtask for GitHub Actions CI.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2045,High,1
-3134,Sub-task,Unit/integration test workflow,"Implementation subtask for GitHub Actions CI.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2045,High,1
-3135,Sub-task,Build artifact workflow,"Implementation subtask for GitHub Actions CI.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2045,High,1
-3136,Sub-task,Deploy Cloud Run from trusted branch,"Implementation subtask for Deployment workflow.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2046,High,1
-3137,Sub-task,Use environment configuration,"Implementation subtask for Deployment workflow.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2046,High,1
-3138,Sub-task,Add rollback procedure,"Implementation subtask for Deployment workflow.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2046,High,1
-3139,Sub-task,Test cloud SDK bootstrap,"Implementation subtask for End-to-end validation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2047,High,1
-3140,Sub-task,Test Pub/Sub/SSE propagation,"Implementation subtask for End-to-end validation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2047,High,1
-3141,Sub-task,Test failure fallback,"Implementation subtask for End-to-end validation.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2047,High,1
-3142,Sub-task,Review ADRs,"Implementation subtask for Final engineering package.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2048,High,1
-3143,Sub-task,Write architecture/benchmark report,"Implementation subtask for Final engineering package.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2048,High,1
-3144,Sub-task,Record final demo and retrospective,"Implementation subtask for Final engineering package.
-
-Acceptance Criteria:
-Implemented, tested, documented
-
-Learning Objective:
-CI/CD, Cloud Validation & Finalization
-
-Dependencies:
-See story",2048,High,1
+Issue Key,Work type,Summary,Description,Epic,Parent,Sprint,Priority,Story Points
+EPIC-1,Epic,Foundation,Sprint 1: Domain & local foundation,,,Sprint 1,High,
+EPIC-2,Epic,Backend & Data,Sprint 2: Python API & relational data,,,Sprint 2,High,
+EPIC-3,Epic,Flag Management,Sprint 3: Flag management & admin access,,,Sprint 3,High,
+EPIC-4,Epic,Dashboard,Sprint 4: Dashboard,,,Sprint 4,High,
+EPIC-5,Epic,SDK,Sprint 5: SDK & local evaluation,,,Sprint 5,High,
+EPIC-6,Epic,Evaluation & Targeting,"Sprint 6: Isolation, rollouts & targeting",,,Sprint 6,High,
+EPIC-7,Epic,Caching & Polling,"Sprint 7: Refresh, caching & fallback",,,Sprint 7,High,
+EPIC-8,Epic,Streaming & Consistency,Sprint 8: SSE & consistency,,,Sprint 8,High,
+EPIC-9,Epic,Observability & Resilience,Sprint 9: Observability & resilience,,,Sprint 9,High,
+EPIC-10,Epic,GCP Infrastructure,Sprint 10: GCP & Terraform foundations,,,Sprint 10,High,
+EPIC-11,Epic,Cloud Data & Events,"Sprint 11: Cloud data, events & IAM",,,Sprint 11,High,
+EPIC-12,Epic,CI/CD & Finalization,Sprint 12: CI/CD & finalization,,,Sprint 12,High,
+FF-101,Story,Project charter and glossary,"Sprint: Sprint 1
+Learning Objective: Domain & local foundation
+Test Evidence: `FF-101-T1` (success path) and `FF-101-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-1,,Sprint 1,High,3
+FF-101-1,Sub-task,Write problem statement,Parent story: FF-101. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-101,Sprint 1,High,1
+FF-101-2,Sub-task,Define control/data plane terms,Parent story: FF-101. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-101,Sprint 1,High,1
+FF-101-3,Sub-task,Write first architecture sketch,Parent story: FF-101. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-101,Sprint 1,High,1
+FF-102,Story,Repository bootstrap,"Sprint: Sprint 1
+Learning Objective: Domain & local foundation
+Test Evidence: `FF-102-T1` (success path) and `FF-102-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-1,,Sprint 1,High,3
+FF-102-1,Sub-task,Create monorepo structure,Parent story: FF-102. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-102,Sprint 1,High,1
+FF-102-2,Sub-task,Configure Python tooling,Parent story: FF-102. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-102,Sprint 1,High,1
+FF-102-3,Sub-task,Configure frontend/SDK workspace,Parent story: FF-102. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-102,Sprint 1,High,1
+FF-103,Story,Local infrastructure,"Sprint: Sprint 1
+Learning Objective: Domain & local foundation
+Test Evidence: `FF-103-T1` (success path) and `FF-103-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-1,,Sprint 1,High,3
+FF-103-1,Sub-task,Create Docker Compose,Parent story: FF-103. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-103,Sprint 1,High,1
+FF-103-2,Sub-task,Run PostgreSQL locally,Parent story: FF-103. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-103,Sprint 1,High,1
+FF-103-3,Sub-task,Add health checks and startup documentation,Parent story: FF-103. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-103,Sprint 1,High,1
+FF-104,Story,Engineering workflow,"Sprint: Sprint 1
+Learning Objective: Domain & local foundation
+Test Evidence: `FF-104-T1` (success path) and `FF-104-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-1,,Sprint 1,High,3
+FF-104-1,Sub-task,Set branch strategy,Parent story: FF-104. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-104,Sprint 1,High,1
+FF-104-2,Sub-task,Add commit conventions,Parent story: FF-104. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-104,Sprint 1,High,1
+FF-104-3,Sub-task,Create issue/PR templates,Parent story: FF-104. See the parent story's test evidence and acceptance criteria.,EPIC-1,FF-104,Sprint 1,High,1
+FF-201,Story,FastAPI foundation,"Sprint: Sprint 2
+Learning Objective: Python API & relational data
+Test Evidence: `FF-201-T1` (success path) and `FF-201-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-2,,Sprint 2,High,3
+FF-201-1,Sub-task,Create app factory,Parent story: FF-201. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-201,Sprint 2,High,1
+FF-201-2,Sub-task,Add unauthenticated `/v1/health` and `/v1/ready` endpoints with bounded status responses,Parent story: FF-201. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-201,Sprint 2,High,1
+FF-201-3,Sub-task,Implement the shared error shape from `docs/API-CONTRACT.md` and test validation/server failures,Parent story: FF-201. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-201,Sprint 2,High,1
+FF-202,Story,Database layer,"Sprint: Sprint 2
+Learning Objective: Python API & relational data
+Test Evidence: `FF-202-T1` (success path) and `FF-202-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-2,,Sprint 2,High,3
+FF-202-1,Sub-task,Configure SQLAlchemy,Parent story: FF-202. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-202,Sprint 2,High,1
+FF-202-2,Sub-task,Create Alembic baseline,Parent story: FF-202. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-202,Sprint 2,High,1
+FF-202-3,Sub-task,Implement DB session lifecycle,Parent story: FF-202. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-202,Sprint 2,High,1
+FF-203,Story,Core schema,"Sprint: Sprint 2
+Learning Objective: Python API & relational data
+Test Evidence: `FF-203-T1` (success path) and `FF-203-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-2,,Sprint 2,High,3
+FF-203-1,Sub-task,Create projects/environments tables,Parent story: FF-203. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-203,Sprint 2,High,1
+FF-203-2,Sub-task,Create feature_flags table,Parent story: FF-203. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-203,Sprint 2,High,1
+FF-203-3,Sub-task,Add uniqueness/index constraints,Parent story: FF-203. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-203,Sprint 2,High,1
+FF-204,Story,API tests,"Sprint: Sprint 2
+Learning Objective: Python API & relational data
+Test Evidence: `FF-204-T1` (success path) and `FF-204-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-2,,Sprint 2,High,3
+FF-204-1,Sub-task,Create pytest fixtures,Parent story: FF-204. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-204,Sprint 2,High,1
+FF-204-2,Sub-task,Write CRUD integration tests,Parent story: FF-204. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-204,Sprint 2,High,1
+FF-204-3,Sub-task,Test invalid-input responses against the shared API error contract,Parent story: FF-204. See the parent story's test evidence and acceptance criteria.,EPIC-2,FF-204,Sprint 2,High,1
+FF-301,Story,Project/environment CRUD,"Sprint: Sprint 3
+Learning Objective: Flag management & admin access
+Test Evidence: `FF-301-T1` (success path) and `FF-301-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-3,,Sprint 3,High,3
+FF-301-1,Sub-task,Build create/list/update/delete endpoints,Parent story: FF-301. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-301,Sprint 3,High,1
+FF-301-2,Sub-task,Validate environment keys,Parent story: FF-301. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-301,Sprint 3,High,1
+FF-301-3,Sub-task,Document endpoint behavior,Parent story: FF-301. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-301,Sprint 3,High,1
+FF-302,Story,Feature flag CRUD,"Sprint: Sprint 3
+Learning Objective: Flag management & admin access
+Test Evidence: `FF-302-T1` (success path) and `FF-302-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-3,,Sprint 3,High,3
+FF-302-1,Sub-task,Build create/list/update/delete,Parent story: FF-302. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-302,Sprint 3,High,1
+FF-302-2,Sub-task,Add version incrementing,Parent story: FF-302. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-302,Sprint 3,High,1
+FF-302-3,Sub-task,Add optimistic update protection,Parent story: FF-302. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-302,Sprint 3,High,1
+FF-303,Story,Audit trail,"Sprint: Sprint 3
+Learning Objective: Flag management & admin access
+Test Evidence: `FF-303-T1` (success path) and `FF-303-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-3,,Sprint 3,High,3
+FF-303-1,Sub-task,Create audit_events table,Parent story: FF-303. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-303,Sprint 3,High,1
+FF-303-2,Sub-task,Record mutations,Parent story: FF-303. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-303,Sprint 3,High,1
+FF-303-3,Sub-task,Add audit read endpoint,Parent story: FF-303. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-303,Sprint 3,High,1
+FF-304,Story,Admin authentication,"Sprint: Sprint 3
+Learning Objective: Flag management & admin access
+Test Evidence: `FF-304-T1` (success path) and `FF-304-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-3,,Sprint 3,High,3
+FF-304-1,Sub-task,Verify configured admin password and issue signed HttpOnly session cookie (ADR-018),Parent story: FF-304. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-304,Sprint 3,High,1
+FF-304-2,Sub-task,"Enforce session, Origin, and CSRF checks on admin mutations",Parent story: FF-304. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-304,Sprint 3,High,1
+FF-304-3,Sub-task,"Test invalid password, expired session, CSRF failure, and authorized access",Parent story: FF-304. See the parent story's test evidence and acceptance criteria.,EPIC-3,FF-304,Sprint 3,High,1
+FF-401,Story,Astro/React shell,"Sprint: Sprint 4
+Learning Objective: Dashboard
+Test Evidence: `FF-401-T1` (success path) and `FF-401-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-4,,Sprint 4,High,3
+FF-401-1,Sub-task,Create dashboard layout,Parent story: FF-401. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-401,Sprint 4,High,1
+FF-401-2,Sub-task,Add routing/navigation,Parent story: FF-401. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-401,Sprint 4,High,1
+FF-401-3,Sub-task,Configure API client,Parent story: FF-401. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-401,Sprint 4,High,1
+FF-402,Story,Project/environment UI,"Sprint: Sprint 4
+Learning Objective: Dashboard
+Test Evidence: `FF-402-T1` (success path) and `FF-402-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-4,,Sprint 4,High,3
+FF-402-1,Sub-task,Project list,Parent story: FF-402. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-402,Sprint 4,High,1
+FF-402-2,Sub-task,Environment selector,Parent story: FF-402. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-402,Sprint 4,High,1
+FF-402-3,Sub-task,Environment state/loading/error UI,Parent story: FF-402. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-402,Sprint 4,High,1
+FF-403,Story,Flag management UI,"Sprint: Sprint 4
+Learning Objective: Dashboard
+Test Evidence: `FF-403-T1` (success path) and `FF-403-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-4,,Sprint 4,High,3
+FF-403-1,Sub-task,Flag table,Parent story: FF-403. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-403,Sprint 4,High,1
+FF-403-2,Sub-task,Create/edit form,Parent story: FF-403. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-403,Sprint 4,High,1
+FF-403-3,Sub-task,Enable/disable control,Parent story: FF-403. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-403,Sprint 4,High,1
+FF-404,Story,Audit UX,"Sprint: Sprint 4
+Learning Objective: Dashboard
+Test Evidence: `FF-404-T1` (success path) and `FF-404-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-4,,Sprint 4,High,3
+FF-404-1,Sub-task,Audit history page,Parent story: FF-404. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-404,Sprint 4,High,1
+FF-404-2,Sub-task,Before/after display,Parent story: FF-404. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-404,Sprint 4,High,1
+FF-404-3,Sub-task,Error and empty states,Parent story: FF-404. See the parent story's test evidence and acceptance criteria.,EPIC-4,FF-404,Sprint 4,High,1
+FF-501,Story,SDK package,"Sprint: Sprint 5
+Learning Objective: SDK & local evaluation
+Test Evidence: `FF-501-T1` (success path) and `FF-501-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-5,,Sprint 5,High,3
+FF-501-1,Sub-task,Create package structure,Parent story: FF-501. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-501,Sprint 5,High,1
+FF-501-2,Sub-task,Define the public SDK API against `docs/API-CONTRACT.md`,Parent story: FF-501. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-501,Sprint 5,High,1
+FF-501-3,Sub-task,"Add SDK contract tests for response parsing, API errors, and fallback",Parent story: FF-501. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-501,Sprint 5,High,1
+FF-502,Story,Configuration bootstrap,"Sprint: Sprint 5
+Learning Objective: SDK & local evaluation
+Test Evidence: `FF-502-T1` (success path) and `FF-502-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-5,,Sprint 5,High,3
+FF-502-1,Sub-task,Implement config fetch,Parent story: FF-502. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-502,Sprint 5,High,1
+FF-502-2,Sub-task,Validate config schema,Parent story: FF-502. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-502,Sprint 5,High,1
+FF-502-3,Sub-task,Store immutable snapshot,Parent story: FF-502. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-502,Sprint 5,High,1
+FF-503,Story,Evaluation engine,"Sprint: Sprint 5
+Learning Objective: SDK & local evaluation
+Test Evidence: `FF-503-T1` (success path) and `FF-503-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-5,,Sprint 5,High,3
+FF-503-1,Sub-task,Boolean evaluation,Parent story: FF-503. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-503,Sprint 5,High,1
+FF-503-2,Sub-task,Default/fallback evaluation,Parent story: FF-503. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-503,Sprint 5,High,1
+FF-503-3,Sub-task,Evaluation unit-test matrix,Parent story: FF-503. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-503,Sprint 5,High,1
+FF-504,Story,Demo Store integration,"Sprint: Sprint 5
+Learning Objective: SDK & local evaluation
+Test Evidence: `FF-504-T1` (success path) and `FF-504-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-5,,Sprint 5,High,3
+FF-504-1,Sub-task,Integrate SDK in `apps/demo-store/src/components/FlaggedDemo.tsx`,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-504,Sprint 5,High,1
+FF-504-2,Sub-task,Add `new_checkout` to the checkout page,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-504,Sprint 5,High,1
+FF-504-3,Sub-task,Demonstrate a live switch without rebuilding the demo store,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-504,Sprint 5,High,1
+FF-504-4,Sub-task,Use `new_product_card` on the product-list page,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-504,Sprint 5,High,1
+FF-504-5,Sub-task,Use `holiday_banner` on the home page,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-504,Sprint 5,High,1
+FF-504-6,Sub-task,Build Product detail and Cart pages and verify their navigation,Parent story: FF-504. See the parent story's test evidence and acceptance criteria.,EPIC-5,FF-504,Sprint 5,High,1
+FF-601,Story,Client keys,"Sprint: Sprint 6
+Learning Objective: Isolation, rollouts & targeting
+Test Evidence: `FF-601-T1` (success path) and `FF-601-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-6,,Sprint 6,High,3
+FF-601-1,Sub-task,Generate environment-scoped keys with `ff_client_` prefix and one-time display,Parent story: FF-601. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-601,Sprint 6,High,1
+FF-601-2,Sub-task,Hash stored secrets,Parent story: FF-601. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-601,Sprint 6,High,1
+FF-601-3,Sub-task,Build revoke flow,Parent story: FF-601. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-601,Sprint 6,High,1
+FF-602,Story,Environment isolation,"Sprint: Sprint 6
+Learning Objective: Isolation, rollouts & targeting
+Test Evidence: `FF-602-T1` (success path) and `FF-602-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-6,,Sprint 6,High,3
+FF-602-1,Sub-task,Prevent cross-environment reads,Parent story: FF-602. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-602,Sprint 6,High,1
+FF-602-2,Sub-task,Test staging/production separation,Parent story: FF-602. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-602,Sprint 6,High,1
+FF-602-3,Sub-task,Add SDK environment configuration,Parent story: FF-602. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-602,Sprint 6,High,1
+FF-603,Story,Percentage rollout,"Sprint: Sprint 6
+Learning Objective: Isolation, rollouts & targeting
+Test Evidence: `FF-603-T1` (success path) and `FF-603-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-6,,Sprint 6,High,3
+FF-603-1,Sub-task,Implement stable hashing,Parent story: FF-603. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-603,Sprint 6,High,1
+FF-603-2,Sub-task,Build 0/50/100% cases,Parent story: FF-603. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-603,Sprint 6,High,1
+FF-603-3,Sub-task,Test deterministic user assignment,Parent story: FF-603. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-603,Sprint 6,High,1
+FF-604,Story,Targeting rules,"Sprint: Sprint 6
+Learning Objective: Isolation, rollouts & targeting
+Test Evidence: `FF-604-T1` (success path) and `FF-604-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-6,,Sprint 6,High,3
+FF-604-1,Sub-task,Define v1 rule model,Parent story: FF-604. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-604,Sprint 6,High,1
+FF-604-2,Sub-task,Implement equals/contains,Parent story: FF-604. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-604,Sprint 6,High,1
+FF-604-3,Sub-task,Test rule precedence,Parent story: FF-604. See the parent story's test evidence and acceptance criteria.,EPIC-6,FF-604,Sprint 6,High,1
+FF-701,Story,In-memory configuration cache,"Sprint: Sprint 7
+Learning Objective: Refresh, caching & fallback
+Test Evidence: `FF-701-T1` (success path) and `FF-701-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-7,,Sprint 7,High,3
+FF-701-1,Sub-task,Atomic snapshot replacement,Parent story: FF-701. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-701,Sprint 7,High,1
+FF-701-2,Sub-task,Track version/age,Parent story: FF-701. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-701,Sprint 7,High,1
+FF-701-3,Sub-task,Expose cache diagnostics,Parent story: FF-701. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-701,Sprint 7,High,1
+FF-702,Story,Polling,"Sprint: Sprint 7
+Learning Objective: Refresh, caching & fallback
+Test Evidence: `FF-702-T1` (success path) and `FF-702-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-7,,Sprint 7,High,3
+FF-702-1,Sub-task,Add polling scheduler,Parent story: FF-702. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-702,Sprint 7,High,1
+FF-702-2,Sub-task,Handle timeouts/errors,Parent story: FF-702. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-702,Sprint 7,High,1
+FF-702-3,Sub-task,Measure stale window,Parent story: FF-702. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-702,Sprint 7,High,1
+FF-703,Story,HTTP cache optimization,"Sprint: Sprint 7
+Learning Objective: Refresh, caching & fallback
+Test Evidence: `FF-703-T1` (success path) and `FF-703-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-7,,Sprint 7,High,3
+FF-703-1,Sub-task,Implement ETag/version conditional requests,Parent story: FF-703. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-703,Sprint 7,High,1
+FF-703-2,Sub-task,Test 304 behavior,Parent story: FF-703. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-703,Sprint 7,High,1
+FF-703-3,Sub-task,Benchmark request reduction,Parent story: FF-703. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-703,Sprint 7,High,1
+FF-704,Story,Redis experiment,"Sprint: Sprint 7
+Learning Objective: Refresh, caching & fallback
+Test Evidence: `FF-704-T1` (success path) and `FF-704-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-7,,Sprint 7,High,3
+FF-704-1,Sub-task,Run the optional Redis experiment with a local-only container; do not use managed Memorystore,Parent story: FF-704. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-704,Sprint 7,High,1
+FF-704-2,Sub-task,Implement the shared-cache adapter for the local experiment only; the default evaluation path remains the SDK memory snapshot,Parent story: FF-704. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-704,Sprint 7,High,1
+FF-704-3,Sub-task,Compare local Redis with in-process caching and document when it helps,Parent story: FF-704. See the parent story's test evidence and acceptance criteria.,EPIC-7,FF-704,Sprint 7,High,1
+FF-801,Story,SSE stream,"Sprint: Sprint 8
+Learning Objective: SSE & consistency
+Test Evidence: `FF-801-T1` (success path) and `FF-801-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-8,,Sprint 8,High,3
+FF-801-1,Sub-task,Create stream endpoint,Parent story: FF-801. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-801,Sprint 8,High,1
+FF-801-2,Sub-task,Define event schema,Parent story: FF-801. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-801,Sprint 8,High,1
+FF-801-3,Sub-task,Handle client disconnects,Parent story: FF-801. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-801,Sprint 8,High,1
+FF-802,Story,SDK stream client,"Sprint: Sprint 8
+Learning Objective: SSE & consistency
+Test Evidence: `FF-802-T1` (success path) and `FF-802-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-8,,Sprint 8,High,3
+FF-802-1,Sub-task,Connect to SSE,Parent story: FF-802. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-802,Sprint 8,High,1
+FF-802-2,Sub-task,Update snapshot from events,Parent story: FF-802. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-802,Sprint 8,High,1
+FF-802-3,Sub-task,Add stream status diagnostics,Parent story: FF-802. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-802,Sprint 8,High,1
+FF-803,Story,Reconnect behavior,"Sprint: Sprint 8
+Learning Objective: SSE & consistency
+Test Evidence: `FF-803-T1` (success path) and `FF-803-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-8,,Sprint 8,High,3
+FF-803-1,Sub-task,Exponential backoff,Parent story: FF-803. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-803,Sprint 8,High,1
+FF-803-2,Sub-task,Catch-up bootstrap,Parent story: FF-803. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-803,Sprint 8,High,1
+FF-803-3,Sub-task,Test connection interruption,Parent story: FF-803. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-803,Sprint 8,High,1
+FF-804,Story,Consistency controls,"Sprint: Sprint 8
+Learning Objective: SSE & consistency
+Test Evidence: `FF-804-T1` (success path) and `FF-804-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-8,,Sprint 8,High,3
+FF-804-1,Sub-task,Reject stale versions,Parent story: FF-804. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-804,Sprint 8,High,1
+FF-804-2,Sub-task,Handle duplicates,Parent story: FF-804. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-804,Sprint 8,High,1
+FF-804-3,Sub-task,Test out-of-order events,Parent story: FF-804. See the parent story's test evidence and acceptance criteria.,EPIC-8,FF-804,Sprint 8,High,1
+FF-901,Story,Structured observability,"Sprint: Sprint 9
+Learning Objective: Observability & resilience
+Test Evidence: `FF-901-T1` (success path) and `FF-901-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-9,,Sprint 9,High,3
+FF-901-1,Sub-task,Add request logs,Parent story: FF-901. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-901,Sprint 9,High,1
+FF-901-2,Sub-task,Add evaluation telemetry,Parent story: FF-901. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-901,Sprint 9,High,1
+FF-901-3,Sub-task,Add propagation metrics,Parent story: FF-901. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-901,Sprint 9,High,1
+FF-902,Story,Tracing/metrics,"Sprint: Sprint 9
+Learning Objective: Observability & resilience
+Test Evidence: `FF-902-T1` (success path) and `FF-902-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-9,,Sprint 9,High,3
+FF-902-1,Sub-task,Instrument service boundaries,Parent story: FF-902. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-902,Sprint 9,High,1
+FF-902-2,Sub-task,Expose latency metrics,Parent story: FF-902. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-902,Sprint 9,High,1
+FF-902-3,Sub-task,Measure propagation delay,Parent story: FF-902. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-902,Sprint 9,High,1
+FF-903,Story,Failure injection,"Sprint: Sprint 9
+Learning Objective: Observability & resilience
+Test Evidence: `FF-903-T1` (success path) and `FF-903-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-9,,Sprint 9,High,3
+FF-903-1,Sub-task,Break database,Parent story: FF-903. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-903,Sprint 9,High,1
+FF-903-2,Sub-task,Break stream connection,Parent story: FF-903. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-903,Sprint 9,High,1
+FF-903-3,Sub-task,Test stale-cache fallback,Parent story: FF-903. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-903,Sprint 9,High,1
+FF-904,Story,Load testing,"Sprint: Sprint 9
+Learning Objective: Observability & resilience
+Test Evidence: `FF-904-T1` (success path) and `FF-904-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-9,,Sprint 9,High,3
+FF-904-1,Sub-task,Create Locust scenarios,Parent story: FF-904. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-904,Sprint 9,High,1
+FF-904-2,Sub-task,Measure p50/p95/p99,Parent story: FF-904. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-904,Sprint 9,High,1
+FF-904-3,Sub-task,Write performance report,Parent story: FF-904. See the parent story's test evidence and acceptance criteria.,EPIC-9,FF-904,Sprint 9,High,1
+FF-1001,Story,Cost guardrails,"Sprint: Sprint 10
+Learning Objective: GCP & Terraform foundations
+Test Evidence: `FF-1001-T1` (success path) and `FF-1001-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-10,,Sprint 10,High,3
+FF-1001-1,Sub-task,"Review current pricing and billing, then configure a budget/alert before any optional provisioning; document that alerts are not spend caps",Parent story: FF-1001. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1001,Sprint 10,High,1
+FF-1001-2,Sub-task,Record quotas as unverified until re-checked; do not rely on free-tier assumptions,Parent story: FF-1001. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1001,Sprint 10,High,1
+FF-1001-3,Sub-task,Write and validate the resource cleanup checklist before any approved provisioning,Parent story: FF-1001. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1001,Sprint 10,High,1
+FF-1002,Story,Terraform foundation,"Sprint: Sprint 10
+Learning Objective: GCP & Terraform foundations
+Test Evidence: `FF-1002-T1` (success path) and `FF-1002-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-10,,Sprint 10,High,3
+FF-1002-1,Sub-task,Create provider/module layout,Parent story: FF-1002. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1002,Sprint 10,High,1
+FF-1002-2,Sub-task,"Document local state by default and optional GCS state cost, locking, access, and cleanup",Parent story: FF-1002. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1002,Sprint 10,High,1
+FF-1002-3,Sub-task,Add variables/outputs,Parent story: FF-1002. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1002,Sprint 10,High,1
+FF-1002-4,Sub-task,Set Cloud Run minimum instances to 0 in the Terraform default,Parent story: FF-1002. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1002,Sprint 10,High,1
+FF-1003,Story,Artifact Registry,"Sprint: Sprint 10
+Learning Objective: GCP & Terraform foundations
+Test Evidence: `FF-1003-T1` (success path) and `FF-1003-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-10,,Sprint 10,High,3
+FF-1003-1,Sub-task,Define optional Artifact Registry resource; do not apply by default,Parent story: FF-1003. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1003,Sprint 10,High,1
+FF-1003-2,Sub-task,Build container locally,Parent story: FF-1003. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1003,Sprint 10,High,1
+FF-1003-3,Sub-task,Document image push and cleanup; execute only after explicit cloud approval,Parent story: FF-1003. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1003,Sprint 10,High,1
+FF-1004,Story,Cloud Run foundation,"Sprint: Sprint 10
+Learning Objective: GCP & Terraform foundations
+Test Evidence: `FF-1004-T1` (success path) and `FF-1004-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-10,,Sprint 10,High,3
+FF-1004-1,Sub-task,Validate a stateless API plan without applying; set Cloud Run minimum instances to 0,Parent story: FF-1004. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1004,Sprint 10,High,1
+FF-1004-2,Sub-task,Configure environment variables,Parent story: FF-1004. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1004,Sprint 10,High,1
+FF-1004-3,Sub-task,Verify Cloud Run minimum instances = 0 and scale-to-zero configuration in Terraform,Parent story: FF-1004. See the parent story's test evidence and acceptance criteria.,EPIC-10,FF-1004,Sprint 10,High,1
+FF-1101,Story,Firestore adapter,"Sprint: Sprint 11
+Learning Objective: Cloud data, events & IAM
+Test Evidence: `FF-1101-T1` (success path) and `FF-1101-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-11,,Sprint 11,High,3
+FF-1101-1,Sub-task,Map local domain to documents,Parent story: FF-1101. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1101,Sprint 11,High,1
+FF-1101-2,Sub-task,Implement repository methods,Parent story: FF-1101. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1101,Sprint 11,High,1
+FF-1101-3,Sub-task,Run parity tests vs PostgreSQL,Parent story: FF-1101. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1101,Sprint 11,High,1
+FF-1102,Story,Pub/Sub propagation,"Sprint: Sprint 11
+Learning Objective: Cloud data, events & IAM
+Test Evidence: `FF-1102-T1` (success path) and `FF-1102-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-11,,Sprint 11,High,3
+FF-1102-1,Sub-task,Create topic/subscription,Parent story: FF-1102. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1102,Sprint 11,High,1
+FF-1102-2,Sub-task,Publish configuration events,Parent story: FF-1102. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1102,Sprint 11,High,1
+FF-1102-3,Sub-task,Consume and handle duplicates,Parent story: FF-1102. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1102,Sprint 11,High,1
+FF-1103,Story,GCP IAM,"Sprint: Sprint 11
+Learning Objective: Cloud data, events & IAM
+Test Evidence: `FF-1103-T1` (success path) and `FF-1103-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-11,,Sprint 11,High,3
+FF-1103-1,Sub-task,Create least-privilege runtime identity,Parent story: FF-1103. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1103,Sprint 11,High,1
+FF-1103-2,Sub-task,Limit Firestore permissions,Parent story: FF-1103. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1103,Sprint 11,High,1
+FF-1103-3,Sub-task,Limit Pub/Sub permissions,Parent story: FF-1103. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1103,Sprint 11,High,1
+FF-1104,Story,Cloud observability,"Sprint: Sprint 11
+Learning Objective: Cloud data, events & IAM
+Test Evidence: `FF-1104-T1` (success path) and `FF-1104-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-11,,Sprint 11,High,3
+FF-1104-1,Sub-task,Configure useful logs,Parent story: FF-1104. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1104,Sprint 11,High,1
+FF-1104-2,Sub-task,Validate log volume,Parent story: FF-1104. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1104,Sprint 11,High,1
+FF-1104-3,Sub-task,Create basic operational dashboard/queries,Parent story: FF-1104. See the parent story's test evidence and acceptance criteria.,EPIC-11,FF-1104,Sprint 11,High,1
+FF-1201,Story,GitHub Actions CI,"Sprint: Sprint 12
+Learning Objective: CI/CD & finalization
+Test Evidence: `FF-1201-T1` (success path) and `FF-1201-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-12,,Sprint 12,High,3
+FF-1201-1,Sub-task,Lint and type-check workflow,Parent story: FF-1201. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1201,Sprint 12,High,1
+FF-1201-2,Sub-task,Unit and integration test workflow,Parent story: FF-1201. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1201,Sprint 12,High,1
+FF-1201-3,Sub-task,Build artifact workflow,Parent story: FF-1201. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1201,Sprint 12,High,1
+FF-1201-4,Sub-task,Run the consistency checker locally and in the optional hosted CI gate,Parent story: FF-1201. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1201,Sprint 12,High,1
+FF-1202,Story,Deployment workflow,"Sprint: Sprint 12
+Learning Objective: CI/CD & finalization
+Test Evidence: `FF-1202-T1` (success path) and `FF-1202-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-12,,Sprint 12,High,3
+FF-1202-1,Sub-task,Document optional Cloud Run deployment from a trusted branch; deploy only after explicit approval and the cost gate,Parent story: FF-1202. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1202,Sprint 12,High,1
+FF-1202-2,Sub-task,Use environment configuration,Parent story: FF-1202. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1202,Sprint 12,High,1
+FF-1202-3,Sub-task,Add rollback procedure,Parent story: FF-1202. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1202,Sprint 12,High,1
+FF-1203,Story,End-to-end validation,"Sprint: Sprint 12
+Learning Objective: CI/CD & finalization
+Test Evidence: `FF-1203-T1` (success path) and `FF-1203-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-12,,Sprint 12,High,3
+FF-1203-1,Sub-task,Test cloud SDK bootstrap,Parent story: FF-1203. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1203,Sprint 12,High,1
+FF-1203-2,Sub-task,Test Pub/Sub/SSE propagation,Parent story: FF-1203. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1203,Sprint 12,High,1
+FF-1203-3,Sub-task,Test failure fallback,Parent story: FF-1203. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1203,Sprint 12,High,1
+FF-1204,Story,Final engineering package,"Sprint: Sprint 12
+Learning Objective: CI/CD & finalization
+Test Evidence: `FF-1204-T1` (success path) and `FF-1204-T2` (failure path); name the implemented test file when the test is added.
+Definition of Done: local behavior; success and failure tests; documented design; no accidental secrets or paid infrastructure; focused commit/PR.",EPIC-12,,Sprint 12,High,3
+FF-1204-1,Sub-task,Review ADRs,Parent story: FF-1204. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1204,Sprint 12,High,1
+FF-1204-2,Sub-task,Write architecture/benchmark report,Parent story: FF-1204. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1204,Sprint 12,High,1
+FF-1204-3,Sub-task,Record final demo and retrospective,Parent story: FF-1204. See the parent story's test evidence and acceptance criteria.,EPIC-12,FF-1204,Sprint 12,High,1

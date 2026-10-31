@@ -4,7 +4,8 @@
 ## Distributed Feature Flag & Configuration Platform
 
 **Status:** Approved planning baseline  
-**Plan:** 12 outcome-based milestones; no fixed calendar or completion date
+**Plan:** 60 working sessions over 12 weeks; 12 outcome-based sprints of five
+sessions, with no fixed calendar dates or completion deadline
 **Primary goal:** Learn cloud and system design by building, testing, breaking, and improving a real distributed platform.
 
 ---

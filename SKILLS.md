@@ -36,6 +36,26 @@ The project is intentionally organized as a progression from **single-process so
 
 # Learning sequence
 
+## Sprint focus
+
+This table aligns each Jira learning objective with the canonical sprint in
+`docs/SPRINT-CALENDAR.md`.
+
+| Sprint | Learning objective |
+|---:|---|
+| 1 | Domain & local foundation |
+| 2 | Python API & relational data |
+| 3 | Flag management & admin access |
+| 4 | Dashboard |
+| 5 | SDK & local evaluation |
+| 6 | Isolation, rollouts & targeting |
+| 7 | Refresh, caching & fallback |
+| 8 | SSE & consistency |
+| 9 | Observability & resilience |
+| 10 | GCP & Terraform foundations |
+| 11 | Cloud data, events & IAM |
+| 12 | CI/CD & finalization |
+
 ## Stage 1 — Domain and HTTP
 Learn:
 
@@ -183,4 +203,3 @@ Use official documentation first:
 - GitHub Actions documentation
 
 Use commercial feature-flag documentation such as LaunchDarkly as a **reference implementation model**, not as an instruction manual.
-

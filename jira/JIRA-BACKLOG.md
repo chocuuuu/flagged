@@ -1,8 +1,10 @@
 # JIRA-BACKLOG.md
 
-# Flagged - Outcome-Based Jira Backlog
+# Flagged - Jira Backlog
 
-**Execution model:** 12 ordered milestone groups; no fixed schedule, session count, or completion date
+`JIRA-BACKLOG.md` is the canonical issue source. Generate the CSV import with `python scripts/generate_jira_csv.py`; do not hand-edit the CSV.
+
+**Execution model:** 12 ordered sprints x 5 working sessions; 60 working sessions over 12 weeks, with no fixed calendar dates or deadline
 
 **Workflow:** Backlog → Ready → In Progress → Code Review → QA → Done
 
@@ -27,6 +29,9 @@ Epic
 - Milestone
 - Priority
 - Story Points
+- Sprint
+- Epic
+- Test Evidence
 - Acceptance Criteria
 - Learning Objective
 - Dependencies
@@ -48,7 +53,7 @@ Epic
 
 ---
 
-# Milestone 1 — Foundation & Domain
+# Sprint 1 — Domain & local foundation
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -56,9 +61,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M1<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 1<br>
 **Epic:** EPIC-1
+**Learning Objective:** Domain & local foundation
+
+**Test Evidence:** `FF-101-T1` (success path) and `FF-101-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -79,9 +87,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M1<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 1<br>
 **Epic:** EPIC-1
+**Learning Objective:** Domain & local foundation
+
+**Test Evidence:** `FF-102-T1` (success path) and `FF-102-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -102,9 +113,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M1<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 1<br>
 **Epic:** EPIC-1
+**Learning Objective:** Domain & local foundation
+
+**Test Evidence:** `FF-103-T1` (success path) and `FF-103-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -125,9 +139,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M1<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 1<br>
 **Epic:** EPIC-1
+**Learning Objective:** Domain & local foundation
+
+**Test Evidence:** `FF-104-T1` (success path) and `FF-104-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -147,7 +164,7 @@ Epic
 
 ---
 
-# Milestone 2 — Python API & Database
+# Sprint 2 — Python API & relational data
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -155,9 +172,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M2<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 2<br>
 **Epic:** EPIC-2
+**Learning Objective:** Python API & relational data
+
+**Test Evidence:** `FF-201-T1` (success path) and `FF-201-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -170,17 +190,20 @@ Epic
 **Subtasks:**
 
 - [ ] **FF-201-1** — Create app factory
-- [ ] **FF-201-2** — Add health/readiness endpoints
-- [ ] **FF-201-3** — Configure structured error handling
+- [ ] **FF-201-2** — Add unauthenticated `/v1/health` and `/v1/ready` endpoints with bounded status responses
+- [ ] **FF-201-3** — Implement the shared error shape from `docs/API-CONTRACT.md` and test validation/server failures
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 ## FF-202 — Database layer
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M2<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 2<br>
 **Epic:** EPIC-2
+**Learning Objective:** Python API & relational data
+
+**Test Evidence:** `FF-202-T1` (success path) and `FF-202-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -201,9 +224,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M2<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 2<br>
 **Epic:** EPIC-2
+**Learning Objective:** Python API & relational data
+
+**Test Evidence:** `FF-203-T1` (success path) and `FF-203-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -224,9 +250,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M2<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 2<br>
 **Epic:** EPIC-2
+**Learning Objective:** Python API & relational data
+
+**Test Evidence:** `FF-204-T1` (success path) and `FF-204-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -240,13 +269,13 @@ Epic
 
 - [ ] **FF-204-1** — Create pytest fixtures
 - [ ] **FF-204-2** — Write CRUD integration tests
-- [ ] **FF-204-3** — Add invalid-input tests
+- [ ] **FF-204-3** — Test invalid-input responses against the shared API error contract
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
 ---
 
-# Milestone 3 — Flag Management & Audit
+# Sprint 3 — Flag management & admin access
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -254,9 +283,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M3<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 3<br>
 **Epic:** EPIC-3
+**Learning Objective:** Flag management & admin access
+
+**Test Evidence:** `FF-301-T1` (success path) and `FF-301-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -277,9 +309,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M3<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 3<br>
 **Epic:** EPIC-3
+**Learning Objective:** Flag management & admin access
+
+**Test Evidence:** `FF-302-T1` (success path) and `FF-302-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -300,9 +335,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M3<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 3<br>
 **Epic:** EPIC-3
+**Learning Objective:** Flag management & admin access
+
+**Test Evidence:** `FF-303-T1` (success path) and `FF-303-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -323,9 +361,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M3<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 3<br>
 **Epic:** EPIC-3
+**Learning Objective:** Flag management & admin access
+
+**Test Evidence:** `FF-304-T1` (success path) and `FF-304-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -337,15 +378,15 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-304-1** — Implement login
-- [ ] **FF-304-2** — Protect admin routes
-- [ ] **FF-304-3** — Add authorization tests
+- [ ] **FF-304-1** — Verify configured admin password and issue signed HttpOnly session cookie (ADR-018)
+- [ ] **FF-304-2** — Enforce session, Origin, and CSRF checks on admin mutations
+- [ ] **FF-304-3** — Test invalid password, expired session, CSRF failure, and authorized access
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
 ---
 
-# Milestone 4 — Dashboard
+# Sprint 4 — Dashboard
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -353,9 +394,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M4<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 4<br>
 **Epic:** EPIC-4
+**Learning Objective:** Dashboard
+
+**Test Evidence:** `FF-401-T1` (success path) and `FF-401-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -376,9 +420,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M4<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 4<br>
 **Epic:** EPIC-4
+**Learning Objective:** Dashboard
+
+**Test Evidence:** `FF-402-T1` (success path) and `FF-402-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -399,9 +446,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M4<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 4<br>
 **Epic:** EPIC-4
+**Learning Objective:** Dashboard
+
+**Test Evidence:** `FF-403-T1` (success path) and `FF-403-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -422,9 +472,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M4<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 4<br>
 **Epic:** EPIC-4
+**Learning Objective:** Dashboard
+
+**Test Evidence:** `FF-404-T1` (success path) and `FF-404-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -444,7 +497,7 @@ Epic
 
 ---
 
-# Milestone 5 — SDK & Local Evaluation
+# Sprint 5 — SDK & local evaluation
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -452,9 +505,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M5<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 5<br>
 **Epic:** EPIC-5
+**Learning Objective:** SDK & local evaluation
+
+**Test Evidence:** `FF-501-T1` (success path) and `FF-501-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -467,17 +523,20 @@ Epic
 **Subtasks:**
 
 - [ ] **FF-501-1** — Create package structure
-- [ ] **FF-501-2** — Define public SDK API
-- [ ] **FF-501-3** — Add build/test pipeline
+- [ ] **FF-501-2** — Define the public SDK API against `docs/API-CONTRACT.md`
+- [ ] **FF-501-3** — Add SDK contract tests for response parsing, API errors, and fallback
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 ## FF-502 — Configuration bootstrap
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M5<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 5<br>
 **Epic:** EPIC-5
+**Learning Objective:** SDK & local evaluation
+
+**Test Evidence:** `FF-502-T1` (success path) and `FF-502-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -498,9 +557,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M5<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 5<br>
 **Epic:** EPIC-5
+**Learning Objective:** SDK & local evaluation
+
+**Test Evidence:** `FF-503-T1` (success path) and `FF-503-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -521,9 +583,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M5<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 5<br>
 **Epic:** EPIC-5
+**Learning Objective:** SDK & local evaluation
+
+**Test Evidence:** `FF-504-T1` (success path) and `FF-504-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -535,15 +600,18 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-504-1** — Integrate SDK
-- [ ] **FF-504-2** — Add new checkout flag
-- [ ] **FF-504-3** — Demonstrate live switch without rebuild
+- [ ] **FF-504-1** — Integrate SDK in `apps/demo-store/src/components/FlaggedDemo.tsx`
+- [ ] **FF-504-2** — Add `new_checkout` to the checkout page
+- [ ] **FF-504-3** — Demonstrate a live switch without rebuilding the demo store
+- [ ] **FF-504-4** — Use `new_product_card` on the product-list page
+- [ ] **FF-504-5** — Use `holiday_banner` on the home page
+- [ ] **FF-504-6** — Build Product detail and Cart pages and verify their navigation
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
 ---
 
-# Milestone 6 — Environments, Rollouts & Targeting
+# Sprint 6 — Isolation, rollouts & targeting
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -551,9 +619,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M6<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 6<br>
 **Epic:** EPIC-6
+**Learning Objective:** Isolation, rollouts & targeting
+
+**Test Evidence:** `FF-601-T1` (success path) and `FF-601-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -565,7 +636,7 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-601-1** — Generate scoped keys
+- [ ] **FF-601-1** — Generate environment-scoped keys with `ff_client_` prefix and one-time display
 - [ ] **FF-601-2** — Hash stored secrets
 - [ ] **FF-601-3** — Build revoke flow
 
@@ -574,9 +645,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M6<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 6<br>
 **Epic:** EPIC-6
+**Learning Objective:** Isolation, rollouts & targeting
+
+**Test Evidence:** `FF-602-T1` (success path) and `FF-602-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -597,9 +671,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M6<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 6<br>
 **Epic:** EPIC-6
+**Learning Objective:** Isolation, rollouts & targeting
+
+**Test Evidence:** `FF-603-T1` (success path) and `FF-603-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -620,9 +697,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M6<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 6<br>
 **Epic:** EPIC-6
+**Learning Objective:** Isolation, rollouts & targeting
+
+**Test Evidence:** `FF-604-T1` (success path) and `FF-604-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -642,7 +722,7 @@ Epic
 
 ---
 
-# Milestone 7 — Caching & Polling
+# Sprint 7 — Refresh, caching & fallback
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -650,9 +730,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M7<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 7<br>
 **Epic:** EPIC-7
+**Learning Objective:** Refresh, caching & fallback
+
+**Test Evidence:** `FF-701-T1` (success path) and `FF-701-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -673,9 +756,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M7<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 7<br>
 **Epic:** EPIC-7
+**Learning Objective:** Refresh, caching & fallback
+
+**Test Evidence:** `FF-702-T1` (success path) and `FF-702-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -696,9 +782,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M7<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 7<br>
 **Epic:** EPIC-7
+**Learning Objective:** Refresh, caching & fallback
+
+**Test Evidence:** `FF-703-T1` (success path) and `FF-703-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -719,9 +808,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M7<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 7<br>
 **Epic:** EPIC-7
+**Learning Objective:** Refresh, caching & fallback
+
+**Test Evidence:** `FF-704-T1` (success path) and `FF-704-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -733,15 +825,15 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-704-1** — Run Redis locally
-- [ ] **FF-704-2** — Implement shared cache adapter
-- [ ] **FF-704-3** — Document when Redis helps
+- [ ] **FF-704-1** — Run the optional Redis experiment with a local-only container; do not use managed Memorystore
+- [ ] **FF-704-2** — Implement the shared-cache adapter for the local experiment only; the default evaluation path remains the SDK memory snapshot
+- [ ] **FF-704-3** — Compare local Redis with in-process caching and document when it helps
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
 ---
 
-# Milestone 8 — SSE & Consistency
+# Sprint 8 — SSE & consistency
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -749,9 +841,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M8<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 8<br>
 **Epic:** EPIC-8
+**Learning Objective:** SSE & consistency
+
+**Test Evidence:** `FF-801-T1` (success path) and `FF-801-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -772,9 +867,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M8<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 8<br>
 **Epic:** EPIC-8
+**Learning Objective:** SSE & consistency
+
+**Test Evidence:** `FF-802-T1` (success path) and `FF-802-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -795,9 +893,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M8<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 8<br>
 **Epic:** EPIC-8
+**Learning Objective:** SSE & consistency
+
+**Test Evidence:** `FF-803-T1` (success path) and `FF-803-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -818,9 +919,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M8<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 8<br>
 **Epic:** EPIC-8
+**Learning Objective:** SSE & consistency
+
+**Test Evidence:** `FF-804-T1` (success path) and `FF-804-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -840,7 +944,7 @@ Epic
 
 ---
 
-# Milestone 9 — Observability, Resilience & Load
+# Sprint 9 — Observability & resilience
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -848,9 +952,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M9<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 9<br>
 **Epic:** EPIC-9
+**Learning Objective:** Observability & resilience
+
+**Test Evidence:** `FF-901-T1` (success path) and `FF-901-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -871,9 +978,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M9<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 9<br>
 **Epic:** EPIC-9
+**Learning Objective:** Observability & resilience
+
+**Test Evidence:** `FF-902-T1` (success path) and `FF-902-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -894,9 +1004,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M9<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 9<br>
 **Epic:** EPIC-9
+**Learning Objective:** Observability & resilience
+
+**Test Evidence:** `FF-903-T1` (success path) and `FF-903-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -917,9 +1030,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M9<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 9<br>
 **Epic:** EPIC-9
+**Learning Objective:** Observability & resilience
+
+**Test Evidence:** `FF-904-T1` (success path) and `FF-904-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -939,7 +1055,7 @@ Epic
 
 ---
 
-# Milestone 10 — Terraform & GCP Foundation
+# Sprint 10 — GCP & Terraform foundations
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -947,9 +1063,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M10<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 10<br>
 **Epic:** EPIC-10
+**Learning Objective:** GCP & Terraform foundations
+
+**Test Evidence:** `FF-1001-T1` (success path) and `FF-1001-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -961,18 +1080,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1001-1** — Create budget/alert
-- [ ] **FF-1001-2** — Document free-tier assumptions
-- [ ] **FF-1001-3** — Write cleanup checklist
+- [ ] **FF-1001-1** — Review current pricing and billing, then configure a budget/alert before any optional provisioning; document that alerts are not spend caps
+- [ ] **FF-1001-2** — Record quotas as unverified until re-checked; do not rely on free-tier assumptions
+- [ ] **FF-1001-3** — Write and validate the resource cleanup checklist before any approved provisioning
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 ## FF-1002 — Terraform foundation
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M10<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 10<br>
 **Epic:** EPIC-10
+**Learning Objective:** GCP & Terraform foundations
+
+**Test Evidence:** `FF-1002-T1` (success path) and `FF-1002-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -985,17 +1107,21 @@ Epic
 **Subtasks:**
 
 - [ ] **FF-1002-1** — Create provider/module layout
-- [ ] **FF-1002-2** — Create state configuration
+- [ ] **FF-1002-2** — Document local state by default and optional GCS state cost, locking, access, and cleanup
 - [ ] **FF-1002-3** — Add variables/outputs
+- [ ] **FF-1002-4** — Set Cloud Run minimum instances to 0 in the Terraform default
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 ## FF-1003 — Artifact Registry
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M10<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 10<br>
 **Epic:** EPIC-10
+**Learning Objective:** GCP & Terraform foundations
+
+**Test Evidence:** `FF-1003-T1` (success path) and `FF-1003-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1007,18 +1133,21 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1003-1** — Create repository
+- [ ] **FF-1003-1** — Define optional Artifact Registry resource; do not apply by default
 - [ ] **FF-1003-2** — Build container locally
-- [ ] **FF-1003-3** — Push versioned image
+- [ ] **FF-1003-3** — Document image push and cleanup; execute only after explicit cloud approval
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 ## FF-1004 — Cloud Run foundation
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M10<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 10<br>
 **Epic:** EPIC-10
+**Learning Objective:** GCP & Terraform foundations
+
+**Test Evidence:** `FF-1004-T1` (success path) and `FF-1004-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1030,15 +1159,15 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1004-1** — Deploy stateless API
+- [ ] **FF-1004-1** — Validate a stateless API plan without applying; set Cloud Run minimum instances to 0
 - [ ] **FF-1004-2** — Configure environment variables
-- [ ] **FF-1004-3** — Validate scale-to-zero behavior
+- [ ] **FF-1004-3** — Verify Cloud Run minimum instances = 0 and scale-to-zero configuration in Terraform
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 
 ---
 
-# Milestone 11 — Firestore, Pub/Sub & IAM
+# Sprint 11 — Cloud data, events & IAM
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -1046,9 +1175,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M11<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 11<br>
 **Epic:** EPIC-11
+**Learning Objective:** Cloud data, events & IAM
+
+**Test Evidence:** `FF-1101-T1` (success path) and `FF-1101-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1069,9 +1201,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M11<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 11<br>
 **Epic:** EPIC-11
+**Learning Objective:** Cloud data, events & IAM
+
+**Test Evidence:** `FF-1102-T1` (success path) and `FF-1102-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1092,9 +1227,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M11<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 11<br>
 **Epic:** EPIC-11
+**Learning Objective:** Cloud data, events & IAM
+
+**Test Evidence:** `FF-1103-T1` (success path) and `FF-1103-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1115,9 +1253,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M11<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 11<br>
 **Epic:** EPIC-11
+**Learning Objective:** Cloud data, events & IAM
+
+**Test Evidence:** `FF-1104-T1` (success path) and `FF-1104-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1137,7 +1278,7 @@ Epic
 
 ---
 
-# Milestone 12 — CI/CD, Cloud Validation & Finalization
+# Sprint 12 — CI/CD & finalization
 
 **Timing:** Outcome-based; no fixed duration
 
@@ -1145,9 +1286,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M12<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 12<br>
 **Epic:** EPIC-12
+**Learning Objective:** CI/CD & finalization
+
+**Test Evidence:** `FF-1201-T1` (success path) and `FF-1201-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1159,18 +1303,22 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1201-1** — Lint workflow
-- [ ] **FF-1201-2** — Unit/integration test workflow
+- [ ] **FF-1201-1** — Lint and type-check workflow
+- [ ] **FF-1201-2** — Unit and integration test workflow
 - [ ] **FF-1201-3** — Build artifact workflow
+- [ ] **FF-1201-4** — Run the consistency checker locally and in the optional hosted CI gate
 
 **Learning checkpoint:** Explain what architectural concept this story introduced before marking it Done.
 ## FF-1202 — Deployment workflow
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M12<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 12<br>
 **Epic:** EPIC-12
+**Learning Objective:** CI/CD & finalization
+
+**Test Evidence:** `FF-1202-T1` (success path) and `FF-1202-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1182,7 +1330,7 @@ Epic
 
 **Subtasks:**
 
-- [ ] **FF-1202-1** — Deploy Cloud Run from trusted branch
+- [ ] **FF-1202-1** — Document optional Cloud Run deployment from a trusted branch; deploy only after explicit approval and the cost gate
 - [ ] **FF-1202-2** — Use environment configuration
 - [ ] **FF-1202-3** — Add rollback procedure
 
@@ -1191,9 +1339,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M12<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 12<br>
 **Epic:** EPIC-12
+**Learning Objective:** CI/CD & finalization
+
+**Test Evidence:** `FF-1203-T1` (success path) and `FF-1203-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
@@ -1214,9 +1365,12 @@ Epic
 
 **Issue Type:** Story  
 **Priority:** High  
-**Story Points:** 3–5  
-**Milestone:** M12<br>
+**Story Points:** 3<br>
+**Sprint:** Sprint 12<br>
 **Epic:** EPIC-12
+**Learning Objective:** CI/CD & finalization
+
+**Test Evidence:** `FF-1204-T1` (success path) and `FF-1204-T2` (failure path); name the implemented test file when the test is added.
 
 **Definition of done:**
 
