@@ -12,6 +12,11 @@ The revision rules in ADR-019 need a stable inventory of the persisted fields th
 
 ## Decision
 
+The v1 HTTP routes, request/response shapes, status codes, SSE event, and shared
+error shape are specified by the draft [API contract](../API-CONTRACT.md). The API
+and SDK implementations must reference that contract rather than maintain competing
+wire-format definitions.
+
 - The SDK configuration endpoint returns one complete snapshot for a single environment, authenticated by that environment's read-only client key. The key permits configuration reads only; it does not grant admin access.
 - The client-visible configuration consists of:
   - The environment's stable key and environment-wide `revision`.

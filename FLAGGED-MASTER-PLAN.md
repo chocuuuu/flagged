@@ -1454,7 +1454,9 @@ SDK
  ▼
 /v1/sdk/projects/{projectKey}/environments/{environmentKey}/stream
  │
- └── config.updated(revision=43)
+ └── event: config.updated
+     id: 43
+     data: {"revision":43}
          ↓
     fetch/validate config
          ↓
@@ -2314,11 +2316,10 @@ Measure:
 
 A stream event can be:
 
-```json
-{
-  "type": "config.updated",
-  "version": 43
-}
+```text
+id: 43
+event: config.updated
+data: {"revision":43}
 ```
 
 The client can then:
@@ -3841,7 +3842,7 @@ Epic
 
 # PROGRESS.md
 
-# Flagged — 60-Day Progress Tracker
+# Flagged — 60 working sessions Progress Tracker
 
 ## How to use
 
@@ -3989,7 +3990,7 @@ Commit:
 
 # DAILY-PLAN.md
 
-# Flagged — 60-Working-Session Execution Plan
+# Flagged — 60 working sessions Execution Plan
 
 ## Working assumption
 

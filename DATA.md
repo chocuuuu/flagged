@@ -18,8 +18,7 @@ Configuration distributed to clients carries an environment-wide, monotonically 
 Project
   └── Environment
         ├── Flag
-        │     ├── Target Rules
-        │     └── Variants
+        │     └── Target Rules
         ├── Client Key
         └── Environment Configuration Revision
 
@@ -75,7 +74,7 @@ available for reuse in the meantime.
 | key | varchar | unique within environment |
 | name | varchar | display value |
 | description | text | nullable |
-| type | varchar | boolean/variant |
+| type | varchar | `boolean` in MVP; variants are out of MVP |
 | enabled | boolean | base state |
 | rollout_basis_points | integer | 0–10000 inclusive; canonical rollout value |
 | version | bigint | optimistic version |
@@ -88,6 +87,10 @@ Constraint:
 UNIQUE(environment_id, key),
 CHECK (rollout_basis_points BETWEEN 0 AND 10000)
 ```
+
+**MVP scope:** `type` is `boolean` only. Variants are a PRD stretch goal and are
+out of the MVP schema and SDK payload. Do not add variant persistence or evaluation
+until its data model and wire contract have a reviewed ADR.
 
 The admin API and SDK configuration payload use integer basis points, not decimal percentages. A presentation layer may display percentages but must submit an exact integer basis-point value.
 
@@ -111,7 +114,7 @@ Targeting-rule priorities need not be unique. Enabled rules are ordered by ascen
 |---|---|---|
 | id | UUID | PK |
 | environment_id | UUID | FK |
-| key_prefix | varchar | safe display prefix |
+| key_prefix | varchar | `ff_client_` plus a short public prefix; never the full secret |
 | key_hash | varchar | stored secret hash |
 | status | varchar | active/revoked |
 | created_at | timestamptz | required |
@@ -170,7 +173,7 @@ The SDK treats this as immutable configuration and replaces its in-memory snapsh
 
 ---
 
-# 5. Why PostgreSQL locally and Firestore in GCP?
+# 5. Why PostgreSQL locally and Firestore as a deferred GCP experiment?
 
 This is **not because the product fundamentally needs two databases**.
 
@@ -187,7 +190,7 @@ It is a deliberate learning and cost decision.
 - indexes
 - query behavior
 
-### Firestore (emulator by default) teaches
+### Firestore (deferred; an emulator may be used for isolated learning) teaches
 
 - document modeling
 - document persistence and managed/serverless service semantics
@@ -196,7 +199,10 @@ It is a deliberate learning and cost decision.
 - cloud-native data access
 - free-tier-aware design
 
-The repository/service boundary means application behavior should not depend directly on SQL or Firestore SDK calls.
+The repository/service boundary means application behavior should not depend directly
+on SQL or Firestore SDK calls. PostgreSQL is the only selected implementation
+baseline. A Firestore adapter and snapshot read model are deferred; the proposed
+materialized SDK snapshot in `docs/API-CONTRACT.md` is not an accepted decision.
 
 ```text
 Service layer
@@ -254,6 +260,9 @@ Properties:
 
 ## Redis
 
+Redis is an optional local-only shared-cache experiment. It does not replace the
+SDK's in-memory evaluation snapshot and does not imply a managed Redis deployment.
+
 Used as a learning experiment for:
 
 - shared cache
@@ -262,7 +271,7 @@ Used as a learning experiment for:
 - TTL
 - multiple API instances
 
-Redis is not required for the final zero-cost cloud deployment.
+Redis is not required for the default local-first path.
 
 ---
 
@@ -289,3 +298,13 @@ Avoid unlimited historical growth.
 5. A lower or equal revision cannot replace the SDK's current snapshot.
 6. Audit records are append-only.
 7. A flag evaluation never mutates configuration.
+
+| Invariant | Planned Jira test evidence |
+|---|---|
+| 1. Flag keys are unique per environment | FF-203-T1 and FF-302-T2 |
+| 2. Environment revisions increase monotonically; flag edit versions are separate | FF-302-T2 and FF-804-T2 |
+| 3. Revoked client key cannot read SDK configuration | FF-601-T2 |
+| 4. Admin credentials cannot authenticate as SDK clients | FF-601-T2 and FF-602-T2 |
+| 5. Equal or lower snapshot revision is ignored | FF-503-T2 and FF-804-T2 |
+| 6. Audit records are append-only | FF-303-T2 |
+| 7. Evaluation does not mutate configuration | FF-503-T2 |

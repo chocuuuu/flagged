@@ -154,7 +154,7 @@ newer revision?
 
 ## Streaming
 
-Cross-instance delivery follows [ADR-021](docs/adrs/ADR-021-sse-delivery-across-instances.md): each active stream checks the database-backed environment revision (5-second local interval; 60-second live Firestore default), so an update made on another stateless instance is observed without process-local fan-out state. SSE events carry a revision hint, not configuration; the SDK fetches and validates the complete snapshot on notification and reconnect. Polling remains the recovery path.
+Cross-instance delivery follows [ADR-021](docs/adrs/ADR-021-sse-delivery-across-instances.md): each active stream checks the database-backed environment revision (5-second local interval; a 60-second interval is proposed for a future, explicitly approved Firestore adapter and must be re-measured/reviewed before use). Firestore is deferred; PostgreSQL is the selected implementation baseline. An update made on another stateless instance is observed without process-local fan-out state. SSE events carry a revision hint, not configuration; the SDK fetches and validates the complete snapshot on notification and reconnect. Polling remains the recovery path.
 
 ```text
 SDK
@@ -163,7 +163,9 @@ SDK
  ▼
 /v1/sdk/projects/{projectKey}/environments/{environmentKey}/stream
  │
- └── config.updated(revision=43)
+ └── event: config.updated
+     id: 43
+     data: {"revision":43}
          ↓
     fetch/validate config
          ↓
@@ -220,7 +222,7 @@ This creates stable assignment without server-side session storage.
 
 # 9. Local Redis role
 
-Redis is used to study shared caching and invalidation.
+Redis is an optional local-only experiment for studying shared caching and invalidation.
 
 Development topology:
 
@@ -230,7 +232,8 @@ API replica A ─┐
 API replica B ─┘
 ```
 
-The SDK still evaluates locally.
+The SDK still evaluates locally. Redis is not a managed-service dependency in the
+default path.
 
 Redis is not intended to be in the SDK's normal evaluation path.
 
@@ -238,7 +241,11 @@ Redis is not intended to be in the SDK's normal evaluation path.
 
 # 10. GCP architecture
 
-This diagram is a target architecture for study, not the default deployment. Run cloud learning exercises against local emulators/adapters and validate Terraform without applying it. A live deployment is optional and requires the cost-approval gate in `COST-BOUNDARY.md`.
+This diagram is a target architecture for study, not the default deployment.
+Firestore is a deferred optional adapter; PostgreSQL remains the selected
+implementation baseline. Run cloud learning exercises against local
+emulators/adapters and validate Terraform without applying it. A live deployment
+is optional and requires the cost-approval gate in `COST-BOUNDARY.md`.
 
 ```text
                 GitHub

@@ -231,13 +231,12 @@ Measure:
 
 # 9. SSE design
 
-A stream event can be:
+A stream event uses the single v1 wire contract from `docs/API-CONTRACT.md`:
 
-```json
-{
-  "type": "config.updated",
-  "revision": 43
-}
+```text
+id: 43
+event: config.updated
+data: {"revision":43}
 ```
 
 The client can then:

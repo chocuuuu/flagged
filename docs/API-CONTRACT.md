@@ -4,7 +4,11 @@
 
 **API version:** `v1`
 
-This document proposes the HTTP contract for the control plane and SDK. It is intentionally a draft: related ADRs describe design decisions, some are still Proposed, and the endpoints are not implemented or verified. Review this contract together with ADR-012, ADR-018, ADR-019, ADR-020, ADR-021, and ADR-022 before using it as an implementation contract.
+This document is the single draft HTTP contract for the control plane and SDK. It is
+not yet approved for implementation: related ADRs remain Proposed and endpoints are
+not implemented or verified. Both the API and SDK implementation must reference this
+contract; do not duplicate route or payload definitions in implementation notes.
+Review together with ADR-012, ADR-018, ADR-019, ADR-020, ADR-021, and ADR-022.
 
 ## 1. Contract principles
 
@@ -201,38 +205,77 @@ The create request is `{}`. Its response is `{ "id": "...", "keyPrefix": "...", 
 
 ## 4. Admin routes
 
-All resource routes in this section require an authenticated admin session. The session-creation route is the login entry point; session read and deletion follow the session behavior above. State-changing routes additionally require CSRF validation.
+All resource routes in this section require an authenticated admin session. The
+session-creation route is the login entry point; session read and deletion follow the
+session behavior above. State-changing routes additionally require CSRF validation.
 
-| Method and path | Request | Success |
-|---|---|---|
-| `POST /v1/admin/session` | `{"password":"..."}` | `200`, session cookie and `{"csrfToken":"..."}` |
-| `GET /v1/admin/session` | None | `200`, `{"authenticated":true,"csrfToken":"..."}` or `401` |
-| `DELETE /v1/admin/session` | CSRF header | `204`, cleared cookie |
-| `GET /v1/admin/projects` | Pagination query | `200`, paginated projects |
-| `POST /v1/admin/projects` | Project create shape | `201`, project |
-| `GET /v1/admin/projects/{projectKey}` | None | `200`, project |
-| `PATCH /v1/admin/projects/{projectKey}` | Project update shape | `200`, project |
-| `GET /v1/admin/projects/{projectKey}/environments` | Pagination query | `200`, paginated environments |
-| `POST /v1/admin/projects/{projectKey}/environments` | Environment create shape | `201`, environment |
-| `GET /v1/admin/projects/{projectKey}/environments/{environmentKey}` | None | `200`, environment |
-| `PATCH /v1/admin/projects/{projectKey}/environments/{environmentKey}` | Environment update shape | `200`, environment |
-| `GET /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags` | Pagination query | `200`, paginated flags and `X-Environment-Revision` |
-| `POST /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags` | Flag create shape | `201`, FlagMutationResponse |
-| `GET /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags/{flagKey}` | None | `200`, FlagDetailResponse |
-| `PATCH /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags/{flagKey}` | Changed fields plus `expectedVersion` | `200`, FlagMutationResponse |
-| `DELETE /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags/{flagKey}` | `{"expectedVersion":3}` | `204`; advances environment revision, returned in `X-Environment-Revision` |
-| `POST .../flags/{flagKey}/rules` | Rule create shape | `201`, rule, new `flagVersion`, and current environment `revision` |
-| `PATCH .../flags/{flagKey}/rules/{ruleId}` | Changed rule fields plus `expectedFlagVersion` | `200`, rule, new `flagVersion`, and current `revision` |
-| `DELETE .../flags/{flagKey}/rules/{ruleId}` | `{"expectedFlagVersion":3}` | `204`; returns new tokens in response headers `X-Flag-Version` and `X-Environment-Revision` |
-| `GET .../client-keys` | Pagination query | `200`, paginated key metadata |
-| `POST .../client-keys` | `{}` | `201`, metadata plus one-time full `key` |
-| `DELETE .../client-keys/{clientKeyId}` | None | `204`; revokes key |
+| Method and path | Auth | Request | Success |
+|---|---|---|---|
+| `POST /v1/admin/session` | Strict Origin check; pre-auth | `{"password":"..."}` | `200`, session cookie and `{"csrfToken":"..."}` |
+| `GET /v1/admin/session` | Admin session, if present | None | `200`, authenticated state and CSRF token, or `401` |
+| `DELETE /v1/admin/session` | Admin session + CSRF | CSRF header | `204`, cleared cookie |
+| `GET /v1/admin/projects` | Admin session | Pagination query | `200`, paginated projects |
+| `POST /v1/admin/projects` | Admin session + CSRF | Project create shape | `201`, project |
+| `GET /v1/admin/projects/{projectKey}` | Admin session | None | `200`, project |
+| `PATCH /v1/admin/projects/{projectKey}` | Admin session + CSRF | Project update shape | `200`, project |
+| `GET /v1/admin/projects/{projectKey}/environments` | Admin session | Pagination query | `200`, paginated environments |
+| `POST /v1/admin/projects/{projectKey}/environments` | Admin session + CSRF | Environment create shape | `201`, environment |
+| `GET /v1/admin/projects/{projectKey}/environments/{environmentKey}` | Admin session | None | `200`, environment |
+| `PATCH /v1/admin/projects/{projectKey}/environments/{environmentKey}` | Admin session + CSRF | Environment update shape | `200`, environment |
+| `GET /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags` | Admin session | Pagination query | `200`, paginated flags and `X-Environment-Revision` |
+| `POST /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags` | Admin session + CSRF | Flag create shape | `201`, FlagMutationResponse |
+| `GET /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags/{flagKey}` | Admin session | None | `200`, FlagDetailResponse |
+| `PATCH /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags/{flagKey}` | Admin session + CSRF | Changed fields plus `expectedVersion` | `200`, FlagMutationResponse |
+| `DELETE /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags/{flagKey}` | Admin session + CSRF | `{"expectedVersion":3}` | `204`; advances revision in `X-Environment-Revision` |
+| `POST /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags/{flagKey}/rules` | Admin session + CSRF | Rule create shape | `201`, rule, flag version, and environment revision |
+| `PATCH /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags/{flagKey}/rules/{ruleId}` | Admin session + CSRF | Changed fields plus `expectedFlagVersion` | `200`, rule, flag version, and environment revision |
+| `DELETE /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags/{flagKey}/rules/{ruleId}` | Admin session + CSRF | `{"expectedFlagVersion":3}` | `204`; tokens in `X-Flag-Version` and `X-Environment-Revision` |
+| `GET /v1/admin/projects/{projectKey}/environments/{environmentKey}/client-keys` | Admin session | Pagination query | `200`, paginated key metadata |
+| `POST /v1/admin/projects/{projectKey}/environments/{environmentKey}/client-keys` | Admin session + CSRF | `{}` | `201`, metadata plus one-time full `key` |
+| `DELETE /v1/admin/projects/{projectKey}/environments/{environmentKey}/client-keys/{clientKeyId}` | Admin session + CSRF | None | `204`; revokes key |
+| `GET /v1/admin/projects/{projectKey}/audit-events` | Admin session | Pagination query; optional `environmentKey` | `200`, paginated redacted audit events |
+| `GET /v1/health` | None | None | `200`, `{"status":"ok"}` when process is alive |
+| `GET /v1/ready` | None | None | `200`, `{"status":"ready"}` or `503 DEPENDENCY_UNAVAILABLE` when required dependencies are unavailable |
+| `GET /v1/sdk/projects/{projectKey}/environments/{environmentKey}/config` | Bearer client key | Optional `If-None-Match` | `200` with the section 5 snapshot, `304` when unchanged |
+| `GET /v1/sdk/projects/{projectKey}/environments/{environmentKey}/stream` | Bearer client key | Optional `Last-Event-ID` | `200` SSE stream using the section 6 event schema |
 
-`...` in the rule and key routes means the full project/environment/flag prefix shown immediately above. It is shorthand in this table only, not a literal route.
+Every non-success response uses the shared error shape in section 7, except
+bodyless `204` and conditional `304` responses. Health responses disclose only
+service status.
 
 Project and environment deletion are not part of v1. Flag and rule delete requests carry concurrency tokens in their JSON bodies because deletion conflicts must be reported with the shared JSON error shape; clients must send `Content-Type: application/json`.
 
-Admin mutation responses that change client-visible configuration include the resulting environment `revision`. A mutation that changes only admin metadata leaves it unchanged. The configuration, audit event, revision, and any corresponding SDK snapshot projection commit atomically. The flag delete route returns its resulting revision in `X-Environment-Revision` because a `204` response has no body.
+Admin mutation responses that change client-visible configuration include the resulting environment `revision`. A mutation that changes only admin metadata leaves it unchanged. The configuration, audit event, and revision commit atomically. The flag delete route returns its resulting revision in `X-Environment-Revision` because a `204` response has no body.
+
+### Audit history
+
+`GET /v1/admin/projects/{projectKey}/audit-events` requires an authenticated admin
+session. It accepts the standard `limit` and opaque `cursor` pagination parameters
+and an optional `environmentKey` filter. Results are ordered newest first, with a
+stable event-ID tiebreaker. The response is
+`{"items":[...],"nextCursor":null}`. Each event contains `id`, `projectKey`,
+`environmentKey` (nullable), `actor`, `action`, `resourceType`, `resourceId`,
+`before`, `after`, and `timestamp`. Values that could reveal credentials, key
+material, or other secrets are redacted; full client keys are never included.
+Project-scope mismatch and unknown projects return the shared `404` error shape.
+Invalid cursors use `400 INVALID_CURSOR`.
+
+Example item:
+
+```json
+{
+  "id": "uuid",
+  "projectKey": "storefront",
+  "environmentKey": "production",
+  "actor": "configured-admin",
+  "action": "flag.updated",
+  "resourceType": "flag",
+  "resourceId": "uuid",
+  "before": {"enabled": false},
+  "after": {"enabled": true},
+  "timestamp": "2026-10-30T00:00:00Z"
+}
+```
 
 ## 5. SDK configuration snapshot
 
@@ -277,14 +320,17 @@ The v1 snapshot omits `generatedAt`; the revision and ETag are stable for an unc
 - `304` is only a network/body optimization. It does not imply a free database read.
 - `revision` in the JSON body is the authoritative value. `ETag` is an opaque HTTP validator; clients must not parse it as a revision.
 
-### Read pattern and cost boundary (proposed)
+### Read pattern and cost boundary
 
 - PostgreSQL reads the environment revision, flags, and enabled rules in one consistent database transaction/snapshot and constructs the response from that committed state.
-- For Firestore, this contract proposes a materialized `sdk_snapshots/{environmentId}` document containing the complete serialized snapshot and revision. The SDK endpoint reads that single document per request, including requests that return `304`; it does not query/read one Firestore document per flag. The projection is derived data, not a second source of truth, and is written atomically with client-visible configuration, environment revision, and audit changes. The response is served only after the projection is committed.
-- Store no more than 900 KiB of serialized snapshot payload in the Firestore projection, leaving room below Firestore's 1 MiB per-document limit for metadata. Enforce ADR-022's 500-flag cap and this byte limit before committing a client-visible mutation; never truncate a snapshot.
-- This single-document projection is a **proposal requiring review**, because it adds a materialized view to the Firestore adapter and couples every client-visible mutation to its update. If rejected, choose and measure an alternative read model before implementation; do not silently fan out to one document read per flag.
-- A Firestore SDK config request costs at least one snapshot-document read plus one client-key document read if revocation is checked against Firestore on every request. A `304` still incurs these reads. The exact key lookup/cache strategy must preserve the intended revocation window and be included in the live workload estimate.
-- At 20 continuously connected streams and a 60-second interval, ADR-021 estimates 28,800 stream revision reads/day. An additional 20 SDKs making a conditional config request every 30 seconds would require up to 57,600 snapshot-document reads and 57,600 key-validation reads per day, before stream key checks, bootstraps, writes, or other activity. Therefore the 21,200 reads remaining under the 50,000-read quota are not sufficient under that combined request pattern. Recalculate from measured intervals and request volume; the quota is not a spending cap. Live Firestore remains gated by current pricing review and explicit user approval.
+- Firestore persistence and its SDK snapshot read model are deferred by owner decision
+  DP-003 in `docs/DECISIONS-PENDING.md`. Revisit and measure the read model before
+  implementing a Firestore adapter.
+- ADR-022's proposed 500-flag and 900 KiB snapshot bounds remain subject to the
+  implementation review; do not attribute them to an active Firestore projection.
+- Do not estimate live Firestore usage or cost from an unselected read model. Any
+  future estimate must use a measured request pattern, current official pricing, and
+  the explicit cloud approval gate.
 
 ## 6. SSE stream
 
@@ -304,6 +350,8 @@ data: {"revision":43}
 ```
 
 - Event data contains only the `revision`; the SSE `id` is the same revision for reconnect tracking. The SDK fetches and validates the full snapshot after each event, reconnect, or stream close; it installs only a strictly newer revision.
+- The cursor is carried in the `Last-Event-ID` header; there is no `afterVersion`
+  query parameter (owner decision DP-001).
 - Send an SSE comment heartbeat (`: keep-alive`) every 20 seconds. A heartbeat does not indicate database health or configuration freshness.
 - Maximum connection lifetime is 5 minutes by default. The stream closes at that limit; the SDK reconnects with bounded exponential backoff and jitter and performs a full snapshot fetch. Configure the hosting request timeout at least 30 seconds longer than the stream lifetime.
 - Revoking a key immediately rejects subsequent configuration and stream requests. An already-open stream carries revision hints only and may stay open until the server detects closure or its five-minute lifetime ends; the SDK's next snapshot fetch is rejected after revocation.
@@ -344,24 +392,18 @@ Every non-`304`, non-`204` API error uses:
 
 Missing `expectedVersion` or `expectedFlagVersion` returns `428 VERSION_REQUIRED`. A malformed token returns `422 VALIDATION_ERROR`. A stale token returns `409 VERSION_CONFLICT` with the current version when the resource exists. Malformed JSON is `400`. A client key presented to an admin endpoint is `403`, not `401`, because it is valid but has the wrong permission.
 
-## 8. Proposed endpoint inventory
+## 8. Endpoint inventory
 
-| Surface | Routes |
-|---|---|
-| Session | `POST`, `GET`, `DELETE /v1/admin/session` |
-| Projects | `GET`, `POST /v1/admin/projects`; `GET`, `PATCH /v1/admin/projects/{projectKey}` |
-| Environments | `GET`, `POST /v1/admin/projects/{projectKey}/environments`; `GET`, `PATCH /v1/admin/projects/{projectKey}/environments/{environmentKey}` |
-| Flags | `GET`, `POST /v1/admin/projects/{projectKey}/environments/{environmentKey}/flags`; `GET`, `PATCH`, `DELETE .../flags/{flagKey}` |
-| Rules | `POST .../flags/{flagKey}/rules`; `PATCH`, `DELETE .../rules/{ruleId}` |
-| Client keys | `GET`, `POST .../client-keys`; `DELETE .../client-keys/{clientKeyId}` |
-| SDK snapshot | `GET /v1/sdk/projects/{projectKey}/environments/{environmentKey}/config` |
-| SDK stream | `GET /v1/sdk/projects/{projectKey}/environments/{environmentKey}/stream` |
-
-Audit-history retrieval is intentionally not shaped here; define its pagination and redaction rules before exposing it in a v1 admin route.
+The complete route inventory is the method/path/auth/request/success table in
+section 4. Request and response schemas are defined in sections 2–7. Keep this
+table as the single route inventory; implementation notes should link here rather
+than duplicate it.
 
 ## 9. Review gates before implementation
 
-- Resolve the proposed Firestore materialized snapshot document, its atomic update behavior, its read/write cost, and the 900 KiB limit against ADR-022 and the data model.
+- Firestore persistence and its SDK snapshot read model are deferred by owner decision
+  DP-003 in `docs/DECISIONS-PENDING.md`. Revisit before a Firestore adapter is
+  implemented; this draft does not select a projection or read-on-demand strategy.
 - Confirm whether admin project/environment deletion remains excluded from v1 and how retained audit history interacts with any later deletion endpoint.
 - Confirm that browser SDKs use `fetch`-based SSE rather than native `EventSource` so credentials remain in headers.
 - Ensure all ADR-dependent field names, rule order, revision semantics, and client-key scope remain consistent with ADR-012, ADR-018, ADR-019, ADR-020, ADR-021, and ADR-022.
