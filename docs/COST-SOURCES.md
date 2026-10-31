@@ -10,7 +10,10 @@ Before any optional live deployment, independently check the official pricing an
 - Cloud Logging pricing
 - IAM pricing
 - Artifact Registry pricing
+- Cloud Storage / GCS Terraform state pricing
+- Secret Manager pricing
 - Memorystore for Redis pricing
 - Cloud SQL pricing
+- GitHub Actions hosted-runner terms and usage limits
 
 Free quotas are not cost caps. The standard project path uses local services, emulators, and local validation; no pricing assumption is needed to complete it.

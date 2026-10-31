@@ -110,6 +110,10 @@ Display only:
 ff_client_abc123••••••
 ```
 
+`ff_client_abc123` is the stored display prefix; the remaining client secret is
+masked. New client keys use the `ff_client_` prefix, are scoped to one environment,
+and are shown in full only once.
+
 When a key is created:
 
 ```text
@@ -340,3 +344,14 @@ No release is complete if:
 - revoked keys still work;
 - stale configuration can overwrite newer configuration;
 - sensitive values are visible in logs.
+
+### Required Jira test evidence
+
+| Invariant | Planned test evidence |
+|---|---|
+| No secret is committed | FF-104-T2 (secret scan detects a canary pattern) |
+| Admin API rejects unauthenticated access | FF-304-T2 |
+| SDK key cannot mutate configuration | FF-601-T2 and FF-602-T2 |
+| Revoked client key is rejected | FF-601-T2 |
+| Stale configuration cannot overwrite newer configuration | FF-804-T2 |
+| Sensitive values are absent from logs | FF-901-T2 |
